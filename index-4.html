@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praxly — KI-Automatisierung für Physiotherapiepraxen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2ECC71;
+    --green-dark: #1a9e52;
+    --green-light: #e8faf1;
+    --green-mid: #a8edca;
+    --ink: #0f1f14;
+    --ink-light: #3d5446;
+    --gray: #f5f7f5;
+    --gray-mid: #e2e8e4;
+    --white: #ffffff;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-mid);
+    padding: 0 5%;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-dot {
+    width: 10px; height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green-dark); }
+
+  .nav-cta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-ghost {
+    padding: 9px 20px;
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-ghost:hover { border-color: var(--green); color: var(--green-dark); }
+
+  .btn-primary {
+    padding: 9px 22px;
+    background: var(--green);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 60px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 400px;
+    background: radial-gradient(ellipse, rgba(46,204,113,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .trust-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--green-light);
+    border: 1px solid var(--green-mid);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.82rem;
+    color: var(--green-dark);
+    font-weight: 500;
+    margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .trust-bar span { 
+    width: 6px; height: 6px; 
+    background: var(--green); 
+    border-radius: 50%; 
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--ink);
+    max-width: 820px;
+    margin: 0 auto 24px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--green-dark);
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--ink-light);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.65;
+    font-weight: 400;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+
+  .btn-primary-lg {
+    padding: 14px 32px;
+    background: var(--green);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(46,204,113,0.35);
+  }
+
+  .btn-primary-lg:hover { 
+    background: var(--green-dark); 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(46,204,113,0.4);
+  }
+
+  .btn-outline-lg {
+    padding: 14px 32px;
+    border: 2px solid var(--gray-mid);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .btn-outline-lg:hover { border-color: var(--green); }
+
+  /* TRUST LOGOS */
+  .trust-logos {
+    background: var(--gray);
+    padding: 28px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--gray-mid);
+    border-bottom: 1px solid var(--gray-mid);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--ink-light);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 32px; height: 32px;
+    background: var(--green-light);
+    border: 1px solid var(--green-mid);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 90px 5%;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+
+  h2 em { font-style: normal; color: var(--green-dark); }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--ink-light);
+    max-width: 580px;
+    line-height: 1.65;
+  }
+
+  /* PROBLEM SECTION */
+  .problem {
+    background: var(--white);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .pain-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .pain-card {
+    background: var(--gray);
+    border: 1px solid var(--gray-mid);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .pain-card:hover { 
+    border-color: var(--green-mid); 
+    transform: translateX(4px);
+  }
+
+  .pain-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pain-card h4 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+
+  .pain-card p {
+    font-size: 0.87rem;
+    color: var(--ink-light);
+    line-height: 1.5;
+  }
+
+  .stat-block {
+    background: var(--ink);
+    border-radius: 20px;
+    padding: 48px 40px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-block::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(46,204,113,0.2), transparent 70%);
+  }
+
+  .big-stat {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  .stat-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    margin-bottom: 28px;
+  }
+
+  /* SOLUTION */
+  .solution {
+    background: var(--gray);
+  }
+
+  .solution-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .solution-header .section-sub {
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 16px;
+    padding: 30px 26px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.07);
+    border-color: var(--green-mid);
+  }
+
+  .feature-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; height: 48px;
+    background: var(--green-light);
+    border-radius: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .feature-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.6;
+  }
+
+  .check-list {
+    list-style: none;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .check-list li {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .check-list li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  /* HOW IT WORKS */
+  .how {
+    background: var(--white);
+  }
+
+  .how-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .how-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: calc(16.66% + 24px);
+    right: calc(16.66% + 24px);
+    height: 2px;
+    background: linear-gradient(to right, var(--green-mid), var(--green-mid));
+  }
+
+  .step {
+    text-align: center;
+    padding: 0 24px;
+    position: relative;
+  }
+
+  .step-num {
+    width: 72px; height: 72px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(46,204,113,0.35);
+  }
+
+  .step h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .step p {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.6;
+  }
+
+  /* COMPARE TABLE */
+  .compare {
+    background: var(--gray);
+  }
+
+  .compare-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .compare-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+
+  .compare-table th {
+    padding: 18px 24px;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: left;
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .compare-table th.highlight {
+    background: var(--green);
+    color: var(--white);
+  }
+
+  .compare-table td {
+    padding: 16px 24px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--gray-mid);
+    background: var(--white);
+    color: var(--ink-light);
+  }
+
+  .compare-table td.highlight {
+    background: var(--green-light);
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .compare-table td.check {
+    color: var(--green-dark);
+    font-weight: 600;
+  }
+
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  /* TESTIMONIAL */
+  .testimonial {
+    background: var(--ink);
+    padding: 90px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonial::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: 10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(46,204,113,0.15), transparent 70%);
+    pointer-events: none;
+  }
+
+  .testimonial-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-mark {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--green);
+    line-height: 0.5;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .quote-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+
+  .quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .author-avatar {
+    width: 48px; height: 48px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--white);
+    font-size: 1.1rem;
+  }
+
+  .author-info {
+    text-align: left;
+  }
+
+  .author-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 0.95rem;
+  }
+
+  .author-role {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--white);
+    text-align: center;
+    padding: 100px 5%;
+  }
+
+  .cta-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--green-light);
+    border: 2px solid var(--green-mid);
+    border-radius: 24px;
+    padding: 60px 50px;
+  }
+
+  .cta-box h2 {
+    margin-bottom: 14px;
+  }
+
+  .cta-box p {
+    font-size: 1.05rem;
+    color: var(--ink-light);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.6);
+    padding: 48px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  footer .logo { color: var(--white); }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; gap: 40px; }
+    .steps::before { display: none; }
+    h1 { font-size: 2.2rem; }
+    .cta-box { padding: 40px 28px; }
+    .compare-table { font-size: 0.8rem; }
+    .compare-table td, .compare-table th { padding: 12px 14px; }
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15,31,20,0.6);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 540px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-light);
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--ink); }
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .modal-sub {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    margin-bottom: 24px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--white);
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+  }
+  .form-group textarea { height: 100px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .checkbox-group input { width: auto; margin-top: 3px; }
+  .checkbox-group label { font-size: 0.82rem; color: var(--ink-light); }
+  .modal-legal {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+  .modal-legal h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 16px 0 8px;
+  }
+  .modal-legal h3:first-child { margin-top: 0; }
+
+</style>
+
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <span class="logo-dot"></span>
+    Praxly
+  </div>
+  <ul class="nav-links">
+    <li><a href="#loesung">Leistungen</a></li>
+    <li><a href="#ablauf">Ablauf</a></li>
+    <li><a href="#vergleich">Vergleich</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#loesung" class="btn-ghost">Mehr erfahren</a>
+    <button onclick="openModal('kontakt-modal')" class="btn-ghost">Kontakt</button>
+    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sannalena-slg/kostenloses-erstgesprach'});return false;" class="btn-primary">Gespräch vereinbaren →</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="trust-bar">
+    <span></span>
+    Für Gesundheitspraxen im DACH-Raum
+  </div>
+  <h1>Kein Anruf verloren.<br><em>Kein Termin verpasst.</em></h1>
+  <p class="hero-sub">
+    Automatische Terminbuchung, Erinnerungen und Wiederbestellungen — damit deine Praxis läuft, auch wenn du gerade behandelst.
+  </p>
+  <div class="hero-actions">
+    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sannalena-slg/kostenloses-erstgesprach'});return false;" class="btn-primary-lg">Kostenloses Erstgespräch →</a>
+    <a href="#loesung" class="btn-outline-lg">Wie es funktioniert</a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-logos">
+  <div class="trust-item">
+    <div class="trust-icon">🇦🇹</div>
+    Entwickelt für Österreich
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🔒</div>
+    DSGVO-konform
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">⚡</div>
+    Schnelle Umsetzung
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🩺</div>
+    Für Gesundheitspraxen
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="problem-grid">
+    <div>
+      <p class="section-label">Das Problem</p>
+      <h2>Dein Telefon klingelt.<br><em>Du kannst nicht rangehen.</em></h2>
+      <p class="section-sub">Praxen verbringen täglich wertvolle Zeit mit manueller Terminverwaltung — Zeit, die für Patienten fehlt.</p>
+      <div class="pain-cards">
+        <div class="pain-card">
+          <div class="pain-icon">📞</div>
+          <div>
+            <h4>Anrufe während der Behandlung</h4>
+            <p>Du bist beim Patienten — und verpasst gleichzeitig Neubuchungen. Interessenten rufen woanders an.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">📅</div>
+          <div>
+            <h4>Lücken im Kalender durch No-Shows</h4>
+            <p>Patienten vergessen Termine, sagen nicht ab — und der Slot bleibt leer.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🔄</div>
+          <div>
+            <h4>Wiederbestellungen fallen durchs Raster</h4>
+            <p>Patienten nach der Behandlung aktiv zurückzuholen erfordert Zeit — die niemand hat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-block">
+      <div class="big-stat">24/7</div>
+      <p class="stat-label">Terminbuchung — auch wenn du gerade behandelst</p>
+      <div class="stat-divider"></div>
+      <div class="big-stat" style="font-size: 3rem;">0</div>
+      <p class="stat-label">verpasste Anfragen durch automatische Bestätigungen</p>
+      <div class="stat-divider"></div>
+      <div class="big-stat" style="font-size: 3rem;">100%</div>
+      <p class="stat-label">automatisch — kein technisches Vorwissen nötig</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="loesung">
+  <div class="solution-header">
+    <p class="section-label">Die Lösung</p>
+    <h2>KI-Automatisierung,<br><em>die für dich arbeitet</em></h2>
+    <p class="section-sub">Drei Bausteine, die zusammen dafür sorgen, dass kein Termin verloren geht — und dein Kalender immer voll ist.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-chip">🤖</div>
+      <h3>Automatische Terminbuchung</h3>
+      <p>Patienten buchen 24/7 online — ohne Anruf, ohne Wartezeit. Das System prüft Verfügbarkeit und bestätigt sofort.</p>
+      <ul class="check-list">
+        <li>Online-Buchung rund um die Uhr</li>
+        <li>Direktsync in deinen Kalender</li>
+        <li>Sofortige Buchungsbestätigung</li>
+        <li>Keine Doppelbuchungen</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="feature-chip">💬</div>
+      <h3>Automatische Erinnerungen</h3>
+      <p>SMS oder WhatsApp-Erinnerungen reduzieren No-Shows drastisch. Patienten können direkt auf die Nachricht reagieren.</p>
+      <ul class="check-list">
+        <li>Erinnerung 24h vor Termin</li>
+        <li>Absage & Umbuchung per Klick</li>
+        <li>Automatische Slot-Nachbesetzung</li>
+        <li>Individuell anpassbare Texte</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="feature-chip">🔁</div>
+      <h3>Automatische Wiederbestellung</h3>
+      <p>Nach der letzten Einheit wird der Patient automatisch kontaktiert — zum richtigen Zeitpunkt, mit der richtigen Nachricht.</p>
+      <ul class="check-list">
+        <li>Automatischer Follow-Up</li>
+        <li>Personalisierte Nachrichten</li>
+        <li>Langfristige Patientenbindung</li>
+        <li>Mehr Wiederkehrbuchungen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="ablauf">
+  <div class="how-inner">
+    <div class="how-header">
+      <p class="section-label">Der Ablauf</p>
+      <h2>In 3 Schritten<br><em>zur Automatisierung</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Kostenloses Erstgespräch</h3>
+        <p>Wir schauen uns gemeinsam an, wo in deiner Praxis Zeit verloren geht — und was Automatisierung konkret bringt.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Individuelle Einrichtung</h3>
+        <p>Ich richte alle Automatisierungen ein und passe sie auf deinen Kalender, deine Sprache und deine Patienten an.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Live & laufender Support</h3>
+        <p>Alles läuft — du bekommst laufende Betreuung und kein technisches Vorwissen ist nötig.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare" id="vergleich">
+  <div class="compare-inner">
+    <div class="compare-header">
+      <p class="section-label">Warum Praxly?</p>
+      <h2>Spezialisiert statt<br><em>generisch</em></h2>
+    </div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Kriterium</th>
+          <th class="highlight">Praxly</th>
+          <th>Allgemeine Software</th>
+          <th>Selbst gemacht</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Speziell für Gesundheitspraxen</td>
+          <td class="highlight check">✓ Ja</td>
+          <td>Nein</td>
+          <td>Nein</td>
+        </tr>
+        <tr>
+          <td>Einrichtung & Setup</td>
+          <td class="highlight check">✓ Vollständig inklusive</td>
+          <td>Eigenaufwand hoch</td>
+          <td>Sehr hoher Aufwand</td>
+        </tr>
+        <tr>
+          <td>DSGVO-konform (AT)</td>
+          <td class="highlight check">✓ Vollständig</td>
+          <td>Teils</td>
+          <td>Unklar</td>
+        </tr>
+        <tr>
+          <td>Technisches Vorwissen nötig</td>
+          <td class="highlight check">✓ Keines</td>
+          <td>Mittel</td>
+          <td>Sehr viel</td>
+        </tr>
+        <tr>
+          <td>Laufende Betreuung</td>
+          <td class="highlight check">✓ Persönlich</td>
+          <td>Nur Ticketsystem</td>
+          <td>Keine</td>
+        </tr>
+        <tr>
+          <td>Zeit bis zur Umsetzung</td>
+          <td class="highlight check">✓ Schnell & persönlich</td>
+          <td>Wochen bis Monate</td>
+          <td>Monate</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+      <div class="author-info">
+        <div class="author-name">Mag. Maria S.</div>
+        <div class="author-role">Inhaberin, Physiotherapiepraxis Wien</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section" id="kontakt">
+  <div class="cta-box">
+    <p class="section-label">Jetzt starten</p>
+    <h2>Kostenloses Erstgespräch<br><em>in 20 Minuten</em></h2>
+    <p>Kein technisches Vorwissen nötig. Ich zeige dir, was Automatisierung konkret für deine Praxis bedeutet — und was es kostet.</p>
+    <a href="mailto:kontakt@sannalenagottschalk.at" class="btn-primary-lg" style="margin: 0 auto; display: inline-flex;">
+      Gespräch vereinbaren →
+    </a>
+    <p style="margin-top: 18px; font-size: 0.82rem; color: var(--ink-light);">Oder schreib direkt: kontakt@sannalenagottschalk.at</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">
+    <span class="logo-dot"></span>
+    Praxly
+  </div>
+  <ul class="footer-links">
+    <li><a href="#" onclick="openModal('impressum-modal'); return false;">Impressum</a></li>
+    <li><a href="#" onclick="openModal('datenschutz-modal'); return false;">Datenschutz</a></li>
+  </ul>
+  <p style="font-size: 0.82rem;">© 2026 Praxly</p>
+</footer>
+
+
+
+<!-- KONTAKT MODAL -->
+<div class="modal-overlay" id="kontakt-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('kontakt-modal')">×</button>
+    <p class="modal-title">Kontakt</p>
+    <p class="modal-sub">Wir kümmern uns um dein Anliegen und melden uns schnellstmöglich bei dir.</p>
+    <form name="kontakt" method="POST" data-netlify="true" onsubmit="handleSubmit(event, 'kontakt-modal')">
+      <input type="hidden" name="form-name" value="kontakt" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Vorname *</label>
+          <input type="text" name="vorname" required placeholder="z.B. Anna" />
+        </div>
+        <div class="form-group">
+          <label>Nachname *</label>
+          <input type="text" name="nachname" required placeholder="z.B. Müller" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Telefonnummer *</label>
+        <input type="tel" name="telefon" required placeholder="+43 ..." />
+      </div>
+      <div class="form-group">
+        <label>E-Mail *</label>
+        <input type="email" name="email" required placeholder="deine@email.at" />
+      </div>
+      <div class="form-group">
+        <label>Nachricht</label>
+        <textarea name="nachricht" placeholder="Was kann ich für dich tun?"></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="datenschutz-check" required />
+        <label for="datenschutz-check">Ich akzeptiere die <a href="#" onclick="openModal('datenschutz-modal'); return false;" style="color: var(--green-dark);">Datenschutzrichtlinien</a>.</label>
+      </div>
+      <button type="submit" class="btn-primary-lg" style="width: 100%; justify-content: center;">Nachricht senden →</button>
+    </form>
+  </div>
+</div>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-overlay" id="impressum-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('impressum-modal')">×</button>
+    <p class="modal-title">Impressum</p>
+    <div class="modal-legal">
+      <h3>Angaben gemäß § 5 ECG</h3>
+      Sanna Lena Gottschalk<br>
+      Schruns, Österreich<br><br>
+      <h3>Kontakt</h3>
+      E-Mail: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+    </div>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL -->
+<div class="modal-overlay" id="datenschutz-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('datenschutz-modal')">×</button>
+    <p class="modal-title">Datenschutzerklärung</p>
+    <div class="modal-legal">
+      <h3>Verantwortliche Person</h3>
+      Sanna Lena Gottschalk<br>
+      E-Mail: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+
+      <h3>Welche Daten werden verarbeitet?</h3>
+      Diese Website erhebt keine personenbezogenen Daten automatisch. Wenn du uns per Kontaktformular oder E-Mail kontaktierst, werden deine Angaben ausschließlich zur Bearbeitung deiner Anfrage verwendet.
+
+      <h3>Hosting</h3>
+      Diese Website wird über Netlify gehostet. Beim Aufruf können technische Daten (z.B. IP-Adresse) verarbeitet werden. Weitere Infos: <a href="https://www.netlify.com/privacy/" style="color: var(--green-dark);" target="_blank">netlify.com/privacy</a>
+
+      <h3>Cookies</h3>
+      Diese Website verwendet keine Cookies.
+
+      <h3>Deine Rechte</h3>
+      Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten gemäß DSGVO. Kontakt: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+
+      <h3>Beschwerderecht</h3>
+      Du kannst dich bei der österreichischen Datenschutzbehörde beschweren: <a href="https://www.dsb.gv.at" style="color: var(--green-dark);" target="_blank">dsb.gv.at</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) closeModal(this.id);
+  });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+  }
+});
+function handleSubmit(e, modalId) {
+  e.preventDefault();
+  const form = e.target;
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  }).then(() => {
+    form.innerHTML = '<p style="text-align:center; padding: 40px 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--green-dark);">✓ Danke! Wir melden uns bald bei dir.</p>';
+  }).catch(() => {
+    alert('Etwas ist schiefgelaufen. Bitte schreib direkt an kontakt@sannalenagottschalk.at');
+  });
+}
+</script>
+
+</body>
+</html>
