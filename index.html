@@ -868,6 +868,10 @@
   .modal-legal h3:first-child { margin-top: 0; }
 
 </style>
+
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 
@@ -885,7 +889,7 @@
   <div class="nav-cta">
     <a href="#loesung" class="btn-ghost">Mehr erfahren</a>
     <button onclick="openModal('kontakt-modal')" class="btn-ghost">Kontakt</button>
-    <button onclick="openModal('kontakt-modal')" class="btn-primary">Gespräch vereinbaren →</button>
+    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sannalena-slg/kostenloses-erstgesprach'});return false;" class="btn-primary">Gespräch vereinbaren →</button>
   </div>
 </nav>
 
@@ -900,7 +904,7 @@
     Automatische Terminbuchung, Erinnerungen und Wiederbestellungen — damit deine Praxis läuft, auch wenn du gerade behandelst.
   </p>
   <div class="hero-actions">
-    <a href="#kontakt" class="btn-primary-lg">Kostenloses Erstgespräch →</a>
+    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sannalena-slg/kostenloses-erstgesprach'});return false;" class="btn-primary-lg">Kostenloses Erstgespräch →</a>
     <a href="#loesung" class="btn-outline-lg">Wie es funktioniert</a>
   </div>
 </section>
