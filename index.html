@@ -770,6 +770,103 @@
     .compare-table { font-size: 0.8rem; }
     .compare-table td, .compare-table th { padding: 12px 14px; }
   }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15,31,20,0.6);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 540px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-light);
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--ink); }
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .modal-sub {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    margin-bottom: 24px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--white);
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+  }
+  .form-group textarea { height: 100px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .checkbox-group input { width: auto; margin-top: 3px; }
+  .checkbox-group label { font-size: 0.82rem; color: var(--ink-light); }
+  .modal-legal {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+  .modal-legal h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 16px 0 8px;
+  }
+  .modal-legal h3:first-child { margin-top: 0; }
+
 </style>
 </head>
 <body>
@@ -786,8 +883,9 @@
     <li><a href="#vergleich">Vergleich</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#kontakt" class="btn-ghost">Mehr erfahren</a>
-    <a href="#kontakt" class="btn-primary">Gespräch vereinbaren →</a>
+    <a href="#loesung" class="btn-ghost">Mehr erfahren</a>
+    <button onclick="openModal('kontakt-modal')" class="btn-ghost">Kontakt</button>
+    <button onclick="openModal('kontakt-modal')" class="btn-primary">Gespräch vereinbaren →</button>
   </div>
 </nav>
 
@@ -833,7 +931,7 @@
     <div>
       <p class="section-label">Das Problem</p>
       <h2>Dein Telefon klingelt.<br><em>Du kannst nicht rangehen.</em></h2>
-      <p class="section-sub">Physiotherapeuten verbringen bis zu 2 Stunden täglich mit Terminverwaltung — Zeit, die für Patienten fehlt.</p>
+      <p class="section-sub">Praxen verbringen täglich wertvolle Zeit mit manueller Terminverwaltung — Zeit, die für Patienten fehlt.</p>
       <div class="pain-cards">
         <div class="pain-card">
           <div class="pain-icon">📞</div>
@@ -846,7 +944,7 @@
           <div class="pain-icon">📅</div>
           <div>
             <h4>Lücken im Kalender durch No-Shows</h4>
-            <p>Patienten vergessen Termine, sagen nicht ab — und der Slot bleibt leer. Bis zu 15% aller Termine.</p>
+            <p>Patienten vergessen Termine, sagen nicht ab — und der Slot bleibt leer.</p>
           </div>
         </div>
         <div class="pain-card">
@@ -859,14 +957,14 @@
       </div>
     </div>
     <div class="stat-block">
-      <div class="big-stat">2h</div>
-      <p class="stat-label">Zeitverlust täglich durch manuelle Terminverwaltung pro Praxis</p>
+      <div class="big-stat">24/7</div>
+      <p class="stat-label">Terminbuchung — auch wenn du gerade behandelst</p>
       <div class="stat-divider"></div>
-      <div class="big-stat" style="font-size: 3rem;">bis −40%</div>
-      <p class="stat-label">weniger No-Shows durch automatische Erinnerungen</p>
+      <div class="big-stat" style="font-size: 3rem;">0</div>
+      <p class="stat-label">verpasste Anfragen durch automatische Bestätigungen</p>
       <div class="stat-divider"></div>
-      <div class="big-stat" style="font-size: 3rem;">+3,5h</div>
-      <p class="stat-label">pro Woche mehr Behandlungszeit — ohne Mehraufwand</p>
+      <div class="big-stat" style="font-size: 3rem;">100%</div>
+      <p class="stat-label">automatisch — kein technisches Vorwissen nötig</p>
     </div>
   </div>
 </section>
@@ -1000,13 +1098,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<div class="testimonial">
-  <div class="testimonial-inner">
-    <span class="quote-mark">"</span>
-    <p class="quote-text">Seit der Automatisierung läuft unsere Terminbuchung von selbst. Wir haben weniger No-Shows, einen volleren Kalender — und ich muss nicht mehr zwischen Behandlung und Telefon jonglieren.</p>
-    <div class="quote-author">
-      <div class="author-avatar">M</div>
       <div class="author-info">
         <div class="author-name">Mag. Maria S.</div>
         <div class="author-role">Inhaberin, Physiotherapiepraxis Wien</div>
@@ -1021,10 +1112,10 @@
     <p class="section-label">Jetzt starten</p>
     <h2>Kostenloses Erstgespräch<br><em>in 20 Minuten</em></h2>
     <p>Kein technisches Vorwissen nötig. Ich zeige dir, was Automatisierung konkret für deine Praxis bedeutet — und was es kostet.</p>
-    <a href="mailto:hallo@praxly.at" class="btn-primary-lg" style="margin: 0 auto; display: inline-flex;">
+    <a href="mailto:kontakt@sannalenagottschalk.at" class="btn-primary-lg" style="margin: 0 auto; display: inline-flex;">
       Gespräch vereinbaren →
     </a>
-    <p style="margin-top: 18px; font-size: 0.82rem; color: var(--ink-light);">Oder schreib direkt: hallo@praxly.at</p>
+    <p style="margin-top: 18px; font-size: 0.82rem; color: var(--ink-light);">Oder schreib direkt: kontakt@sannalenagottschalk.at</p>
   </div>
 </section>
 
@@ -1035,12 +1126,129 @@
     Praxly
   </div>
   <ul class="footer-links">
-    <li><a href="#">Impressum</a></li>
-    <li><a href="#">Datenschutz</a></li>
-    <li><a href="https://praxly.at">Website</a></li>
+    <li><a href="#" onclick="openModal('impressum-modal'); return false;">Impressum</a></li>
+    <li><a href="#" onclick="openModal('datenschutz-modal'); return false;">Datenschutz</a></li>
   </ul>
-  <p style="font-size: 0.82rem;">© 2025 Praxly</p>
+  <p style="font-size: 0.82rem;">© 2026 Praxly</p>
 </footer>
+
+
+
+<!-- KONTAKT MODAL -->
+<div class="modal-overlay" id="kontakt-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('kontakt-modal')">×</button>
+    <p class="modal-title">Kontakt</p>
+    <p class="modal-sub">Wir kümmern uns um dein Anliegen und melden uns schnellstmöglich bei dir.</p>
+    <form name="kontakt" method="POST" data-netlify="true" onsubmit="handleSubmit(event, 'kontakt-modal')">
+      <input type="hidden" name="form-name" value="kontakt" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Vorname *</label>
+          <input type="text" name="vorname" required placeholder="z.B. Anna" />
+        </div>
+        <div class="form-group">
+          <label>Nachname *</label>
+          <input type="text" name="nachname" required placeholder="z.B. Müller" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Telefonnummer *</label>
+        <input type="tel" name="telefon" required placeholder="+43 ..." />
+      </div>
+      <div class="form-group">
+        <label>E-Mail *</label>
+        <input type="email" name="email" required placeholder="deine@email.at" />
+      </div>
+      <div class="form-group">
+        <label>Nachricht</label>
+        <textarea name="nachricht" placeholder="Was kann ich für dich tun?"></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="datenschutz-check" required />
+        <label for="datenschutz-check">Ich akzeptiere die <a href="#" onclick="openModal('datenschutz-modal'); return false;" style="color: var(--green-dark);">Datenschutzrichtlinien</a>.</label>
+      </div>
+      <button type="submit" class="btn-primary-lg" style="width: 100%; justify-content: center;">Nachricht senden →</button>
+    </form>
+  </div>
+</div>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-overlay" id="impressum-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('impressum-modal')">×</button>
+    <p class="modal-title">Impressum</p>
+    <div class="modal-legal">
+      <h3>Angaben gemäß § 5 ECG</h3>
+      Sanna Lena Gottschalk<br>
+      Schruns, Österreich<br><br>
+      <h3>Kontakt</h3>
+      E-Mail: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+    </div>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL -->
+<div class="modal-overlay" id="datenschutz-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('datenschutz-modal')">×</button>
+    <p class="modal-title">Datenschutzerklärung</p>
+    <div class="modal-legal">
+      <h3>Verantwortliche Person</h3>
+      Sanna Lena Gottschalk<br>
+      E-Mail: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+
+      <h3>Welche Daten werden verarbeitet?</h3>
+      Diese Website erhebt keine personenbezogenen Daten automatisch. Wenn du uns per Kontaktformular oder E-Mail kontaktierst, werden deine Angaben ausschließlich zur Bearbeitung deiner Anfrage verwendet.
+
+      <h3>Hosting</h3>
+      Diese Website wird über Netlify gehostet. Beim Aufruf können technische Daten (z.B. IP-Adresse) verarbeitet werden. Weitere Infos: <a href="https://www.netlify.com/privacy/" style="color: var(--green-dark);" target="_blank">netlify.com/privacy</a>
+
+      <h3>Cookies</h3>
+      Diese Website verwendet keine Cookies.
+
+      <h3>Deine Rechte</h3>
+      Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten gemäß DSGVO. Kontakt: <a href="mailto:kontakt@sannalenagottschalk.at" style="color: var(--green-dark);">kontakt@sannalenagottschalk.at</a>
+
+      <h3>Beschwerderecht</h3>
+      Du kannst dich bei der österreichischen Datenschutzbehörde beschweren: <a href="https://www.dsb.gv.at" style="color: var(--green-dark);" target="_blank">dsb.gv.at</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) closeModal(this.id);
+  });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+  }
+});
+function handleSubmit(e, modalId) {
+  e.preventDefault();
+  const form = e.target;
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  }).then(() => {
+    form.innerHTML = '<p style="text-align:center; padding: 40px 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--green-dark);">✓ Danke! Wir melden uns bald bei dir.</p>';
+  }).catch(() => {
+    alert('Etwas ist schiefgelaufen. Bitte schreib direkt an kontakt@sannalenagottschalk.at');
+  });
+}
+</script>
 
 </body>
 </html>
