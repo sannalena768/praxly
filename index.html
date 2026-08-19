@@ -3,12 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praxly — Die moderne Software für deine Therapie-Praxis</title>
-<meta name="description" content="Praxly ist die moderne Cloud-Software für Therapie-Praxen im DACH-Raum (Deutschland, Österreich, Schweiz): Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. Start in der Physiotherapie, schlüsselfertig eingerichtet.">
+<title>Praxly — Praxissoftware für Physiotherapie in Österreich & DACH</title>
+<meta name="description" content="Praxly ist die Praxissoftware für Physiotherapie- und Therapie-Praxen in Österreich und im DACH-Raum: Online-Terminbuchung 24/7, automatische Erinnerungen gegen Ausfälle, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform auf Servern in der EU. Persönlich für dich eingerichtet.">
 <link rel="icon" href="logo.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
+<meta property="og:description" content="Weniger Verwaltung, mehr Zeit für deine Patient:innen: Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform, Server in der EU. Persönlich eingerichtet.">
+<meta property="og:image" content="https://praxly.at/logo.png">
+<meta property="og:url" content="https://praxly.at">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Praxly">
+<meta property="og:locale" content="de_AT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
+<meta name="twitter:description" content="Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform, Server in der EU. Persönlich eingerichtet.">
+<meta name="twitter:image" content="https://praxly.at/logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=optional" rel="stylesheet">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Praxly",
+      "url": "https://praxly.at",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Praxissoftware für Physiotherapie- und Therapie-Praxen im DACH-Raum: Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation und Honorarnoten. DSGVO-konform mit Datenhaltung in der EU.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "0",
+        "description": "Individuelles Angebot im kostenlosen Erstgespräch – abhängig von Praxisgröße und Funktionsumfang."
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Praxly",
+      "url": "https://praxly.at",
+      "logo": "https://praxly.at/logo.png",
+      "email": "sanna@praxly.at"
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
     --green: #2ECC71;
@@ -105,6 +152,14 @@
     box-shadow: 0 8px 22px -8px rgba(46,204,113,0.7);
   }
   .btn-primary:hover { background: var(--green-dark); color: #fff; transform: translateY(-2px); }
+  .btn-secondary {
+    background: var(--white);
+    color: var(--ink);
+    font-weight: 600;
+    border: 1px solid var(--gray-mid);
+    box-shadow: none;
+  }
+  .btn-secondary:hover { border-color: var(--green-mid); color: var(--green-dark); transform: translateY(-2px); }
   .nav-cta { padding: 10px 20px; min-height: 44px; font-size: 0.92rem; }
 
   /* ---------- HERO ---------- */
@@ -161,66 +216,21 @@
     margin-bottom: 30px;
     hyphens: manual;
   }
-
-  /* ---------- CTA FORM ---------- */
-  .cta-form {
+  .hero-actions {
     display: flex;
-    gap: 10px;
-    max-width: 480px;
+    gap: 12px;
     flex-wrap: wrap;
-  }
-  .cta-form input[type="email"] {
-    flex: 1 1 220px;
-    min-width: 0;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    padding: 14px 18px;
-    min-height: 48px;
-    border: 1px solid var(--gray-mid);
-    border-radius: 999px;
-    background: var(--white);
-    color: var(--ink);
-    outline: none;
-    transition: border .15s ease, box-shadow .15s ease;
-  }
-  .cta-form input[type="email"]:focus {
-    border-color: var(--green);
-    box-shadow: 0 0 0 4px rgba(46,204,113,0.18);
+    align-items: center;
   }
   .cta-note {
     font-size: 0.82rem;
     color: var(--ink-light);
-    margin-top: 12px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     gap: 7px;
+    flex-wrap: wrap;
   }
-  .cta-consent {
-    flex-basis: 100%;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    line-height: 1.45;
-    color: var(--ink-light);
-    max-width: 480px;
-  }
-  .cta-consent input { margin-top: 2px; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--green); }
-  .final .cta-consent { color: rgba(255,255,255,0.75); margin-left: auto; margin-right: auto; }
-  .final .cta-consent a { color: #fff; }
-  .cta-success {
-    display: none;
-    background: var(--green-light);
-    border: 1px solid var(--green-mid);
-    border-radius: 16px;
-    padding: 20px 22px;
-    max-width: 480px;
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .cta-success.show { display: block; }
-  .cta-success strong { font-family: var(--font-display); }
 
   /* ---------- HERO VISUAL ---------- */
   .hero-visual {
@@ -443,6 +453,7 @@
   }
   .feat-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
   .feat-card p { font-size: 0.9rem; color: var(--ink-light); }
+  .feat-card p .benefit { color: var(--green-dark); font-weight: 600; }
 
   /* ---------- WHY ---------- */
   .why-grid {
@@ -503,6 +514,75 @@
   .step h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
   .step p { font-size: 0.9rem; color: var(--ink-light); }
 
+  /* ---------- OFFER / PRICING ---------- */
+  .offer-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .offer-card {
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 20px;
+    padding: 36px 34px;
+  }
+  .offer-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--ink); margin-bottom: 14px; }
+  .offer-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+  .offer-list li { display: flex; gap: 11px; font-size: 0.95rem; color: var(--ink-light); align-items: flex-start; }
+  .offer-list li svg { flex-shrink: 0; margin-top: 3px; }
+  .offer-side {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .offer-side h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+  .offer-side p { font-size: 0.95rem; color: rgba(255,255,255,0.72); margin-bottom: 22px; }
+  .offer-side .btn { width: 100%; }
+
+  /* ---------- FAQ ---------- */
+  .faq-wrap { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 14px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 24px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--green-dark);
+    flex-shrink: 0;
+    transition: transform .2s ease;
+    line-height: 1;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item .faq-body { padding: 0 24px 22px; font-size: 0.95rem; color: var(--ink-light); }
+
   /* ---------- FINAL CTA ---------- */
   .final {
     padding-top: 90px;
@@ -520,16 +600,81 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .final p {
+  .final > p {
     color: rgba(255,255,255,0.75);
     font-size: 1.05rem;
     max-width: 560px;
     margin: 0 auto 30px;
   }
-  .final .cta-form { margin: 0 auto; justify-content: center; }
-  .final .cta-form input[type="email"] { background: rgba(255,255,255,0.95); }
-  .final .cta-note { color: rgba(255,255,255,0.6); justify-content: center; }
-  .final .cta-success { margin: 0 auto; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #fff; }
+  .final .btn-secondary { background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.25); }
+  .final .btn-secondary:hover { background: rgba(255,255,255,0.14); color: #fff; border-color: rgba(255,255,255,0.4); }
+  .final .final-note { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 18px; }
+  .final .final-note a { color: #fff; font-weight: 600; }
+
+  /* secondary Brevo option */
+  .secondary-optin {
+    max-width: 520px;
+    margin: 48px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .secondary-optin h3 { font-family: var(--font-display); font-size: 1.15rem; color: #fff; margin-bottom: 8px; }
+  .secondary-optin > p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin: 0 auto 20px; max-width: 460px; }
+  .cta-form {
+    display: flex;
+    gap: 10px;
+    max-width: 480px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .cta-form input[type="email"] {
+    flex: 1 1 220px;
+    min-width: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 14px 18px;
+    min-height: 48px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.95);
+    color: var(--ink);
+    outline: none;
+    transition: border .15s ease, box-shadow .15s ease;
+  }
+  .cta-form input[type="email"]:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(46,204,113,0.18);
+  }
+  .cta-consent {
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.75);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .cta-consent input { margin-top: 2px; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--green); }
+  .cta-consent a { color: #fff; }
+  .cta-success {
+    display: none;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 20px 22px;
+    max-width: 480px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 500;
+  }
+  .cta-success.show { display: block; }
+  .cta-success strong { font-family: var(--font-display); }
 
   /* ---------- FOOTER ---------- */
   footer {
@@ -552,11 +697,32 @@
   .footer-links a:hover { color: var(--green); }
   .foot-copy { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 
+  /* ---------- MOBILE STICKY CTA ---------- */
+  .mobile-cta { display: none; }
+  @media (max-width: 767px) {
+    .mobile-cta {
+      display: block;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 200;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--gray-mid);
+    }
+    .mobile-cta .btn { width: 100%; }
+    body { padding-bottom: 78px; }
+  }
+
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 52px; }
-    .hero-visual { max-width: 380px; margin: 0 auto; min-height: 300px; }
+    .hero-grid > * { min-width: 0; }
+    .hero-copy { max-width: 100%; }
+    .hero-visual { max-width: 100%; margin: 0 auto; min-height: 300px; }
+    .hv-card { max-width: 340px; margin: 0 auto; }
     .why-grid { grid-template-columns: 1fr; }
+    .offer-wrap { grid-template-columns: 1fr; }
   }
   @media (max-width: 720px) {
     .nav-links .nav-item { display: none; }
@@ -564,6 +730,7 @@
     .block { padding-top: 62px; padding-bottom: 62px; }
     .hero { padding-top: 44px; padding-bottom: 54px; }
     .foot-wrap { flex-direction: column; text-align: center; }
+    .hero-actions .btn { flex: 1 1 100%; }
   }
   @media (max-width: 400px) {
     section { padding: 0 4%; }
@@ -571,6 +738,7 @@
     .hv-chip { max-width: 180px; padding: 9px 11px; }
     .hv-chip-1 { top: -12px; right: 0; }
     .hv-chip-2 { bottom: -14px; left: 0; }
+    .offer-card, .offer-side { padding: 28px 22px; }
   }
 </style>
 </head>
@@ -582,8 +750,9 @@
   <ul class="nav-links">
     <li class="nav-item"><a href="#funktionen">Funktionen</a></li>
     <li class="nav-item"><a href="#warum">Warum Praxly</a></li>
-    <li class="nav-item"><a href="#ablauf">So startest du</a></li>
-    <li><a href="#kontakt" class="btn btn-primary nav-cta">Kennenlernen</a></li>
+    <li class="nav-item"><a href="#angebot">Angebot</a></li>
+    <li class="nav-item"><a href="#faq">FAQ</a></li>
+    <li><a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Demo vereinbaren</a></li>
   </ul>
 </nav>
 
@@ -591,24 +760,17 @@
 <header class="hero">
   <div class="hero-grid">
     <div class="hero-copy">
-      <span class="badge"><span class="dot"></span> Software für Therapie-Praxen · DACH-Raum</span>
-      <h1>Die moderne Software, die deine <span class="hl">Therapie-Praxis</span> von selbst organisiert.</h1>
-      <p class="lead">Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese und Honorarnoten – in einer aufgeräumten Cloud-Software, die zusammenspielt. Schluss mit Zettelwirtschaft, Telefonchaos und veralteten Desktop-Programmen.</p>
+      <span class="badge"><span class="dot"></span> Praxissoftware für Physiotherapie · Österreich &amp; DACH</span>
+      <h1>Die <span class="hl">Praxissoftware</span>, die deiner Physio-Praxis den Verwaltungs&shy;aufwand abnimmt.</h1>
+      <p class="lead">Online-Terminbuchung rund um die Uhr, automatische Erinnerungen gegen Ausfälle, digitale Anamnese und Honorarnoten – alles an einem Ort und DSGVO-konform auf Servern in der EU. Praxly wird persönlich für deine Praxis eingerichtet.</p>
 
-      <form class="cta-form" id="heroForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
-        <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
-        <button type="submit" class="btn btn-primary">Praxly kennenlernen</button>
-        <input type="hidden" name="locale" value="de">
-        <input type="hidden" name="html_type" value="simple">
-        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-        <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, zu Praxly per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></label>
-      </form>
-      <div class="cta-success" id="heroSuccess">
-        <strong>Danke!</strong> Du bekommst in Kürze eine Nachricht und einen ersten Einblick in Praxly – in Ruhe und ohne Verkaufsdruck.
+      <div class="hero-actions">
+        <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+        <a href="#funktionen" class="btn btn-secondary">Funktionen ansehen</a>
       </div>
       <p class="cta-note">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Unverbindlich · kein Verkaufsdruck · schlüsselfertig eingerichtet
+        Unverbindliches Erstgespräch · persönliche Einrichtung · DSGVO-konform
       </p>
     </div>
 
@@ -666,11 +828,11 @@
     </div>
     <div class="trust-item">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
-      Für Therapie-Praxen gebaut
+      Für Physiotherapeuten gebaut
     </div>
     <div class="trust-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      Schlüsselfertig eingerichtet
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Persönliche Betreuung · in Österreich entwickelt
     </div>
   </div>
 </section>
@@ -710,48 +872,48 @@
   <div class="feat-grid">
     <div class="feat-card">
       <div class="feat-ic">🗓️</div>
-      <h3>Online-Terminbuchung</h3>
-      <p>Patient:innen buchen rund um die Uhr selbst – ohne Login, ohne Anruf. Freie Zeiten aktualisieren sich automatisch.</p>
+      <h3>Online-Terminbuchung 24/7</h3>
+      <p>Patient:innen buchen rund um die Uhr selbst – ohne Login, ohne Anruf. <span class="benefit">Dein Telefon klingelt seltener, dein Kalender füllt sich von allein.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">📆</div>
       <h3>Kalender &amp; Terminverwaltung</h3>
-      <p>Einzel- und Serientermine, Konfliktprüfung, Therapeutenfilter sowie Wochen- und Tagesansicht – alles übersichtlich an einem Ort.</p>
+      <p>Einzel- und Serientermine mit Konfliktprüfung und Therapeutenfilter. <span class="benefit">Du siehst deinen ganzen Tag auf einen Blick und vermeidest Doppelbuchungen.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">🔔</div>
       <h3>Automatische Erinnerungen</h3>
-      <p>SMS- und E-Mail-Erinnerungen gehen automatisch raus, optional ein zweites Mal – das hilft spürbar gegen No-Shows.</p>
+      <p>SMS- und E-Mail-Erinnerungen gehen automatisch raus, optional ein zweites Mal. <span class="benefit">Weniger Ausfälle, vollere Termine – ohne dass du daran denken musst.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">⏳</div>
       <h3>Warteliste &amp; Absagen</h3>
-      <p>Wird ein Termin frei, hast du die Warteliste sofort zur Hand. Absagen sind mit wenigen Klicks erledigt.</p>
+      <p>Wird ein Termin frei, hast du die Warteliste sofort zur Hand. <span class="benefit">Freie Slots werden schnell nachbesetzt, statt leer zu bleiben.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">👥</div>
       <h3>Patientenverwaltung</h3>
-      <p>Alle Kontaktdaten und die komplette Terminhistorie deiner Patient:innen sauber gebündelt.</p>
+      <p>Alle Kontaktdaten und die komplette Terminhistorie sauber gebündelt. <span class="benefit">Du findest jede Info in Sekunden, statt in Ordnern zu suchen.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">✍️</div>
       <h3>Digitaler Anamnesebogen</h3>
-      <p>Anamnese mit Unterschrift bequem per Link ausfüllen – ohne Login, inklusive DSGVO-Einwilligung.</p>
+      <p>Anamnese mit Unterschrift bequem per Link ausfüllen – inklusive DSGVO-Einwilligung. <span class="benefit">Patient:innen kommen vorbereitet, du sparst dir das Abtippen.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">📋</div>
       <h3>Dokumentation &amp; Verordnungen</h3>
-      <p>Behandlungsdokumentation und Verordnungsverwaltung – zugeschnitten auf den Therapie-Alltag.</p>
+      <p>Behandlungsdokumentation und Verordnungsverwaltung an einem Ort. <span class="benefit">Alles nachvollziehbar dokumentiert, wenn du es brauchst.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">🧾</div>
       <h3>Honorarnoten &amp; Mahnwesen</h3>
-      <p>Rechnungen als PDF erstellen und offene Beträge mit automatischen Zahlungserinnerungen im Blick behalten.</p>
+      <p>Rechnungen als PDF erstellen, offene Beträge mit automatischen Zahlungserinnerungen im Blick. <span class="benefit">Du wirst schneller bezahlt und läufst offenen Beträgen nicht hinterher.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">🏢</div>
       <h3>Team &amp; mehrere Standorte</h3>
-      <p>Rollen für Inhaber:in, Therapeut:in und Empfang – und mehrere Standorte in einer Software verwalten.</p>
+      <p>Rollen für Inhaber:in, Therapeut:in und Empfang – mehrere Standorte in einer Software. <span class="benefit">Jede:r im Team sieht genau das, was er oder sie braucht.</span></p>
     </div>
   </div>
 </section>
@@ -804,7 +966,7 @@
     <div class="step">
       <div class="num">1</div>
       <h3>Kennenlernen</h3>
-      <p>Du lernst Praxly in Ruhe kennen – abgestimmt darauf, wie deine Praxis arbeitet. Ganz unverbindlich.</p>
+      <p>Im kostenlosen Erstgespräch lernst du Praxly in Ruhe kennen – abgestimmt darauf, wie deine Praxis arbeitet. Ganz unverbindlich.</p>
     </div>
     <div class="step">
       <div class="num">2</div>
@@ -819,24 +981,98 @@
   </div>
 </section>
 
+<!-- OFFER / PRICING -->
+<section class="block" id="angebot">
+  <div class="sec-head">
+    <p class="eyebrow">Das Angebot</p>
+    <h2>Ein Preis, der zu deiner Praxis passt.</h2>
+    <p>Was Praxly kostet, richtet sich nach Praxisgröße und Funktionsumfang. Dein individuelles Angebot bekommst du im kostenlosen Erstgespräch – transparent und ohne Überraschungen.</p>
+  </div>
+  <div class="offer-wrap">
+    <div class="offer-card">
+      <h3>Im Preis immer enthalten</h3>
+      <ul class="offer-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
+      </ul>
+    </div>
+    <div class="offer-side">
+      <h3>Individuelles Angebot</h3>
+      <p>Im kostenlosen Erstgespräch schauen wir uns deine Praxis an und du bekommst ein passendes Angebot – ganz ohne Risiko.</p>
+      <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block alt" id="faq">
+  <div class="sec-head">
+    <p class="eyebrow">Häufige Fragen</p>
+    <h2>Alles, was du vor dem Start wissen willst.</h2>
+  </div>
+  <div class="faq-wrap">
+    <details class="faq-item">
+      <summary>Wie aufwändig ist der Umstieg auf Praxly?</summary>
+      <div class="faq-body">Für dich fällt kaum Aufwand an: Praxly wird schlüsselfertig für dich eingerichtet. Kalender, Buchungsseite, Vorlagen und Erinnerungen sind fertig konfiguriert, wenn du startest – du musst nichts selbst umstellen.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Können bestehende Daten übernommen werden?</summary>
+      <div class="faq-body">Ja. Vorhandene Patienten- und Termindaten lassen sich übernehmen. Was genau geht und wie das abläuft, klären wir im Erstgespräch – so startest du nicht bei null.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Wie steht es um Datenschutz und DSGVO?</summary>
+      <div class="faq-body">Praxly ist DSGVO-konform und die Daten liegen ausschließlich in der EU (Frankfurt). Jede Praxis ist strikt von anderen getrennt (Mandantentrennung) und sieht nur ihre eigenen Daten.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Was kostet Praxly?</summary>
+      <div class="faq-body">Der Preis richtet sich nach Praxisgröße und Funktionsumfang – deshalb gibt es kein Pauschalangebot von der Stange. Persönliche Einrichtung, Support und Updates sind immer inklusive. Dein individuelles Angebot bekommst du im kostenlosen Erstgespräch.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Ich bin nicht besonders technikaffin – ist das ein Problem?</summary>
+      <div class="faq-body">Nein. Praxly ist bewusst einfach gehalten und wird persönlich für dich eingerichtet und erklärt. Du bekommst eine Einführung und kannst jederzeit direkt nachfragen – ohne Fachchinesisch.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Wie funktioniert der Support?</summary>
+      <div class="faq-body">Direkt und persönlich. Bei Fragen bekommst du schnelle Antworten von einem festen Ansprechpartner – kein anonymes Ticket-System, keine endlose Warteschleife.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Gibt es eine lange Vertragsbindung?</summary>
+      <div class="faq-body">Die Konditionen sind transparent und werden im Erstgespräch klar besprochen – keine versteckten Bedingungen und kein Kleingedrucktes. Was für dich gilt, weißt du, bevor du dich entscheidest.</div>
+    </details>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final" id="kontakt">
-  <p class="eyebrow" style="color:var(--green);">Jetzt in der Startphase</p>
-  <h2>Lern Praxly kennen und sichere dir früh deinen Platz.</h2>
-  <p>Praxly ist neu und startet mit wenigen ausgewählten Praxen. Trag dich ein – du bekommst eine Nachricht und einen Einblick, wie Praxly deinen Praxis-Alltag spürbar einfacher macht.</p>
+  <p class="eyebrow" style="color:var(--green);">Kostenloses Erstgespräch</p>
+  <h2>Sieh dir Praxly an – unverbindlich und ohne Risiko.</h2>
+  <p>Im kostenlosen Erstgespräch bekommst du einen persönlichen Einblick und wir schauen gemeinsam, ob Praxly zu deiner Praxis passt. Ganz ohne Verkaufsdruck.</p>
 
-  <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
-    <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
-    <button type="submit" class="btn btn-primary">Platz sichern</button>
-    <input type="hidden" name="locale" value="de">
-    <input type="hidden" name="html_type" value="simple">
-    <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-    <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, zu Praxly per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></label>
-  </form>
-  <div class="cta-success" id="finalSuccess">
-    <strong>Danke!</strong> Du bekommst in Kürze eine Nachricht und einen ersten Einblick in Praxly.
+  <div class="hero-actions" style="justify-content:center;">
+    <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+    <a href="mailto:sanna@praxly.at" class="btn btn-secondary">Lieber schreiben?</a>
   </div>
-  <p class="cta-note">Unverbindlich · kein Verkaufsdruck</p>
+  <p class="final-note">Unverbindlich · kein Verkaufsdruck · oder schreib direkt an <a href="mailto:sanna@praxly.at">sanna@praxly.at</a></p>
+
+  <!-- Sekundäre Option: E-Mail-Einblick (Brevo) für alle, die noch kein Gespräch wollen -->
+  <div class="secondary-optin">
+    <h3>Noch nicht bereit für ein Gespräch?</h3>
+    <p>Bekomme einen kurzen Einblick in Praxly per E-Mail – in Ruhe und ohne Verkaufsdruck.</p>
+    <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
+      <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
+      <button type="submit" class="btn btn-primary">Einblick per E-Mail</button>
+      <input type="hidden" name="locale" value="de">
+      <input type="hidden" name="html_type" value="simple">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+      <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, zu Praxly per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></label>
+    </form>
+    <div class="cta-success" id="finalSuccess">
+      <strong>Danke!</strong> Du bekommst in Kürze eine Nachricht und einen ersten Einblick in Praxly.
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -845,12 +1081,20 @@
     <a href="index.html" class="logo"><img src="logo.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
     <ul class="footer-links">
       <li><a href="#funktionen">Funktionen</a></li>
+      <li><a href="#angebot">Angebot</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="mailto:sanna@praxly.at">sanna@praxly.at</a></li>
       <li><a href="impressum.html">Impressum</a></li>
       <li><a href="datenschutz.html">Datenschutz</a></li>
     </ul>
     <p class="foot-copy">© 2026 Praxly</p>
   </div>
 </footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta">
+  <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+</div>
 
 <script>
   (function () {
