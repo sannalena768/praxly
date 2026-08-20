@@ -387,12 +387,16 @@
   /* ---------- SECTION HEADS ---------- */
   .sec-head { text-align: center; max-width: 640px; margin: 0 auto 46px; }
   .eyebrow {
+    display: inline-block;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--green-dark);
-    margin-bottom: 12px;
+    background: var(--green-light);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
   }
   .sec-head h2 {
     font-size: clamp(1.7rem, 4.5vw, 2.5rem);
@@ -712,7 +716,7 @@
       border-top: 1px solid var(--gray-mid);
     }
     .mobile-cta .btn { width: 100%; }
-    body { padding-bottom: 78px; }
+    body { padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
   }
 
   /* ---------- RESPONSIVE ---------- */
@@ -741,6 +745,21 @@
     .hv-chip-1 { top: -12px; right: 0; }
     .hv-chip-2 { bottom: -14px; left: 0; }
     .offer-card, .offer-side { padding: 28px 22px; }
+  }
+  /* ---------- A11y & Polish ---------- */
+  a, button, summary, input { -webkit-tap-highlight-color: transparent; }
+  a:focus-visible, button:focus-visible, summary:focus-visible,
+  input:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--green-dark);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .pain-card, .feat-card, .why-card, .step {
+    box-shadow: 0 6px 20px -14px rgba(15,31,20,0.35);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   }
 </style>
 </head>
@@ -771,7 +790,7 @@
         <a href="#funktionen" class="btn btn-secondary">Funktionen ansehen</a>
       </div>
       <p class="cta-note">
-        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         Unverbindliches Erstgespräch · persönliche Einrichtung · DSGVO-konform
       </p>
     </div>
@@ -821,19 +840,19 @@
 <section class="trust">
   <div class="trust-grid">
     <div class="trust-item">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       Daten in der EU (Frankfurt)
     </div>
     <div class="trust-item">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       DSGVO · Mandantentrennung
     </div>
     <div class="trust-item">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
       Für Physiotherapeut:innen gebaut
     </div>
     <div class="trust-item">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       Persönliche Betreuung · in Österreich entwickelt
     </div>
   </div>
@@ -994,11 +1013,11 @@
     <div class="offer-card">
       <h3>Im Preis immer enthalten</h3>
       <ul class="offer-list">
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
       </ul>
     </div>
     <div class="offer-side">
@@ -1064,7 +1083,7 @@
     <h3>Noch nicht bereit für ein Gespräch?</h3>
     <p>Bekomme einen kurzen Einblick in Praxly per E-Mail – in Ruhe und ohne Verkaufsdruck.</p>
     <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
-      <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
+      <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" maxlength="120" autocomplete="email" required>
       <button type="submit" class="btn btn-primary">Einblick per E-Mail</button>
       <input type="hidden" name="locale" value="de">
       <input type="hidden" name="html_type" value="simple">
@@ -1120,12 +1139,23 @@
         body.set('html_type', 'simple');
         body.set('einwilligung', 'ja');
         function done() { form.style.display = 'none'; success.classList.add('show'); }
+        function fail() {
+          if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+          var msg = form.querySelector('.form-error');
+          if (!msg) {
+            msg = document.createElement('p');
+            msg.className = 'form-error';
+            msg.style.cssText = 'margin-top:12px;font-size:0.86rem;color:#c0392b;';
+            form.appendChild(msg);
+          }
+          msg.innerHTML = 'Das hat leider nicht geklappt. Schreib mir kurz an <a href="mailto:sanna@praxly.at">sanna@praxly.at</a> – ich melde mich persönlich.';
+        }
         fetch(form.action, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: body.toString()
-        }).then(done).catch(done);
+        }).then(done).catch(fail);
       });
     }
     wire('finalForm', 'finalSuccess');
