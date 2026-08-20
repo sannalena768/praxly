@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Praxly — Praxissoftware für Physiotherapie in Österreich & DACH</title>
-<meta name="description" content="Praxly ist die Praxissoftware für Physiotherapie- und Therapie-Praxen in Österreich und im DACH-Raum: Online-Terminbuchung 24/7, automatische Erinnerungen gegen Ausfälle, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform auf Servern in der EU. Persönlich für dich eingerichtet.">
+<meta name="description" content="Praxissoftware für Physiotherapie-Praxen: Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese & Honorarnoten. DSGVO-konform, Server in der EU.">
 <link rel="icon" href="logo.png">
 <link rel="canonical" href="https://praxly.at/">
 
@@ -58,7 +58,7 @@
 <style>
   :root {
     --green: #2ECC71;
-    --green-dark: #1a9e52;
+    --green-dark: #157a3f;
     --green-light: #e8faf1;
     --green-mid: #a8edca;
     --ink: #0f1f14;
@@ -114,7 +114,8 @@
     gap: 8px;
     text-decoration: none;
   }
-  .logo img { height: 34px; width: auto; }
+  .logo img { height: 34px; width: auto; flex-shrink: 0; }
+  .logo { min-width: 0; }
   .nav-links {
     display: flex;
     align-items: center;
@@ -159,7 +160,7 @@
     box-shadow: none;
   }
   .btn-secondary:hover { border-color: var(--green-mid); color: var(--green-dark); transform: translateY(-2px); }
-  .nav-cta { padding: 10px 20px; min-height: 44px; font-size: 0.92rem; }
+  .nav-cta { padding: 10px 20px; min-height: 48px; font-size: 0.92rem; white-space: nowrap; flex-shrink: 0; }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -692,13 +693,14 @@
   }
   footer .logo { color: var(--white); }
   .footer-links { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; align-items: center; }
-  .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; }
+  .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; padding: 8px 0; }
   .footer-links a:hover { color: var(--green); }
   .foot-copy { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 
   /* ---------- MOBILE STICKY CTA ---------- */
   .mobile-cta { display: none; }
   @media (max-width: 767px) {
+    .nav-cta { display: none; }
     .mobile-cta {
       display: block;
       position: fixed;
@@ -715,6 +717,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 900px) {
+    .nav-links .nav-item { display: none; }
     .hero-grid { grid-template-columns: 1fr; gap: 52px; }
     .hero-grid > * { min-width: 0; }
     .hero-copy { max-width: 100%; }
@@ -768,7 +771,7 @@
         <a href="#funktionen" class="btn btn-secondary">Funktionen ansehen</a>
       </div>
       <p class="cta-note">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         Unverbindliches Erstgespräch · persönliche Einrichtung · DSGVO-konform
       </p>
     </div>
@@ -818,19 +821,19 @@
 <section class="trust">
   <div class="trust-grid">
     <div class="trust-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       Daten in der EU (Frankfurt)
     </div>
     <div class="trust-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       DSGVO · Mandantentrennung
     </div>
     <div class="trust-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
-      Für Physiotherapeuten gebaut
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
+      Für Physiotherapeut:innen gebaut
     </div>
     <div class="trust-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       Persönliche Betreuung · in Österreich entwickelt
     </div>
   </div>
@@ -846,7 +849,7 @@
     <div class="pain-card">
       <span class="pic">📞</span>
       <h3>Das Telefon steht nicht still</h3>
-      <p>Termine, Absagen und Verschiebungen laufen über Anrufe und Zettel – während du eigentlich am Patienten arbeitest.</p>
+      <p>Termine, Absagen und Verschiebungen laufen über Anrufe und Zettel – während du eigentlich behandelst.</p>
     </div>
     <div class="pain-card">
       <span class="pic">🕳️</span>
@@ -991,11 +994,11 @@
     <div class="offer-card">
       <h3>Im Preis immer enthalten</h3>
       <ul class="offer-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a9e52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
       </ul>
     </div>
     <div class="offer-side">
@@ -1125,7 +1128,6 @@
         }).then(done).catch(done);
       });
     }
-    wire('heroForm', 'heroSuccess');
     wire('finalForm', 'finalSuccess');
   })();
 </script>
