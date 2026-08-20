@@ -6,6 +6,7 @@
 <title>Praxly — Praxissoftware für Physiotherapie in Österreich & DACH</title>
 <meta name="description" content="Praxly ist die Praxissoftware für Physiotherapie- und Therapie-Praxen in Österreich und im DACH-Raum: Online-Terminbuchung 24/7, automatische Erinnerungen gegen Ausfälle, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform auf Servern in der EU. Persönlich für dich eingerichtet.">
 <link rel="icon" href="logo.png">
+<link rel="canonical" href="https://praxly.at/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
@@ -40,8 +41,6 @@
       "description": "Praxissoftware für Physiotherapie- und Therapie-Praxen im DACH-Raum: Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation und Honorarnoten. DSGVO-konform mit Datenhaltung in der EU.",
       "offers": {
         "@type": "Offer",
-        "priceCurrency": "EUR",
-        "price": "0",
         "description": "Fester monatlicher Preis ohne Einrichtungsgebühr, alle Funktionen inklusive. Konditionen im kostenlosen Erstgespräch."
       }
     },
@@ -1116,6 +1115,7 @@
         body.set('email_address_check', '');
         body.set('locale', 'de');
         body.set('html_type', 'simple');
+        body.set('einwilligung', 'ja');
         function done() { form.style.display = 'none'; success.classList.add('show'); }
         fetch(form.action, {
           method: 'POST',
