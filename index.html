@@ -18,7 +18,7 @@
 <meta property="og:locale" content="de_AT">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
 <meta name="twitter:description" content="Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform, Server in der EU. Persönlich eingerichtet.">
 <meta name="twitter:image" content="https://praxly.at/logo.png">
@@ -41,7 +41,7 @@
       "description": "Praxissoftware für Physiotherapie- und Therapie-Praxen im DACH-Raum: Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation und Honorarnoten. DSGVO-konform mit Datenhaltung in der EU.",
       "offers": {
         "@type": "Offer",
-        "description": "Fester monatlicher Preis ohne Einrichtungsgebühr, alle Funktionen inklusive. Konditionen im kostenlosen Erstgespräch."
+        "description": "Fester monatlicher Preis ohne Einrichtungsgebühr, alle Funktionen inklusive. Solo € 79/Monat, Praxis € 119/Monat – 14 Tage kostenlos testen."
       }
     },
     {
@@ -551,6 +551,69 @@
   .offer-side p { font-size: 0.95rem; color: rgba(255,255,255,0.72); margin-bottom: 22px; }
   .offer-side .btn { width: 100%; }
 
+  /* ---------- PRICING ---------- */
+  .pricing-grid {
+    max-width: 780px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .pricing-card {
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 20px;
+    padding: 32px 30px;
+    position: relative;
+  }
+  .pricing-card-featured {
+    background: var(--ink);
+    border-color: transparent;
+    box-shadow: 0 30px 60px -30px rgba(15,31,20,0.5);
+  }
+  .pricing-badge {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: var(--green);
+    color: #06341c;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .pricing-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+  .pricing-amount {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .pricing-card-featured .pricing-amount { color: #fff; }
+  .pricing-per {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ink-light);
+  }
+  .pricing-card-featured .pricing-per { color: rgba(255,255,255,0.6); }
+  .pricing-sub {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    margin-top: 6px;
+    margin-bottom: 4px;
+  }
+  @media (max-width: 640px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+
   /* ---------- FAQ ---------- */
   .faq-wrap { max-width: 780px; margin: 0 auto; }
   .faq-item {
@@ -624,6 +687,9 @@
   }
   .secondary-optin h3 { font-family: var(--font-display); font-size: 1.15rem; color: #fff; margin-bottom: 8px; }
   .secondary-optin > p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin: 0 auto 20px; max-width: 460px; }
+  .secondary-contact { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 16px; }
+  .secondary-contact a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+  .secondary-contact a:hover { color: var(--green); }
   .cta-form {
     display: flex;
     gap: 10px;
@@ -773,7 +839,7 @@
     <li class="nav-item"><a href="#warum">Warum Praxly</a></li>
     <li class="nav-item"><a href="#angebot">Angebot</a></li>
     <li class="nav-item"><a href="#faq">FAQ</a></li>
-    <li><a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Demo vereinbaren</a></li>
+    <li><a href="https://app.praxly.at/registrierung" class="btn btn-primary nav-cta">Kostenlos testen</a></li>
   </ul>
 </nav>
 
@@ -786,12 +852,12 @@
       <p class="lead">Online-Terminbuchung rund um die Uhr, automatische Erinnerungen gegen Ausfälle, digitale Anamnese und Honorarnoten – alles an einem Ort und DSGVO-konform auf Servern in der EU. Praxly wird persönlich für deine Praxis eingerichtet.</p>
 
       <div class="hero-actions">
-        <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+        <a href="https://app.praxly.at/registrierung" class="btn btn-primary">Kostenlos 14 Tage testen</a>
         <a href="#funktionen" class="btn btn-secondary">Funktionen ansehen</a>
       </div>
       <p class="cta-note">
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Unverbindliches Erstgespräch · persönliche Einrichtung · DSGVO-konform
+        14 Tage kostenlos · keine Kreditkarte · monatlich kündbar
       </p>
     </div>
 
@@ -853,7 +919,7 @@
     </div>
     <div class="trust-item">
       <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-      Persönliche Betreuung · in Österreich entwickelt
+      Support per E-Mail &amp; WhatsApp · in Österreich entwickelt
     </div>
   </div>
 </section>
@@ -928,8 +994,8 @@
     </div>
     <div class="feat-card">
       <div class="feat-ic">🧾</div>
-      <h3>Honorarnoten &amp; Mahnwesen</h3>
-      <p>Rechnungen als PDF erstellen, offene Beträge mit automatischen Zahlungserinnerungen im Blick. <span class="benefit">Du wirst schneller bezahlt und läufst offenen Beträgen nicht hinterher.</span></p>
+      <h3>Honorarnoten &amp; Kassenrückerstattung</h3>
+      <p>Honorarnoten als PDF mit allen Pflichtangaben für die Kostenrückerstattung beim Krankenversicherungsträger – SV-Nummer, ärztliche Verordnung, Zahlungsdatum. <span class="benefit">Patient:innen können den Beleg direkt einreichen, du wirst schneller bezahlt.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">🏢</div>
@@ -986,18 +1052,18 @@
   <div class="steps">
     <div class="step">
       <div class="num">1</div>
-      <h3>Kennenlernen</h3>
-      <p>Im kostenlosen Erstgespräch lernst du Praxly in Ruhe kennen – abgestimmt darauf, wie deine Praxis arbeitet. Ganz unverbindlich.</p>
+      <h3>Kostenlos registrieren</h3>
+      <p>In 5 Minuten anmelden: Praxisname, Branche, erste Leistung eintragen – fertig. Kein Gespräch, keine Kreditkarte, kein Warten.</p>
     </div>
     <div class="step">
       <div class="num">2</div>
-      <h3>Einrichtung inklusive</h3>
-      <p>Kalender, Buchungsseite, Vorlagen und Erinnerungen kommen fertig eingerichtet – du musst nichts selbst konfigurieren.</p>
+      <h3>Praxis einrichten</h3>
+      <p>Patient:innen anlegen, Team einladen, Buchungsseite aktivieren. Alles geht intuitiv – und bei Fragen ist Hilfe immer direkt erreichbar.</p>
     </div>
     <div class="step">
       <div class="num">3</div>
-      <h3>Live gehen</h3>
-      <p>Deine Praxis nutzt Praxly im Alltag – mit direkter Betreuung, wann immer du Fragen hast.</p>
+      <h3>Im Alltag loslegen</h3>
+      <p>Termine, Erinnerungen, Honorarnoten – alles läuft. Nach den 14 Tagen entscheidest du, ob du weitermachst. Monatlich kündbar.</p>
     </div>
   </div>
 </section>
@@ -1005,27 +1071,40 @@
 <!-- OFFER / PRICING -->
 <section class="block" id="angebot">
   <div class="sec-head">
-    <p class="eyebrow">Das Angebot</p>
-    <h2>Ein fairer Preis. Alles inklusive.</h2>
-    <p>Praxly kostet <strong>300 € pro Monat</strong> – ganz ohne Einrichtungsgebühr und ohne versteckte Zusatzkosten. In diesem Preis ist wirklich alles enthalten: sämtliche Funktionen, die persönliche Einrichtung deiner Praxis, laufende Updates und ein fester Ansprechpartner für den Support. Die Mindestlaufzeit beträgt nur 2 Monate, danach ist Praxly monatlich kündbar. Kein Paket-Dschungel, keine Staffelpreise, keine Überraschungen auf der Rechnung – ein Preis, der von Anfang an klar ist.</p>
+    <p class="eyebrow">Preise</p>
+    <h2>Klare Preise. Alles inklusive. Monatlich kündbar.</h2>
+    <p>Kein Paket-Dschungel, keine Einrichtungsgebühr, keine Mindestlaufzeit. 14 Tage kostenlos testen – keine Kreditkarte nötig.</p>
   </div>
-  <div class="offer-wrap">
-    <div class="offer-card">
-      <h3>Im Preis immer enthalten</h3>
-      <ul class="offer-list">
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Persönliche Einrichtung deiner Praxis – Kalender, Buchungsseite und Vorlagen kommen fertig konfiguriert.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive – von Online-Terminbuchung bis Honorarnoten.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direkter, persönlicher Support – kein anonymes Ticket-System.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laufende Updates – deine Software bleibt automatisch aktuell.</li>
-        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Daten in der EU, DSGVO-konform und mandantengetrennt.</li>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-label">Einzeltherapeut:in</div>
+      <div class="pricing-amount">€ 79<span class="pricing-per">/Monat</span></div>
+      <div class="pricing-sub">Solo-Praxis · 1 Therapeut:in</div>
+      <ul class="offer-list" style="margin-top:20px;">
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alle Funktionen inklusive</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Online-Terminbuchung, Kalender, Honorarnoten</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Automatische Erinnerungen</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>DSGVO · Daten in der EU</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Monatlich kündbar</li>
       </ul>
+      <a href="https://app.praxly.at/registrierung" class="btn btn-secondary" style="width:100%;margin-top:24px;">14 Tage kostenlos testen</a>
     </div>
-    <div class="offer-side">
-      <h3>Kostenloses Erstgespräch</h3>
-      <p>Im kostenlosen Erstgespräch schauen wir uns gemeinsam deine Praxis an, klären deine Fragen und du siehst genau, wie Praxly dir im Alltag Arbeit abnimmt. Du bekommst einen klaren Überblick über den Ablauf und die Einrichtung – unverbindlich und ganz ohne Risiko.</p>
-      <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+    <div class="pricing-card pricing-card-featured">
+      <div class="pricing-badge">Für Praxen mit Team</div>
+      <div class="pricing-label" style="color:rgba(255,255,255,0.8);">Praxis</div>
+      <div class="pricing-amount">€ 119<span class="pricing-per">/Monat</span></div>
+      <div class="pricing-sub" style="color:rgba(255,255,255,0.7);">Bis zu 5 Therapeut:innen</div>
+      <ul class="offer-list" style="margin-top:20px;">
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8edca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="color:rgba(255,255,255,0.88);">Alles aus Solo inklusive</span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8edca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="color:rgba(255,255,255,0.88);">Team-Kalender für alle Therapeut:innen</span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8edca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="color:rgba(255,255,255,0.88);">Honorarnote pro Therapeut:in (Name, UID, Nummernkreis)</span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8edca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="color:rgba(255,255,255,0.88);">Rollen: Inhaber:in, Therapeut:in, Empfang</span></li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8edca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="color:rgba(255,255,255,0.88);">Monatlich kündbar, keine Mindestlaufzeit</span></li>
+      </ul>
+      <a href="https://app.praxly.at/registrierung" class="btn btn-primary" style="width:100%;margin-top:24px;">14 Tage kostenlos testen</a>
     </div>
   </div>
+  <p style="text-align:center;margin-top:20px;font-size:0.88rem;color:var(--ink-light);">Keine Kreditkarte nötig · Keine Einrichtungsgebühr · Keine versteckten Kosten</p>
 </section>
 
 <!-- FAQ -->
@@ -1037,11 +1116,11 @@
   <div class="faq-wrap">
     <details class="faq-item">
       <summary>Wie aufwändig ist der Umstieg auf Praxly?</summary>
-      <div class="faq-body">Für dich fällt kaum Aufwand an: Praxly wird schlüsselfertig für dich eingerichtet. Kalender, Buchungsseite, Vorlagen und Erinnerungen sind bereits fertig konfiguriert, wenn du startest – du musst nichts selbst umstellen oder mühsam einrichten. Du bekommst eine persönliche Einführung, in der alles Wichtige erklärt wird, und kannst deine Praxis meist schon nach kurzer Zeit ganz normal weiterführen. Der laufende Betrieb geht ohne Unterbrechung weiter.</div>
+      <div class="faq-body">Für dich fällt kaum Aufwand an: Praxly ist in 5 Minuten eingerichtet. Die Grundeinstellungen (Kalender, Buchungsseite, Vorlagen, Erinnerungen) sind geführt – du klickst dich einmal durch und bist startklar. Bei Fragen ist das Praxly-Team per E-Mail oder WhatsApp erreichbar, und der laufende Betrieb geht ohne Unterbrechung weiter.</div>
     </details>
     <details class="faq-item">
       <summary>Können bestehende Daten übernommen werden?</summary>
-      <div class="faq-body">Ja. Vorhandene Patienten- und Termindaten lassen sich übernehmen, damit du nicht bei null anfängst und nichts doppelt erfassen musst. Was genau möglich ist und wie die Übernahme abläuft, hängt vom Format deiner bisherigen Daten ab – das schauen wir uns gemeinsam im Erstgespräch an und finden den einfachsten Weg für deine Praxis. Deine Daten liegen dabei jederzeit sicher in der EU.</div>
+      <div class="faq-body">Ja. Vorhandene Patienten- und Termindaten lassen sich übernehmen, damit du nicht bei null anfängst und nichts doppelt erfassen musst. Was genau möglich ist, hängt vom Format deiner bisherigen Daten ab – schreib dem Praxly-Team einfach kurz, und der einfachste Weg wird gemeinsam gefunden. Deine Daten liegen dabei jederzeit sicher in der EU.</div>
     </details>
     <details class="faq-item">
       <summary>Wie steht es um Datenschutz und DSGVO?</summary>
@@ -1049,62 +1128,63 @@
     </details>
     <details class="faq-item">
       <summary>Was kostet Praxly?</summary>
-      <div class="faq-body">Praxly kostet <strong>300 € pro Monat</strong> – ohne Einrichtungsgebühr und ohne versteckte Zusatzkosten. In diesem Preis ist alles enthalten: sämtliche Funktionen, die persönliche Einrichtung deiner Praxis, laufende Updates und ein fester Ansprechpartner für den Support. Es gibt keine Staffelpreise und keine teuren Zusatzmodule – du zahlst einen klaren Betrag und hast von Anfang an den vollen Funktionsumfang. Die Mindestlaufzeit beträgt nur 2 Monate, danach ist Praxly monatlich kündbar.</div>
+      <div class="faq-body">Es gibt zwei klare Tarife: <strong>Solo (1 Therapeut:in) € 79/Monat</strong> und <strong>Praxis (bis 5 Therapeut:innen) € 119/Monat</strong>. Keine Einrichtungsgebühr, keine Mindestlaufzeit, keine versteckten Kosten. Alle Funktionen sind in beiden Tarifen enthalten. Die ersten 14 Tage sind kostenlos – keine Kreditkarte nötig.</div>
     </details>
     <details class="faq-item">
       <summary>Ich bin nicht besonders technikaffin – ist das ein Problem?</summary>
-      <div class="faq-body">Überhaupt nicht. Praxly ist bewusst einfach und übersichtlich gehalten, damit du dich ohne Vorwissen schnell zurechtfindest. Die Einrichtung übernehme ich komplett für dich, und in einer persönlichen Einführung wird dir alles in Ruhe und ohne Fachchinesisch erklärt. Wenn später eine Frage aufkommt, kannst du jederzeit direkt nachfragen – du wirst zu keinem Zeitpunkt mit der Technik allein gelassen.</div>
+      <div class="faq-body">Überhaupt nicht. Praxly ist bewusst einfach und übersichtlich gehalten, damit du dich ohne Vorwissen schnell zurechtfindest. Die Registrierung dauert etwa 5 Minuten, und wenn danach eine Frage aufkommt, kannst du das Praxly-Team jederzeit direkt kontaktieren – du wirst zu keinem Zeitpunkt mit der Technik allein gelassen.</div>
     </details>
     <details class="faq-item">
       <summary>Wie funktioniert der Support?</summary>
-      <div class="faq-body">Direkt und persönlich. Bei Fragen oder Problemen bekommst du schnelle Antworten von einem festen Ansprechpartner, der deine Praxis kennt – kein anonymes Ticket-System und keine endlose Warteschleife. Auch kleinere Anpassungswünsche oder Unklarheiten lassen sich so unkompliziert klären. Der Support ist bereits im monatlichen Preis enthalten und kostet dich nichts extra.</div>
+      <div class="faq-body">Direkt und persönlich. Bei Fragen oder Problemen bekommst du schnelle Antworten von einem festen Ansprechpartner, der deine Praxis kennt – kein anonymes Ticket-System und keine endlose Warteschleife. Der Support ist im monatlichen Preis enthalten und kostet nichts extra.</div>
     </details>
     <details class="faq-item">
-      <summary>Gibt es eine lange Vertragsbindung?</summary>
-      <div class="faq-body">Nein. Die Mindestlaufzeit beträgt lediglich 2 Monate – danach ist Praxly jederzeit monatlich kündbar. Du bindest dich also nicht über Jahre und kannst in Ruhe ausprobieren, ob Praxly zu deiner Praxis passt. Alle Konditionen werden im Erstgespräch offen und klar besprochen – keine versteckten Bedingungen, kein Kleingedrucktes und keine automatische Verlängerung, die du übersiehst.</div>
+      <summary>Gibt es eine Mindestlaufzeit?</summary>
+      <div class="faq-body">Nein. Praxly ist monatlich kündbar – keine Mindestlaufzeit, keine automatische Verlängerung. Du testest 14 Tage kostenlos und entscheidest danach, ob du weitermachst. Keine versteckten Bedingungen, kein Kleingedrucktes.</div>
     </details>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final" id="kontakt">
-  <p class="eyebrow" style="color:var(--green);">Kostenloses Erstgespräch</p>
-  <h2>Sieh dir Praxly an – unverbindlich und ohne Risiko.</h2>
-  <p>Im kostenlosen Erstgespräch bekommst du einen persönlichen Einblick und wir schauen gemeinsam, ob Praxly zu deiner Praxis passt. Ganz ohne Verkaufsdruck.</p>
+  <p class="eyebrow" style="color:var(--green);">Jetzt starten</p>
+  <h2>14 Tage kostenlos testen – ohne Risiko.</h2>
+  <p>Registriere deine Praxis in 5 Minuten. Keine Kreditkarte, keine Mindestlaufzeit, kein Gespräch nötig.</p>
 
   <div class="hero-actions" style="justify-content:center;">
-    <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
-    <a href="mailto:sanna@praxly.at" class="btn btn-secondary">Lieber schreiben?</a>
+    <a href="https://app.praxly.at/registrierung" class="btn btn-primary">Kostenlos 14 Tage testen</a>
   </div>
-  <p class="final-note">Unverbindlich · kein Verkaufsdruck · oder schreib direkt an <a href="mailto:sanna@praxly.at">sanna@praxly.at</a></p>
+  <p class="final-note">Keine Kreditkarte · keine Mindestlaufzeit · monatlich kündbar</p>
 
-  <!-- Sekundäre Option: E-Mail-Einblick (Brevo) für alle, die noch kein Gespräch wollen -->
+  <!-- Sekundäre Option: E-Mail-Einblick (Brevo) -->
   <div class="secondary-optin">
-    <h3>Noch nicht bereit für ein Gespräch?</h3>
-    <p>Bekomme einen kurzen Einblick in Praxly per E-Mail – in Ruhe und ohne Verkaufsdruck.</p>
+    <h3>Lieber schreiben?</h3>
+    <p>Schreib uns direkt – wir antworten in der Regel innerhalb von 24 Stunden.</p>
     <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
       <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" maxlength="120" autocomplete="email" required>
-      <button type="submit" class="btn btn-primary">Einblick per E-Mail</button>
+      <button type="submit" class="btn btn-primary">Schreib uns</button>
       <input type="hidden" name="locale" value="de">
       <input type="hidden" name="html_type" value="simple">
       <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-      <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, zu Praxly per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></label>
+      <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, vom Praxly-Team per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></label>
     </form>
     <div class="cta-success" id="finalSuccess">
-      <strong>Danke!</strong> Du bekommst in Kürze eine Nachricht und einen ersten Einblick in Praxly.
+      <strong>Danke!</strong> Das Praxly-Team meldet sich – in der Regel innerhalb von 24 Stunden.
     </div>
+    <p class="secondary-contact">Oder direkt: <a href="mailto:sanna@praxly.at">sanna@praxly.at</a> · <a href="https://wa.me/436642140654">WhatsApp</a></p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="foot-wrap">
-    <a href="index.html" class="logo"><img src="logo.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Praxly Logo" width="34" height="34" loading="lazy"> Praxly</a>
     <ul class="footer-links">
       <li><a href="#funktionen">Funktionen</a></li>
       <li><a href="#angebot">Angebot</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="mailto:sanna@praxly.at">sanna@praxly.at</a></li>
+      <li><a href="https://wa.me/436642140654">WhatsApp</a></li>
       <li><a href="impressum.html">Impressum</a></li>
       <li><a href="datenschutz.html">Datenschutz</a></li>
     </ul>
@@ -1114,7 +1194,7 @@
 
 <!-- MOBILE STICKY CTA -->
 <div class="mobile-cta">
-  <a href="https://calendly.com/sannalena-slg/kostenloses-erstgesprach" target="_blank" rel="noopener" class="btn btn-primary">Demo vereinbaren</a>
+  <a href="https://app.praxly.at/registrierung" class="btn btn-primary">Kostenlos 14 Tage testen</a>
 </div>
 
 <script>
