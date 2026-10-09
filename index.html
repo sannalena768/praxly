@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praxly — Praxissoftware für Physiotherapie in Österreich & DACH</title>
-<meta name="description" content="Praxissoftware für Physiotherapie in Österreich: Honorarnoten für Wahltherapeuten, Kostenrückerstattung ÖGK, Online-Terminbuchung & digitale Anamnese. DSGVO-konform, Server in der EU.">
+<title>Praxly — Praxissoftware für Physiotherapie in Österreich | Honorarnoten, Termine, Doku</title>
+<meta name="description" content="Praxissoftware für Physiotherapie in Österreich: Honorarnoten für Wahltherapeuten, Kostenrückerstattung, Online-Terminbuchung & Dokumentation. Ab € 79/Monat, 14 Tage gratis testen.">
 <link rel="icon" href="logo.png">
 <link rel="canonical" href="https://praxly.at/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
-<meta property="og:description" content="Praxissoftware für Physiotherapie in Österreich: Honorarnoten für Wahltherapeuten, Kostenrückerstattung ÖGK, Online-Terminbuchung, digitale Anamnese. DSGVO-konform, Server in der EU. 14 Tage gratis testen.">
+<meta property="og:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich">
+<meta property="og:description" content="Praxissoftware für Physiotherapie in Österreich: Honorarnoten für Wahltherapeuten, Kostenrückerstattung, Online-Terminbuchung, Dokumentation. DSGVO-konform, Server in der EU. 14 Tage gratis testen.">
 <meta property="og:image" content="https://praxly.at/logo.png">
 <meta property="og:url" content="https://praxly.at">
 <meta property="og:type" content="website">
@@ -19,13 +19,13 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich & DACH">
+<meta name="twitter:title" content="Praxly — Praxissoftware für Physiotherapie in Österreich">
 <meta name="twitter:description" content="Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. DSGVO-konform, Server in der EU. Persönlich eingerichtet.">
 <meta name="twitter:image" content="https://praxly.at/logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=optional" rel="stylesheet">
+<link rel="preload" href="/fonts/Syne-latin-8vIH7w4qzm.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/DMSans-latin-rP2Yp2ywxg.woff2" as="font" type="font/woff2" crossorigin>
+<link href="/fonts/fonts.css" rel="stylesheet">
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -38,11 +38,11 @@
       "url": "https://praxly.at",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "Praxissoftware für Physiotherapie- und Therapie-Praxen im DACH-Raum: Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation und Honorarnoten. DSGVO-konform mit Datenhaltung in der EU.",
-      "offers": {
-        "@type": "Offer",
-        "description": "Fester monatlicher Preis ohne Einrichtungsgebühr, alle Funktionen inklusive. Solo € 79/Monat, Praxis € 149/Monat – 14 Tage kostenlos testen."
-      }
+      "description": "Praxissoftware für Physiotherapie- und Therapie-Praxen in Österreich: Online-Terminbuchung, Kalender, automatische Erinnerungen, digitale Anamnese, Dokumentation und Honorarnoten. DSGVO-konform mit Datenhaltung in der EU.",
+      "offers": [
+        { "@type": "Offer", "name": "Solo (1 Therapeut:in)", "price": "79", "priceCurrency": "EUR", "url": "https://app.praxly.at/registrierung" },
+        { "@type": "Offer", "name": "Praxis (bis 5 Therapeut:innen)", "price": "149", "priceCurrency": "EUR", "url": "https://app.praxly.at/registrierung" }
+      ]
     },
     {
       "@type": "Organization",
@@ -50,7 +50,7 @@
       "url": "https://praxly.at",
       "logo": "https://praxly.at/logo.png",
       "email": "sanna@praxly.at",
-      "areaServed": ["AT", "DE", "CH"],
+      "areaServed": "AT",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -60,6 +60,79 @@
       "sameAs": []
     }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Wie aufwändig ist der Umstieg auf Praxly?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Für dich fällt kaum Aufwand an: Die Registrierung dauert wenige Minuten, danach führt dich ein Einrichtungs-Assistent in 5 Schritten durch die Grundeinstellungen bis zur ersten Honorarnote. Bei Fragen ist das Praxly-Team per E-Mail oder WhatsApp erreichbar, und der laufende Betrieb geht ohne Unterbrechung weiter."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Können bestehende Daten übernommen werden?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Das Praxly-Team hilft dir beim Übertragen deiner bestehenden Patientendaten, damit du nicht bei null anfängst. Was genau möglich ist, hängt vom Format deiner bisherigen Daten ab – schreib dem Praxly-Team kurz, welches Programm du bisher nutzt, dann wird gemeinsam der einfachste Weg gesucht."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wie steht es um Datenschutz und DSGVO?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Datenschutz hat bei Gesundheitsdaten oberste Priorität – deshalb ist Praxly von Grund auf DSGVO-konform aufgebaut. Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt). Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht transparent in der Datenschutzerklärung. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. So bleiben die sensiblen Informationen deiner Patient:innen jederzeit geschützt."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Was kostet Praxly?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Es gibt zwei klare Tarife: Solo (1 Therapeut:in) € 79/Monat und Praxis (bis 5 Therapeut:innen) € 149/Monat. Keine Einrichtungsgebühr, keine Mindestlaufzeit, keine versteckten Kosten. Alle Funktionen sind in beiden Tarifen enthalten. Die ersten 14 Tage sind kostenlos – keine Kreditkarte nötig."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ich bin nicht besonders technikaffin – ist das ein Problem?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Überhaupt nicht. Praxly ist bewusst einfach und übersichtlich gehalten, damit du dich ohne Vorwissen schnell zurechtfindest. Die Registrierung dauert etwa 5 Minuten, und wenn danach eine Frage aufkommt, kannst du das Praxly-Team jederzeit direkt kontaktieren – du wirst zu keinem Zeitpunkt mit der Technik allein gelassen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kann ich mit Praxly direkt mit der Krankenkasse abrechnen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Praxly ist für Wahltherapeut:innen gemacht: Du stellst deinen Patient:innen eine Honorarnote mit allen Pflichtangaben aus, und sie reichen diese selbst bei ihrem Krankenversicherungsträger zur Kostenrückerstattung ein. Eine direkte Abrechnung mit der Krankenkasse bietet Praxly nicht an."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wie funktioniert der Support?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Direkt und persönlich. Bei Fragen oder Problemen schreibst du dem Praxly-Team per E-Mail oder WhatsApp und bekommst in der Regel innerhalb von 24 Stunden eine Antwort – kein anonymes Ticket-System, keine Warteschleife. Support läuft schriftlich, nicht per Telefon. Der Support ist im monatlichen Preis enthalten und kostet nichts extra."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gibt es eine Mindestlaufzeit?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Praxly ist monatlich kündbar – keine Mindestlaufzeit, jederzeit zum Ende des Abrechnungsmonats kündbar. Du testest 14 Tage kostenlos und entscheidest danach, ob du weitermachst. Keine versteckten Bedingungen, kein Kleingedrucktes."
+   }
+  }
+ ]
 }
 </script>
 
@@ -168,6 +241,7 @@
     box-shadow: none;
   }
   .btn-secondary:hover { border-color: var(--green-mid); color: var(--green-dark); transform: translateY(-2px); }
+  .nav-links a.nav-cta { color: #06341c; }
   .nav-cta { padding: 10px 20px; min-height: 48px; font-size: 0.92rem; white-space: nowrap; flex-shrink: 0; }
 
   /* ---------- HERO ---------- */
@@ -773,7 +847,7 @@
   .footer-links { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; align-items: center; }
   .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; padding: 8px 0; }
   .footer-links a:hover { color: var(--green); }
-  .foot-copy { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .foot-copy { font-size: 0.82rem; color: rgba(255,255,255,0.62); }
 
   /* ---------- MOBILE STICKY CTA ---------- */
   .mobile-cta { display: none; }
@@ -835,17 +909,22 @@
     * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   }
+  .rg-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  a.rg-card { text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s; }
+  a.rg-card:hover, a.rg-card:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,31,20,.08); }
+  .rg-more { display: inline-block; margin-top: 10px; font-weight: 500; color: var(--green-dark); }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="logo"><img src="logo.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
+  <a href="index.html" class="logo"><img src="logo-68.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
   <ul class="nav-links">
     <li class="nav-item"><a href="#funktionen">Funktionen</a></li>
-    <li class="nav-item"><a href="#warum">Warum Praxly</a></li>
-    <li class="nav-item"><a href="#angebot">Angebot</a></li>
+    <li class="nav-item"><a href="#fuer-wen">Für wen</a></li>
+    <li class="nav-item"><a href="#angebot">Preise</a></li>
+    <li class="nav-item"><a href="#ratgeber">Ratgeber</a></li>
     <li class="nav-item"><a href="#faq">FAQ</a></li>
     <li><a href="https://app.praxly.at/registrierung" class="btn btn-primary nav-cta">Kostenlos testen</a></li>
   </ul>
@@ -855,13 +934,13 @@
 <header class="hero">
   <div class="hero-grid">
     <div class="hero-copy">
-      <span class="badge"><span class="dot"></span> Praxissoftware für Physiotherapie · Österreich &amp; DACH</span>
+      <span class="badge"><span class="dot"></span> Praxissoftware für Physiotherapie in Österreich</span>
       <h1>Weniger Verwaltung.<br>Mehr Zeit für deine <span class="hl">Patient:innen</span>.</h1>
-      <p class="lead">Online-Terminbuchung rund um die Uhr, automatische Erinnerungen gegen Ausfälle, digitale Anamnese und Honorarnoten – alles an einem Ort und DSGVO-konform auf Servern in der EU. Bei Fragen hilft das Praxly-Team persönlich per E-Mail oder WhatsApp.</p>
+      <p class="lead">Honorarnoten mit allen Pflichtangaben für die Kostenrückerstattung, Terminkalender mit Online-Buchung, Dokumentation und automatische Erinnerungen – eine Software im Browser, gemacht für Wahltherapeut:innen in Österreich. Daten in der EU (Frankfurt).</p>
 
       <div class="hero-actions">
         <a href="https://app.praxly.at/registrierung" class="btn btn-primary">Kostenlos 14 Tage testen</a>
-        <a href="#funktionen" class="btn btn-secondary">Funktionen ansehen</a>
+        <a href="#ablauf" class="btn btn-secondary">So funktioniert’s</a>
       </div>
       <p class="cta-note">
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -998,7 +1077,7 @@
     <div class="feat-card">
       <div class="feat-ic">📋</div>
       <h3>Dokumentation &amp; Verordnungen</h3>
-      <p>Behandlungsdokumentation und Verordnungsverwaltung an einem Ort. <span class="benefit">Alles nachvollziehbar dokumentiert, wenn du es brauchst.</span></p>
+      <p>Behandlungsdokumentation mit 5 fertigen Vorlagen und Verordnungsverwaltung an einem Ort. <span class="benefit">Alles nachvollziehbar dokumentiert, wenn du es brauchst.</span></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">🧾</div>
@@ -1007,14 +1086,38 @@
     </div>
     <div class="feat-card">
       <div class="feat-ic">🏢</div>
-      <h3>Team &amp; mehrere Standorte</h3>
-      <p>Rollen für Inhaber:in, Therapeut:in und Empfang – mehrere Standorte in einer Software. <span class="benefit">Jede:r im Team sieht genau das, was er oder sie braucht.</span></p>
+      <h3>Gemeinschaftspraxis &amp; Team</h3>
+      <p>Gemeinsamer Kalender, Honorarnoten im Namen selbständiger Therapeut:innen, Rollen für Inhaber:in, Therapeut:in und Empfang – auch mit mehreren Standorten. <span class="benefit">Jede:r im Team sieht genau das, was er oder sie braucht.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FÜR WEN -->
+<section class="block" id="fuer-wen">
+  <div class="sec-head">
+    <p class="eyebrow">Für wen</p>
+    <h2>Für Solo-Praxen und Teams.</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="wic" aria-hidden="true">🧑‍⚕️</div>
+      <div>
+        <h3>Solo-Praxis · € 79/Monat</h3>
+        <p>Du arbeitest allein als Wahltherapeut:in, vielleicht auch mobil oder in einer angemieteten Praxis. Praxly bündelt Termine, Dokumentation und Honorarnoten – deine Patient:innen bekommen eine Honorarnote, die sie direkt zur Kostenrückerstattung einreichen können.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="wic" aria-hidden="true">👥</div>
+      <div>
+        <h3>Gemeinschaftspraxis · € 149/Monat</h3>
+        <p>Bis zu 5 Therapeut:innen teilen sich einen Kalender. Selbständige Therapeut:innen stellen Honorarnoten in ihrem eigenen Namen aus – mit eigenen Angaben und eigenem Nummernkreis. Rollen für Inhaber:in, Therapeut:in und Empfang.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
-<section class="block" id="warum">
+<section class="block alt" id="warum">
   <div class="sec-head">
     <p class="eyebrow">Warum Praxly</p>
     <h2>Kein weiteres Tool, das du dir selbst beibringen musst.</h2>
@@ -1023,22 +1126,22 @@
     <div class="why-card">
       <div class="wic">🤝</div>
       <div>
-        <h3>Schlüsselfertig, nicht selbst zusammengebaut</h3>
-        <p>Praxly ist eigenständig entwickelte Software – keine zusammengesteckte Bastellösung. Alles kommt fertig für deine Praxis eingerichtet, statt dich mit einem nackten Login allein zu lassen.</p>
+        <h3>Geführter Start statt leerem Login</h3>
+        <p>Ein Einrichtungs-Assistent führt dich in 5 Schritten durch die Grundeinstellungen bis zu deiner ersten Honorarnote. Praxly ist eigenständig entwickelte Software – keine zusammengesteckte Bastellösung.</p>
       </div>
     </div>
     <div class="why-card">
       <div class="wic">💬</div>
       <div>
         <h3>Direkte Betreuung statt Ticket-System</h3>
-        <p>Bei Fragen bekommst du schnelle, direkte Antworten – kein anonymes Ticket-System, keine endlose Warteschleife.</p>
+        <p>Fragen beantwortet das Praxly-Team schriftlich per E-Mail oder WhatsApp – in der Regel innerhalb von 24 Stunden, ohne Ticket-System und Warteschleife.</p>
       </div>
     </div>
     <div class="why-card">
       <div class="wic">🩺</div>
       <div>
         <h3>Für therapeutische Praxen gebaut</h3>
-        <p>Anamnese, Verordnungen, Dokumentation und Honorarnoten sind auf den Alltag in der Therapie zugeschnitten – mit Start in der Physiotherapie.</p>
+        <p>Anamnese, Verordnungen, Dokumentation und Honorarnoten sind auf den Alltag in der Physiotherapie zugeschnitten.</p>
       </div>
     </div>
     <div class="why-card">
@@ -1052,21 +1155,21 @@
 </section>
 
 <!-- STEPS -->
-<section class="block alt" id="ablauf">
+<section class="block" id="ablauf">
   <div class="sec-head">
     <p class="eyebrow">So läuft dein Start</p>
-    <h2>In drei Schritten startklar – ohne Aufwand für dich.</h2>
+    <h2>In drei Schritten startklar.</h2>
   </div>
   <div class="steps">
     <div class="step">
       <div class="num">1</div>
       <h3>Kostenlos registrieren</h3>
-      <p>In 5 Minuten anmelden: Praxisname, Branche, erste Leistung eintragen – fertig. Kein Gespräch, keine Kreditkarte, kein Warten.</p>
+      <p>Praxisname, dein Name, E-Mail und Passwort – fertig. Kein Gespräch, keine Kreditkarte, kein Warten.</p>
     </div>
     <div class="step">
       <div class="num">2</div>
       <h3>Praxis einrichten</h3>
-      <p>Patient:innen anlegen, Team einladen, Buchungsseite aktivieren. Alles geht intuitiv – und bei Fragen ist Hilfe immer direkt erreichbar.</p>
+      <p>Der Einrichtungs-Assistent führt dich in 5 Schritten bis zur ersten Honorarnote: Praxisdaten, Leistungen, Team, erste:r Patient:in, erste Rechnung. Jeder Schritt lässt sich überspringen.</p>
     </div>
     <div class="step">
       <div class="num">3</div>
@@ -1077,7 +1180,7 @@
 </section>
 
 <!-- OFFER / PRICING -->
-<section class="block" id="angebot">
+<section class="block alt" id="angebot">
   <div class="sec-head">
     <p class="eyebrow">Preise</p>
     <h2>Klare Preise. Alles inklusive. Monatlich kündbar.</h2>
@@ -1116,7 +1219,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="block alt" id="faq">
+<section class="block" id="faq">
   <div class="sec-head">
     <p class="eyebrow">Häufige Fragen</p>
     <h2>Alles, was du vor dem Start wissen willst.</h2>
@@ -1124,7 +1227,7 @@
   <div class="faq-wrap">
     <details class="faq-item">
       <summary>Wie aufwändig ist der Umstieg auf Praxly?</summary>
-      <div class="faq-body">Für dich fällt kaum Aufwand an: Praxly ist in 5 Minuten eingerichtet. Die Grundeinstellungen (Kalender, Buchungsseite, Vorlagen, Erinnerungen) sind geführt – du klickst dich einmal durch und bist startklar. Bei Fragen ist das Praxly-Team per E-Mail oder WhatsApp erreichbar, und der laufende Betrieb geht ohne Unterbrechung weiter.</div>
+      <div class="faq-body">Für dich fällt kaum Aufwand an: Die Registrierung dauert wenige Minuten, danach führt dich ein Einrichtungs-Assistent in 5 Schritten durch die Grundeinstellungen bis zur ersten Honorarnote. Bei Fragen ist das Praxly-Team per E-Mail oder WhatsApp erreichbar, und der laufende Betrieb geht ohne Unterbrechung weiter.</div>
     </details>
     <details class="faq-item">
       <summary>Können bestehende Daten übernommen werden?</summary>
@@ -1132,7 +1235,7 @@
     </details>
     <details class="faq-item">
       <summary>Wie steht es um Datenschutz und DSGVO?</summary>
-      <div class="faq-body">Datenschutz hat bei Gesundheitsdaten oberste Priorität – deshalb ist Praxly von Grund auf DSGVO-konform aufgebaut. Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt). Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden geprüfte Dienstleister eingesetzt – welche das sind, steht transparent in der Datenschutzerklärung. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. So bleiben die sensiblen Informationen deiner Patient:innen jederzeit geschützt.</div>
+      <div class="faq-body">Datenschutz hat bei Gesundheitsdaten oberste Priorität – deshalb ist Praxly von Grund auf DSGVO-konform aufgebaut. Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt). Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht transparent in der Datenschutzerklärung. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. So bleiben die sensiblen Informationen deiner Patient:innen jederzeit geschützt.</div>
     </details>
     <details class="faq-item">
       <summary>Was kostet Praxly?</summary>
@@ -1143,8 +1246,12 @@
       <div class="faq-body">Überhaupt nicht. Praxly ist bewusst einfach und übersichtlich gehalten, damit du dich ohne Vorwissen schnell zurechtfindest. Die Registrierung dauert etwa 5 Minuten, und wenn danach eine Frage aufkommt, kannst du das Praxly-Team jederzeit direkt kontaktieren – du wirst zu keinem Zeitpunkt mit der Technik allein gelassen.</div>
     </details>
     <details class="faq-item">
+      <summary>Kann ich mit Praxly direkt mit der Krankenkasse abrechnen?</summary>
+      <div class="faq-body">Nein. Praxly ist für Wahltherapeut:innen gemacht: Du stellst deinen Patient:innen eine Honorarnote mit allen Pflichtangaben aus, und sie reichen diese selbst bei ihrem Krankenversicherungsträger zur Kostenrückerstattung ein. Eine direkte Abrechnung mit der Krankenkasse bietet Praxly nicht an.</div>
+    </details>
+    <details class="faq-item">
       <summary>Wie funktioniert der Support?</summary>
-      <div class="faq-body">Direkt und persönlich. Bei Fragen oder Problemen bekommst du schnelle Antworten von einem festen Ansprechpartner, der deine Praxis kennt – kein anonymes Ticket-System und keine endlose Warteschleife. Der Support ist im monatlichen Preis enthalten und kostet nichts extra.</div>
+      <div class="faq-body">Direkt und persönlich. Bei Fragen oder Problemen schreibst du dem Praxly-Team per E-Mail oder WhatsApp und bekommst in der Regel innerhalb von 24 Stunden eine Antwort – kein anonymes Ticket-System, keine Warteschleife. Support läuft schriftlich, nicht per Telefon. Der Support ist im monatlichen Preis enthalten und kostet nichts extra.</div>
     </details>
     <details class="faq-item">
       <summary>Gibt es eine Mindestlaufzeit?</summary>
@@ -1153,9 +1260,43 @@
   </div>
 </section>
 
+<!-- RATGEBER -->
+<section class="block alt" id="ratgeber">
+  <div class="sec-head">
+    <p class="eyebrow">Ratgeber</p>
+    <h2>Wissen für deinen Praxisalltag.</h2>
+  </div>
+  <div class="why-grid rg-grid">
+    <a class="why-card rg-card" href="ratgeber/honorarnote-kostenrueckerstattung/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Honorarnote &amp; Kostenrückerstattung</h3>
+        <p>Was auf einer Honorarnote stehen muss, damit Patient:innen ihr Geld zurückbekommen.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+    <a class="why-card rg-card" href="ratgeber/aerztliche-verordnung-physiotherapie-oesterreich/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Ärztliche Verordnung in Österreich</h3>
+        <p>Gültigkeit, Bewilligung und was Wahltherapeut:innen beachten müssen.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+    <a class="why-card rg-card" href="ratgeber/praxissoftware-wahl-physiotherapeuten-8-kriterien/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Praxissoftware wählen: 8 Kriterien</h3>
+        <p>Worauf Wahl-Physiotherapeut:innen bei der Software-Wahl achten sollten.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final" id="kontakt">
-  <p class="eyebrow" style="color:var(--green);">Jetzt starten</p>
+  <p class="eyebrow" style="color:var(--green-dark);">Jetzt starten</p>
   <h2>14 Tage kostenlos testen – ohne Risiko.</h2>
   <p>Registriere deine Praxis in 5 Minuten. Keine Kreditkarte, keine Mindestlaufzeit, kein Gespräch nötig.</p>
 
@@ -1167,10 +1308,10 @@
   <!-- Sekundäre Option: E-Mail-Einblick (Brevo) -->
   <div class="secondary-optin">
     <h3>Lieber schreiben?</h3>
-    <p>Schreib uns direkt – wir antworten in der Regel innerhalb von 24 Stunden.</p>
+    <p>Hinterlass deine E-Mail-Adresse – das Praxly-Team meldet sich in der Regel innerhalb von 24 Stunden.</p>
     <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
       <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" maxlength="120" autocomplete="email" required>
-      <button type="submit" class="btn btn-primary">Schreib uns</button>
+      <button type="submit" class="btn btn-primary">Kontakt anfordern</button>
       <input type="hidden" name="locale" value="de">
       <input type="hidden" name="html_type" value="simple">
       <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
@@ -1186,11 +1327,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="foot-wrap">
-    <a href="index.html" class="logo"><img src="logo.png" alt="Praxly Logo" width="34" height="34" loading="lazy"> Praxly</a>
+    <a href="index.html" class="logo"><img src="logo-68.png" alt="Praxly Logo" width="34" height="34" loading="lazy"> Praxly</a>
     <ul class="footer-links">
       <li><a href="#funktionen">Funktionen</a></li>
-      <li><a href="#angebot">Angebot</a></li>
+      <li><a href="#angebot">Preise</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#ratgeber">Ratgeber</a></li>
       <li><a href="mailto:sanna@praxly.at">sanna@praxly.at</a></li>
       <li><a href="https://wa.me/436642140654">WhatsApp</a></li>
       <li><a href="impressum.html">Impressum</a></li>
