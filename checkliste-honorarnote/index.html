@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratis-Checkliste: Honorarnote für Wahltherapeut:innen in Österreich | Praxly</title>
+<meta name="description" content="Kostenlose Checkliste (PDF): Welche Angaben auf die Honorarnote gehören – nach § 11 UStG und laut ÖGK für die Kostenerstattung. Für Wahl-Physiotherapeut:innen in Österreich.">
+<link rel="icon" href="/logo.png">
+<link rel="canonical" href="https://praxly.at/checkliste-honorarnote/">
+<meta property="og:title" content="Gratis-Checkliste: Honorarnote für Wahltherapeut:innen">
+<meta property="og:description" content="Kostenlose Checkliste (PDF): Welche Angaben auf die Honorarnote gehören – nach § 11 UStG und laut ÖGK für die Kostenerstattung. Für Wahl-Physiotherapeut:innen in Österreich.">
+<meta property="og:image" content="https://praxly.at/logo.png">
+<meta property="og:url" content="https://praxly.at/checkliste-honorarnote/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_AT">
+<link href="/fonts/fonts.css" rel="stylesheet">
+<style>
+  :root {
+    --green: #2ECC71;
+    --green-dark: #157a3f;
+    --green-light: #e8faf1;
+    --green-mid: #a8edca;
+    --ink: #0f1f14;
+    --ink-light: #3d5446;
+    --gray: #f5f7f5;
+    --gray-mid: #e2e8e4;
+    --white: #ffffff;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { max-width: 100%; height: auto; display: block; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--ink); line-height: 1.7; font-size: 1rem; }
+
+  nav { background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 0 1rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 960px; margin: 0 auto; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; letter-spacing: -0.5px; }
+  .nav-logo span { color: var(--green-dark); }
+  .nav-cta { background: var(--green-dark); color: var(--white); padding: 0.45rem 1.1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .nav-cta:hover { background: #0f5c2e; }
+
+  .breadcrumb { max-width: 760px; margin: 1.5rem auto 0; padding: 0 1rem; font-size: 0.8rem; color: var(--ink-light); }
+  .breadcrumb a { color: var(--green-dark); text-decoration: underline; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 0.35rem; }
+
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .article-meta { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .tag { background: var(--green-light); color: var(--green-dark); padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.75rem; font-weight: 500; }
+
+  h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; line-height: 1.25; color: var(--ink); margin-bottom: 0.75rem; text-wrap: balance; }
+  .intro { font-size: 1.1rem; color: var(--ink-light); margin-bottom: 2rem; line-height: 1.65; }
+  h2 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--ink); margin: 2.5rem 0 0.75rem; }
+  h3 { font-size: 1rem; font-weight: 600; color: var(--ink); margin: 1.5rem 0 0.4rem; }
+  p { margin-bottom: 1rem; }
+  ul, ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+  li { margin-bottom: 0.4rem; }
+  strong { font-weight: 600; }
+  a { color: var(--green-dark); }
+
+  .hinweis { background: var(--green-light); border-left: 3px solid var(--green-dark); padding: 1rem 1.25rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; font-size: 0.9rem; }
+  .hinweis strong { display: block; margin-bottom: 0.3rem; color: var(--green-dark); }
+  .warnung { background: #fffbeb; border-left: 3px solid #d97706; padding: 1rem 1.25rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; font-size: 0.9rem; }
+  .warnung strong { display: block; margin-bottom: 0.3rem; color: #92400e; }
+
+  .checklist { list-style: none; padding-left: 0; margin-bottom: 1.5rem; border: 1px solid var(--gray-mid); border-radius: 12px; overflow: hidden; }
+  .checklist li { padding: 0.85rem 1rem; border-bottom: 1px solid var(--gray-mid); margin: 0; font-size: 0.95rem; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li:nth-child(even) { background: var(--gray); }
+
+  .quellen { font-size: 0.8rem; color: var(--ink-light); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-mid); }
+  .quellen li { margin-bottom: 0.3rem; word-break: break-all; }
+
+  .cta-block { background: var(--green-dark); color: var(--white); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; margin: 3rem 0 1rem; }
+  .cta-block h2 { color: var(--white); font-size: 1.4rem; margin: 0 0 0.6rem; }
+  .cta-block p { color: #ffffff; margin: 0 0 1.2rem; font-size: 0.95rem; }
+  .cta-btn { display: inline-block; background: var(--white); color: var(--green-dark); padding: 0.75rem 1.75rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; text-decoration: none; font-family: var(--font-display); }
+  .cta-btn:hover { background: var(--green-light); }
+  .cta-sub { font-size: 0.8rem !important; color: rgba(255,255,255,0.95) !important; margin-top: 0.6rem !important; }
+
+  footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 2rem 1rem; font-size: 0.8rem; text-align: center; }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 0.5rem; }
+  footer a:hover { color: white; }
+  .footer-disclaimer { max-width: 680px; margin: 0.75rem auto 0; font-size: 0.75rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .lp-list { margin: 1rem 0 1.5rem; padding-left: 1.2rem; }
+  .lp-list li { margin-bottom: .4rem; }
+  .optin { background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; padding: 1.4rem; margin: 1.5rem 0; box-shadow: 0 6px 22px rgba(15,31,20,.06); }
+  .optin h2 { margin-top: 0; }
+  .optin label.f { display: block; font-weight: 600; font-size: .9rem; margin: .9rem 0 .3rem; }
+  .optin input[type=text], .optin input[type=email] { width: 100%; padding: .75rem .9rem; border: 1.5px solid #b9c9bf; border-radius: 10px; font: inherit; font-size: 1rem; }
+  .optin input:focus { outline: 3px solid var(--green-mid); border-color: var(--green-dark); }
+  .consent { display: flex; gap: .6rem; align-items: flex-start; margin: 1rem 0; font-size: .9rem; }
+  .consent input { margin-top: .25rem; width: 18px; height: 18px; flex-shrink: 0; }
+  .optin button { width: 100%; background: var(--green-dark); color: #fff; border: 0; border-radius: 10px; padding: .9rem; font: inherit; font-weight: 700; font-size: 1rem; cursor: pointer; min-height: 48px; }
+  .optin button:hover { background: #0f5c2f; }
+  .optin .small { font-size: .82rem; color: var(--ink-light); margin-top: .8rem; }
+  .optin .small a { color: var(--green-dark); text-decoration: underline; }
+  .msg { display: none; padding: .9rem 1rem; border-radius: 10px; margin-top: 1rem; font-size: .95rem; }
+  .msg.ok { display: block; background: var(--green-light); border-left: 3px solid var(--green-dark); }
+  .msg.err { display: block; background: #fdecec; border-left: 3px solid #b42318; }
+  .hp { position: absolute; left: -9999px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://praxly.at/" class="nav-logo">prax<span>ly</span></a>
+    <a href="https://app.praxly.at/registrierung" class="nav-cta">Kostenlos testen</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="https://praxly.at/">Praxly</a>
+  <span>›</span>
+  Gratis-Checkliste Honorarnote
+</div>
+
+<main class="article-wrap">
+
+  <div class="article-meta">
+    <span class="tag">Gratis-PDF</span>
+    <span class="tag">Wahltherapeut:innen</span>
+    <span>Stand: Oktober 2026</span>
+  </div>
+
+  <h1>Gratis-Checkliste: Was gehört auf die Honorarnote?</h1>
+
+  <p class="intro">Fehlt auf der Honorarnote eine Angabe, kann es bei der Kostenerstattung Rückfragen geben – für Ihre Patient:innen und für Sie. Die Checkliste fasst auf zwei Seiten zusammen, was nach dem Umsatzsteuergesetz und laut ÖGK auf die Rechnung gehört.</p>
+
+  <ul class="lp-list">
+    <li><strong>Teil A:</strong> Rechnungsangaben nach § 11 UStG – inklusive vereinfachter Rechnung bis 400 € und Kleinunternehmerregelung</li>
+    <li><strong>Teil B:</strong> Angaben, die die ÖGK für die Kostenerstattung verlangt – inklusive Zahlungsnachweis</li>
+    <li>Zum Abhaken, zum Ausdrucken, mit Links zu den offiziellen Quellen</li>
+  </ul>
+
+  <section class="optin" aria-labelledby="optin-h">
+    <h2 id="optin-h">Checkliste kostenlos anfordern</h2>
+    <form id="optinForm" novalidate>
+      <label class="f" for="vorname">Vorname</label>
+      <input type="text" id="vorname" name="vorname" autocomplete="given-name" maxlength="80" required>
+      <label class="f" for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="email" autocomplete="email" maxlength="160" required>
+      <label class="f" for="praxis">Praxisname <span style="font-weight:400;color:var(--ink-light);">(optional)</span></label>
+      <input type="text" id="praxis" name="praxis" autocomplete="organization" maxlength="120">
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" id="einwilligung" name="einwilligung" required>
+        <span id="einwilligungText">Ich möchte die Checkliste und gelegentlich Infos von Praxly per E-Mail erhalten. Abmeldung jederzeit.</span></label>
+      <button type="submit">Checkliste per E-Mail anfordern</button>
+      <p class="small">Sie erhalten zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Checkliste. Details zur Verarbeitung Ihrer Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
+      <div class="msg" id="optinMsg" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <div class="hinweis">
+    <strong>Hinweis / keine Beratung</strong>
+    Die Checkliste ist eine Orientierungshilfe und keine Rechts- oder Steuerberatung. Alle Angaben ohne Gewähr, Stand Oktober 2026.
+  </div>
+
+  <p>Mehr Hintergrund im Ratgeber: <a href="https://praxly.at/ratgeber/honorarnote-kostenrueckerstattung/">Honorarnote &amp; Kostenrückerstattung</a> · <a href="https://praxly.at/ratgeber/aerztliche-verordnung-physiotherapie-oesterreich/">Ärztliche Verordnung in Österreich</a></p>
+
+</main>
+
+<footer>
+  <div>
+    <a href="https://praxly.at/">Praxly</a>
+    <a href="https://praxly.at/impressum.html">Impressum</a>
+    <a href="https://praxly.at/datenschutz.html">Datenschutz</a>
+    <a href="mailto:sanna@praxly.at">sanna@praxly.at</a>
+  </div>
+  <div class="footer-disclaimer">
+    Die Inhalte dieser Seite wurden nach bestem Wissen und Gewissen zusammengestellt, ersetzen jedoch keine Rechtsberatung. Alle Angaben ohne Gewähr. Für verbindliche Auskunft wende dich an ÖGK, PhysioAustria oder einen Rechtsanwalt bzw. Steuerberater. © 2026 Praxly
+  </div>
+</footer>
+
+<script>
+(function () {
+  var f = document.getElementById('optinForm'), m = document.getElementById('optinMsg');
+  function show(cls, txt) { m.className = 'msg ' + cls; m.textContent = txt; }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = f.email.value.trim(), vorname = f.vorname.value.trim();
+    if (!vorname) { show('err', 'Bitte geben Sie Ihren Vornamen ein.'); f.vorname.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('err', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'); f.email.focus(); return; }
+    if (!f.einwilligung.checked) { show('err', 'Bitte bestätigen Sie die Einwilligung, damit das Praxly-Team Ihnen die Checkliste senden darf.'); return; }
+    var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Wird gesendet …';
+    fetch('https://app.praxly.at/api/checkliste', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vorname: vorname, email: email, praxis: f.praxis.value.trim(), einwilligung: true,
+        einwilligung_text: document.getElementById('einwilligungText').textContent, quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Checkliste.');
+    }).catch(function () {
+      show('err', 'Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut oder schreiben Sie an sanna@praxly.at.');
+    }).finally(function () { btn.disabled = false; btn.textContent = 'Checkliste per E-Mail anfordern'; });
+  });
+})();
+</script>
+</body>
+</html>
