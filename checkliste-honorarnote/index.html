@@ -146,7 +146,7 @@
       <input type="text" id="praxis" name="praxis" autocomplete="organization" maxlength="120">
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="consent"><input type="checkbox" id="einwilligung" name="einwilligung" required>
-        <span id="einwilligungText">Ich möchte die Checkliste und gelegentlich Infos von Praxly per E-Mail erhalten. Abmeldung jederzeit.</span></label>
+        <span id="einwilligungText">Ich möchte die Checkliste erhalten und willige ein, dass mir das Praxly-Team (Sanna Lena Gottschalk) gelegentlich E-Mails mit Infos zu Praxly schickt. Widerruf jederzeit per Abmeldelink oder an sanna@praxly.at.</span></label>
       <button type="submit">Checkliste per E-Mail anfordern</button>
       <p class="small">Sie erhalten zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Checkliste. Details zur Verarbeitung Ihrer Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
       <div class="msg" id="optinMsg" role="status" aria-live="polite"></div>
@@ -176,6 +176,7 @@
 
 <script>
 (function () {
+  var EINWILLIGUNG = 'Ich möchte die Checkliste erhalten und willige ein, dass mir das Praxly-Team (Sanna Lena Gottschalk) gelegentlich E-Mails mit Infos zu Praxly schickt. Widerruf jederzeit per Abmeldelink oder an sanna@praxly.at.';
   var f = document.getElementById('optinForm'), m = document.getElementById('optinMsg');
   function show(cls, txt) { m.className = 'msg ' + cls; m.textContent = txt; }
   f.addEventListener('submit', function (e) {
@@ -188,7 +189,7 @@
     fetch('https://app.praxly.at/api/checkliste', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ vorname: vorname, email: email, praxis: f.praxis.value.trim(), einwilligung: true,
-        einwilligung_text: document.getElementById('einwilligungText').textContent, quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
+        einwilligung_text: EINWILLIGUNG, einwilligung_version: '2026-10-11', quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Checkliste.');
