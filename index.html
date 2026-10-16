@@ -133,6 +133,46 @@
   },
   {
    "@type": "Question",
+   "name": "Wird nach den 14 Tagen automatisch abgebucht?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Der Test ist kostenlos und endet ohne aktiven Vertragsabschluss automatisch. Nur wenn du dich nach dem Test bewusst für Praxly entscheidest, wird der monatliche Preis fällig."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Muss ich etwas installieren?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Praxly läuft im Browser – am Computer, am Tablet und am Handy. Updates bekommst du automatisch, ohne Installation."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gibt es automatische Terminerinnerungen per SMS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Erinnerungen per SMS und E-Mail gehen automatisch an deine Patient:innen raus und sind im Preis enthalten."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kann ich mit mehreren Therapeut:innen arbeiten?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. In einer Gemeinschaftspraxis nutzt ihr einen gemeinsamen Kalender, und selbständige Therapeut:innen stellen Honorarnoten in ihrem eigenen Namen aus. Rollen für Inhaber:in, Therapeut:in und Empfang regeln, wer was sieht."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Für welche Berufsgruppen ist Praxly gedacht?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Praxly ist für Physiotherapie-Praxen in Österreich entwickelt – vor allem für Wahltherapeut:innen, die mit Honorarnoten und Kostenerstattung arbeiten."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Gibt es eine Mindestlaufzeit?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -932,6 +972,10 @@
   .hv-chip .ct { font-size: 0.78rem; }
   a.logo { min-height: 44px; }
   .cta-consent input { width: 22px; height: 22px; }
+  .not-incl { max-width: 460px; margin: 18px auto 0; padding: 14px 18px; border: 1px dashed var(--gray-mid); border-radius: 12px; font-size: 0.9rem; color: var(--ink-light); background: #fff; }
+  .not-incl p { margin: 0 0 6px; color: var(--ink); }
+  .not-incl ul { margin: 0; padding-left: 1.1rem; }
+  .not-incl li { margin: 4px 0; }
 </style>
 </head>
 <body>
@@ -1225,6 +1269,14 @@
       <a href="https://app.praxly.at/registrierung" class="btn btn-primary" style="width:100%;margin-top:24px;">14 Tage kostenlos testen</a>
     </div>
   </div>
+  <div class="not-incl">
+    <p><strong>Ehrlich gesagt – nicht enthalten:</strong></p>
+    <ul>
+      <li>Direkte Abrechnung mit der Krankenkasse – deine Patient:innen reichen die Honorarnote selbst ein</li>
+      <li>Telefon-Support – Hilfe gibt es schriftlich per E-Mail und WhatsApp, in der Regel innerhalb von 24 Stunden</li>
+      <li>Hardware wie Kartenterminal oder Drucker</li>
+    </ul>
+  </div>
   <p style="text-align:center;margin-top:20px;font-size:0.88rem;color:var(--ink-light);">Keine Kreditkarte nötig · Keine Einrichtungsgebühr · Keine versteckten Kosten</p>
   <p style="text-align:center;margin-top:8px;font-size:0.82rem;color:var(--ink-light);">150 € pro Monat ist der Endpreis. Kein Ausweis der Umsatzsteuer (Kleinunternehmerregelung gem. § 6 Abs. 1 Z 27 UStG).</p>
   <p style="text-align:center;margin-top:8px;font-size:0.88rem;color:var(--ink-light);">Kündigung formlos per E-Mail oder im Kundenkonto, wirksam zum Ende des Abrechnungsmonats. Danach kannst du deine Daten noch 30 Tage exportieren.</p>
@@ -1284,7 +1336,33 @@
   </div>
 </section>
 
-<section class="block alt" id="faq">
+<!-- UMSTIEG -->
+<section class="block alt" id="umstieg">
+  <div class="sec-head">
+    <p class="eyebrow">Umstieg</p>
+    <h2>In drei Schritten von Excel oder deiner alten Software zu Praxly.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Testzugang anlegen</h3>
+      <p>Registriere dich kostenlos und bestätige in Praxly den Auftragsverarbeitungsvertrag. Erst dann werden Patientendaten übertragen.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Daten exportieren</h3>
+      <p>Exportiere deine Patientenliste aus der bisherigen Software oder Excel als CSV-Datei. Schreib dem Praxly-Team, welches Programm du nutzt – der sichere Übertragungsweg wird mit dir abgestimmt.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Import – selbst oder mit Hilfe</h3>
+      <p>Lade die CSV-Datei mit dem Import in Praxly selbst hoch – oder das Praxly-Team überträgt die Daten kostenlos für dich.</p>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:20px;font-size:0.95rem;color:var(--ink-light);">Ausführliche Anleitung: <a href="ratgeber/praxissoftware-wechseln-ohne-datenverlust/" style="color:var(--green-dark);text-decoration:underline;">Praxissoftware wechseln ohne Datenverlust</a></p>
+</section>
+
+<section class="block" id="faq">
   <div class="sec-head">
     <p class="eyebrow">Häufige Fragen</p>
     <h2>Alles, was du vor dem Start wissen willst.</h2>
@@ -1323,6 +1401,26 @@
       <div class="faq-body">Deine Daten gehören dir. Nach dem Ende des Vertrags kannst du deine gespeicherten Daten noch 30 Tage lang exportieren. Danach werden sie gelöscht, soweit keine gesetzliche Aufbewahrungspflicht entgegensteht. Die Details stehen in den <a href="https://app.praxly.at/agb">AGB</a>.</div>
     </details>
     <details class="faq-item">
+      <summary>Wird nach den 14 Tagen automatisch abgebucht?</summary>
+      <div class="faq-body">Nein. Der Test ist kostenlos und endet ohne aktiven Vertragsabschluss automatisch. Nur wenn du dich nach dem Test bewusst für Praxly entscheidest, wird der monatliche Preis fällig.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Muss ich etwas installieren?</summary>
+      <div class="faq-body">Nein. Praxly läuft im Browser – am Computer, am Tablet und am Handy. Updates bekommst du automatisch, ohne Installation.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Gibt es automatische Terminerinnerungen per SMS?</summary>
+      <div class="faq-body">Ja. Erinnerungen per SMS und E-Mail gehen automatisch an deine Patient:innen raus und sind im Preis enthalten.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Kann ich mit mehreren Therapeut:innen arbeiten?</summary>
+      <div class="faq-body">Ja. In einer Gemeinschaftspraxis nutzt ihr einen gemeinsamen Kalender, und selbständige Therapeut:innen stellen Honorarnoten in ihrem eigenen Namen aus. Rollen für Inhaber:in, Therapeut:in und Empfang regeln, wer was sieht.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Für welche Berufsgruppen ist Praxly gedacht?</summary>
+      <div class="faq-body">Praxly ist für Physiotherapie-Praxen in Österreich entwickelt – vor allem für Wahltherapeut:innen, die mit Honorarnoten und Kostenerstattung arbeiten.</div>
+    </details>
+    <details class="faq-item">
       <summary>Gibt es eine Mindestlaufzeit?</summary>
       <div class="faq-body">Nein. Praxly ist monatlich kündbar – keine Mindestlaufzeit, jederzeit zum Ende des Abrechnungsmonats kündbar. Du testest 14 Tage kostenlos und entscheidest danach, ob du weitermachst. Keine versteckten Bedingungen, kein Kleingedrucktes.</div>
     </details>
@@ -1330,7 +1428,7 @@
 </section>
 
 <!-- RATGEBER -->
-<section class="block" id="ratgeber">
+<section class="block alt" id="ratgeber">
   <div class="sec-head">
     <p class="eyebrow">Ratgeber</p>
     <h2>Wissen für deinen Praxisalltag.</h2>
