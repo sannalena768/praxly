@@ -998,6 +998,7 @@
   .umzug-box ul { margin: 0; padding-left: 1.1rem; color: var(--ink-light); font-size: 0.93rem; }
   .umzug-box li { margin: 5px 0; }
   @media (max-width: 767px) { .umzug-box { grid-template-columns: 1fr; } }
+  .betreuung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 1000px; margin: 0 auto; }
 </style>
 </head>
 <body>
@@ -1494,7 +1495,25 @@
 </section>
 
 <!-- RATGEBER -->
-<section class="block alt" id="ratgeber">
+<!-- PERSÖNLICHE BETREUUNG -->
+<section class="block alt" id="betreuung">
+  <div class="sec-head">
+    <p class="eyebrow">Persönliche Betreuung</p>
+    <h2>Du schreibst – das Praxly-Team antwortet.</h2>
+    <p>Kein Callcenter, kein Ticket-System: Praxly wurde in Vorarlberg gegründet und wird hier weiterentwickelt. Hilfe gibt es schriftlich, damit du sie zwischen zwei Behandlungen lesen kannst.</p>
+  </div>
+  <div class="betreuung-grid">
+    <div class="why-card"><div class="wic" aria-hidden="true">✉️</div><div><h3>Schriftlich per E-Mail &amp; WhatsApp</h3><p>Antwort in der Regel innerhalb von 24 Stunden. Telefon-Support gibt es bewusst nicht.</p></div></div>
+    <div class="why-card"><div class="wic" aria-hidden="true">🚚</div><div><h3>Kostenlose Umzugshilfe</h3><p>Hilfe beim Hochladen deiner Patientendaten aus Excel, CSV oder vCard – ohne Patientendaten per E-Mail.</p></div></div>
+    <div class="why-card"><div class="wic" aria-hidden="true">🧭</div><div><h3>Geführter Start</h3><p>Der Einrichtungs-Assistent führt dich in 5 Schritten bis zur ersten Honorarnote.</p></div></div>
+  </div>
+  <div class="hero-actions" style="justify-content:center;margin-top:24px;">
+    <a href="mailto:sanna@praxly.at" class="btn btn-secondary">E-Mail schreiben</a>
+    <a href="https://wa.me/436642140654" class="btn btn-secondary">WhatsApp schreiben</a>
+  </div>
+</section>
+
+<section class="block" id="ratgeber">
   <div class="sec-head">
     <p class="eyebrow">Ratgeber</p>
     <h2>Wissen für deinen Praxisalltag.</h2>
