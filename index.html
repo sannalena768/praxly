@@ -976,6 +976,12 @@
   .not-incl p { margin: 0 0 6px; color: var(--ink); }
   .not-incl ul { margin: 0; padding-left: 1.1rem; }
   .not-incl li { margin: 4px 0; }
+  .umzug-box { max-width: 900px; margin: 28px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .umzug-box > div { background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; padding: 18px 20px; }
+  .umzug-box h3 { font-size: 1.02rem; margin: 0 0 8px; color: var(--ink); }
+  .umzug-box ul { margin: 0; padding-left: 1.1rem; color: var(--ink-light); font-size: 0.93rem; }
+  .umzug-box li { margin: 5px 0; }
+  @media (max-width: 767px) { .umzug-box { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -1354,7 +1360,7 @@
 <!-- UMSTIEG -->
 <section class="block alt" id="umstieg">
   <div class="sec-head">
-    <p class="eyebrow">Umstieg</p>
+    <p class="eyebrow">Datenumzug</p>
     <h2>In drei Schritten von Excel oder deiner alten Software zu Praxly.</h2>
   </div>
   <div class="steps">
@@ -1372,6 +1378,23 @@
       <div class="num">3</div>
       <h3>Hochladen – mit Hilfe, wenn nötig</h3>
       <p>Lade die CSV-Datei über den Import verschlüsselt in Praxly hoch. Das Praxly-Team hilft dir schriftlich kostenlos, falls beim Zuordnen etwas hakt.</p>
+    </div>
+  </div>
+  <div class="umzug-box">
+    <div>
+      <h3>Welche Formate gehen?</h3>
+      <ul>
+        <!-- FORMATLISTE: erst nach Marktreife-Bericht (16.10., 12:15) ergänzen – nur belegte Formate -->
+        <li>CSV-Datei (z. B. aus Excel oder deiner bisherigen Software exportiert)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kostenlose Hilfe – sicher</h3>
+      <ul>
+        <li>Das Praxly-Team hilft schriftlich per E-Mail oder WhatsApp beim Zuordnen der Spalten.</li>
+        <li>Du lädst deine Daten selbst verschlüsselt in Praxly hoch – erst nach Bestätigung des Auftragsverarbeitungsvertrags.</li>
+        <li><strong>Patientendaten schickst du nie per E-Mail.</strong></li>
+      </ul>
     </div>
   </div>
   <p style="text-align:center;margin-top:20px;font-size:0.95rem;color:var(--ink-light);">Ausführliche Anleitung: <a href="ratgeber/praxissoftware-wechseln-ohne-datenverlust/" style="color:var(--green-dark);text-decoration:underline;">Praxissoftware wechseln ohne Datenverlust</a></p>
