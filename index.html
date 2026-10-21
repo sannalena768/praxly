@@ -133,6 +133,14 @@
   },
   {
    "@type": "Question",
+   "name": "Wer steckt hinter Praxly?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Das Praxly-Team aus Vorarlberg, gegründet von Sanna. Praxly wird in Österreich entwickelt und laufend verbessert – Rückmeldungen aus dem Praxisalltag fließen direkt ein."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Wie funktioniert der Support?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -1015,6 +1023,17 @@
   .umzug-box li { margin: 5px 0; }
   @media (max-width: 767px) { .umzug-box { grid-template-columns: 1fr; } }
   .betreuung-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 1000px; margin: 0 auto; }
+  .warum150 { max-width: 640px; margin: 22px auto 0; padding: 18px 22px; background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; }
+  .warum150 h3 { margin: 0 0 8px; font-size: 1.08rem; color: var(--ink); }
+  .warum150 ul { margin: 0; padding-left: 1.1rem; color: var(--ink-light); font-size: 0.93rem; }
+  .warum150 li { margin: 6px 0; }
+  .dsfakten { list-style: none; max-width: 760px; margin: 0 auto 26px; padding: 0; border: 1px solid var(--gray-mid); border-radius: 14px; background: #fff; }
+  .dsfakten li { display: flex; gap: 14px; padding: 10px 16px; border-bottom: 1px solid var(--gray-mid); font-size: 0.93rem; }
+  .dsfakten li:last-child { border-bottom: 0; }
+  .dsfakten span { min-width: 110px; color: var(--ink-light); }
+  .dsfakten b { font-weight: 500; color: var(--ink); }
+  .dsfakten a { color: var(--green-dark); text-decoration: underline; }
+  @media (max-width: 480px) { .dsfakten li { flex-direction: column; gap: 2px; } }
 </style>
 </head>
 <body>
@@ -1222,7 +1241,7 @@
       <div class="wic" aria-hidden="true">🧑‍⚕️</div>
       <div>
         <h3>Solo-Praxis</h3>
-        <p>Du arbeitest allein als Wahltherapeut:in, vielleicht auch mobil oder in einer angemieteten Praxis. Praxly bündelt Termine, Dokumentation und Honorarnoten – deine Patient:innen bekommen eine Honorarnote, die sie direkt zur Kostenrückerstattung einreichen können.</p>
+        <p>Du arbeitest allein als Wahltherapeut:in, vielleicht auch mobil oder in einer angemieteten Praxis. Praxly bündelt Termine, Dokumentation und Honorarnoten – deine Patient:innen bekommen eine Honorarnote, die sie direkt zur Kostenrückerstattung einreichen können. <a href="fuer-einzelpraxen/" style="color:var(--green-dark);text-decoration:underline;">Mehr für Einzelpraxen →</a></p>
       </div>
     </div>
     <div class="why-card">
@@ -1324,6 +1343,16 @@
       <a href="https://app.praxly.at/registrierung" class="btn btn-primary" style="width:100%;margin-top:24px;">14 Tage kostenlos testen</a>
     </div>
   </div>
+  <div class="warum150">
+    <h3>Warum 150 €? Weil alles drin ist.</h3>
+    <ul>
+      <li><strong>Keine Zusatzmodule:</strong> Kalender, Online-Buchung, Doku, Honorarnoten, Mahnwesen und Statistik sind im Preis – es gibt nichts extra zu kaufen.</li>
+      <li><strong>Erinnerungen inklusive:</strong> per E-Mail schon heute. SMS-Erinnerungen werden gerade eingeführt und sind dann ebenfalls im Preis enthalten (mit fairer Monatsgrenze).</li>
+      <li><strong>Persönliche Betreuung:</strong> Antworten schriftlich, meist innerhalb von 24 Stunden – auf Wunsch auch per Zoom. Hilfe beim Datenumzug kostet nichts.</li>
+      <li><strong>Immer aktuell:</strong> Neue Funktionen und Verbesserungen kommen automatisch dazu, ohne Installation.</li>
+      <li><strong>Kein Risiko:</strong> 14 Tage kostenlos, ohne Kreditkarte, danach monatlich kündbar.</li>
+    </ul>
+  </div>
   <div class="not-incl">
     <p><strong>Ehrlich gesagt – nicht enthalten:</strong></p>
     <ul>
@@ -1345,6 +1374,14 @@
     <h2>Gegründet in Vorarlberg. Sorgfältig mit Gesundheits&shy;daten.</h2>
     <p>Praxly wird in Vorarlberg entwickelt – für Physiotherapie-Praxen in ganz Österreich.</p>
   </div>
+  <ul class="dsfakten">
+    <li><span>Datenbank</span><b>EU, Frankfurt (Supabase, Region eu-central-1)</b></li>
+    <li><span>Übertragung</span><b>verschlüsselt (TLS)</b></li>
+    <li><span>Speicherung</span><b>verschlüsselt, automatische Backups</b></li>
+    <li><span>Vertrag</span><b>Auftragsverarbeitungsvertrag nach Art. 28 DSGVO direkt in der App</b></li>
+    <li><span>Deine Daten</span><b>Export jederzeit, nach Kündigung noch 30 Tage</b></li>
+    <li><span>Dienstleister</span><b>offen aufgelistet in der <a href="https://app.praxly.at/datenschutz">Datenschutzerklärung der App</a></b></li>
+  </ul>
   <div class="why-grid">
     <div class="why-card">
       <div class="wic" aria-hidden="true">🇪🇺</div>
@@ -1475,6 +1512,10 @@
     <details class="faq-item">
       <summary>Reicht Praxly die Honorarnoten bei der ÖGK ein?</summary>
       <div class="faq-body">Nein. Praxly ist für Wahltherapeut:innen gemacht: Du stellst deinen Patient:innen eine Honorarnote mit den Angaben aus, die die ÖGK für die Kostenerstattung nennt,, und sie reichen diese selbst bei ihrem Krankenversicherungsträger zur Kostenrückerstattung ein. Eine direkte Abrechnung mit der Krankenkasse bietet Praxly nicht an.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Wer steckt hinter Praxly?</summary>
+      <div class="faq-body">Das Praxly-Team aus Vorarlberg, gegründet von Sanna. Praxly wird in Österreich entwickelt und laufend verbessert – Rückmeldungen aus dem Praxisalltag fließen direkt ein.</div>
     </details>
     <details class="faq-item">
       <summary>Wie funktioniert der Support?</summary>
