@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://praxly.at/online-terminbuchung/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://praxly.at/ratgeber/honorarnote-kostenrueckerstattung/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
