@@ -213,6 +213,14 @@
   },
   {
    "@type": "Question",
+   "name": "Ich habe mein Passwort vergessen – was tun?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Auf der Anmeldeseite app.praxly.at/passwort-vergessen forderst du einen Link für ein neues Passwort an. Schau bitte auch im Spam-Ordner nach. Klappt es nicht, schreib dem Praxly-Team kurz, welche Meldung erscheint."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Gibt es eine Mindestlaufzeit?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -958,7 +966,10 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 900px) {
-    .nav-links .nav-item { display: none; }
+    nav .nav-burger { display: inline-flex; align-items: center; justify-content: center; }
+    .nav-links { display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: #fff; border-bottom: 1px solid var(--gray-mid); padding: 8px 5%; box-shadow: 0 8px 20px rgba(15,31,20,.08); }
+    .nav-links.open { display: flex; }
+    .nav-links .nav-item a { display: block; padding: 12px 0; min-height: 44px; }
     .hero-grid { grid-template-columns: 1fr; gap: 52px; }
     .hero-grid > * { min-width: 0; }
     .hero-copy { max-width: 100%; }
@@ -968,7 +979,6 @@
     .offer-wrap { grid-template-columns: 1fr; }
   }
   @media (max-width: 720px) {
-    .nav-links .nav-item { display: none; }
     .pain-grid, .feat-grid, .steps { grid-template-columns: 1fr; }
     .block { padding-top: 62px; padding-bottom: 62px; }
     .hero { padding-top: 44px; padding-bottom: 54px; }
@@ -1034,6 +1044,8 @@
   .dsfakten b { font-weight: 500; color: var(--ink); }
   .dsfakten a { color: var(--green-dark); text-decoration: underline; }
   @media (max-width: 480px) { .dsfakten li { flex-direction: column; gap: 2px; } }
+  .nav-burger { display: none; background: none; border: 0; font-size: 1.6rem; line-height: 1; color: var(--ink); cursor: pointer; min-width: 48px; min-height: 48px; border-radius: 10px; }
+  .nav-burger:focus-visible { outline: 3px solid var(--green-mid); }
 </style>
 </head>
 <body>
@@ -1041,7 +1053,8 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="logo"><img src="logo-68.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
-  <ul class="nav-links">
+  <button class="nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">☰</button>
+  <ul class="nav-links" id="nav-links">
     <li class="nav-item"><a href="#funktionen">Funktionen</a></li>
     <li class="nav-item"><a href="#fuer-wen">Für wen</a></li>
     <li class="nav-item"><a href="#angebot">Preise</a></li>
@@ -1169,7 +1182,7 @@
     <div class="feat-card">
       <div class="feat-ic">🗓️</div>
       <h3>Online-Terminbuchung 24/7</h3>
-      <p>Patient:innen buchen rund um die Uhr selbst – ohne Login, ohne Anruf. <span class="benefit">Dein Telefon klingelt seltener, dein Kalender füllt sich von allein.</span></p>
+      <p>Patient:innen buchen rund um die Uhr selbst – ohne Login, ohne Anruf. <span class="benefit">Dein Telefon klingelt seltener, dein Kalender füllt sich von allein.</span> <a href="online-terminbuchung/" style="color:var(--green-dark);text-decoration:underline;">Mehr zur Online-Buchung →</a></p>
     </div>
     <div class="feat-card">
       <div class="feat-ic">📆</div>
@@ -1554,6 +1567,10 @@
       <div class="faq-body">Nein. Praxly hat ein Kassenbuch mit Tagesabschluss und kann für Barzahlungen einen Beleg drucken – aber keinen RKSV-signierten Beleg. Laut Unternehmensserviceportal brauchst du eine Registrierkasse, wenn dein Betrieb einen Jahresumsatz von 15.000 € <em>und</em> Barumsätze von 7.500 € im Jahr überschreitet; einen Beleg musst du bei Barzahlungen in jedem Fall ausstellen. Ob und ab wann das bei dir gilt, klär bitte mit deiner Steuerberatung. Mehr dazu: <a href="https://www.usp.gv.at/themen/steuern-finanzen/steuerliche-rechte-und-pflichten/registrierkassen/registrierkassenpflicht.html" rel="noopener">usp.gv.at – Registrierkassenpflicht</a>.</div>
     </details>
     <details class="faq-item">
+      <summary>Ich habe mein Passwort vergessen – was tun?</summary>
+      <div class="faq-body">Auf der Anmeldeseite <a href="https://app.praxly.at/passwort-vergessen">app.praxly.at/passwort-vergessen</a> forderst du einen Link für ein neues Passwort an. Schau bitte auch im Spam-Ordner nach. Klappt es nicht, schreib dem Praxly-Team kurz, welche Meldung erscheint.</div>
+    </details>
+    <details class="faq-item">
       <summary>Gibt es eine Mindestlaufzeit?</summary>
       <div class="faq-body">Nein. Praxly ist monatlich kündbar – keine Mindestlaufzeit, jederzeit zum Ende des Abrechnungsmonats kündbar. Du testest 14 Tage kostenlos und entscheidest danach, ob du weitermachst. Keine versteckten Bedingungen, kein Kleingedrucktes.</div>
     </details>
@@ -1638,6 +1655,30 @@
       <div>
         <h3>Software wechseln ohne Datenverlust</h3>
         <p>Export, Import, Aufbewahrungspflicht – Schritt für Schritt zur neuen Praxissoftware.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+    <a class="why-card rg-card" href="ratgeber/kostenerstattung-bvaeb-svs-wahltherapie/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Kostenerstattung bei BVAEB und SVS</h3>
+        <p>Was Wahltherapeut:innen über Erstattung, Bewilligung und Fristen wissen sollten.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+    <a class="why-card rg-card" href="ratgeber/datenschutz-physiopraxis/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Datenschutz in der Physiopraxis</h3>
+        <p>Informationspflicht, Einwilligung und Aufbewahrung – mit Checkliste für Praxen.</p>
+        <span class="rg-more">Artikel lesen →</span>
+      </div>
+    </a>
+    <a class="why-card rg-card" href="ratgeber/terminabsagen-ausfallhonorar-physiotherapie/">
+      <div class="wic" aria-hidden="true">📖</div>
+      <div>
+        <h3>Terminabsagen und Ausfallhonorar</h3>
+        <p>Was die ÖGK zahlt und welche Absageregeln Sie vorab klar festlegen sollten.</p>
         <span class="rg-more">Artikel lesen →</span>
       </div>
     </a>
@@ -1744,5 +1785,15 @@
   })();
 </script>
 
+<script>
+(function () {
+  var b = document.querySelector('.nav-burger'), u = document.getElementById('nav-links');
+  if (!b || !u) return;
+  function setOpen(o) { u.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Menü schließen' : 'Menü öffnen'); b.textContent = o ? '✕' : '☰'; }
+  b.addEventListener('click', function () { setOpen(!u.classList.contains('open')); });
+  u.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>
