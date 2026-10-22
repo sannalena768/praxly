@@ -966,7 +966,10 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 900px) {
-    .nav-links .nav-item { display: none; }
+    nav .nav-burger { display: inline-flex; align-items: center; justify-content: center; }
+    .nav-links { display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: #fff; border-bottom: 1px solid var(--gray-mid); padding: 8px 5%; box-shadow: 0 8px 20px rgba(15,31,20,.08); }
+    .nav-links.open { display: flex; }
+    .nav-links .nav-item a { display: block; padding: 12px 0; min-height: 44px; }
     .hero-grid { grid-template-columns: 1fr; gap: 52px; }
     .hero-grid > * { min-width: 0; }
     .hero-copy { max-width: 100%; }
@@ -976,7 +979,6 @@
     .offer-wrap { grid-template-columns: 1fr; }
   }
   @media (max-width: 720px) {
-    .nav-links .nav-item { display: none; }
     .pain-grid, .feat-grid, .steps { grid-template-columns: 1fr; }
     .block { padding-top: 62px; padding-bottom: 62px; }
     .hero { padding-top: 44px; padding-bottom: 54px; }
@@ -1042,6 +1044,8 @@
   .dsfakten b { font-weight: 500; color: var(--ink); }
   .dsfakten a { color: var(--green-dark); text-decoration: underline; }
   @media (max-width: 480px) { .dsfakten li { flex-direction: column; gap: 2px; } }
+  .nav-burger { display: none; background: none; border: 0; font-size: 1.6rem; line-height: 1; color: var(--ink); cursor: pointer; min-width: 48px; min-height: 48px; border-radius: 10px; }
+  .nav-burger:focus-visible { outline: 3px solid var(--green-mid); }
 </style>
 </head>
 <body>
@@ -1049,7 +1053,8 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="logo"><img src="logo-68.png" alt="Praxly Logo" width="34" height="34"> Praxly</a>
-  <ul class="nav-links">
+  <button class="nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">☰</button>
+  <ul class="nav-links" id="nav-links">
     <li class="nav-item"><a href="#funktionen">Funktionen</a></li>
     <li class="nav-item"><a href="#fuer-wen">Für wen</a></li>
     <li class="nav-item"><a href="#angebot">Preise</a></li>
@@ -1780,5 +1785,15 @@
   })();
 </script>
 
+<script>
+(function () {
+  var b = document.querySelector('.nav-burger'), u = document.getElementById('nav-links');
+  if (!b || !u) return;
+  function setOpen(o) { u.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Menü schließen' : 'Menü öffnen'); b.textContent = o ? '✕' : '☰'; }
+  b.addEventListener('click', function () { setOpen(!u.classList.contains('open')); });
+  u.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>
