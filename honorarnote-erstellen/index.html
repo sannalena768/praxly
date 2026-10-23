@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honorarnote erstellen: Muster als PDF | Praxly</title>
+<meta name="description" content="Honorarnote für Physiotherapie online erstellen: Formular ausfüllen, Vorschau sehen, als PDF speichern. Deine Eingaben bleiben auf deinem Gerät, nichts wird gesendet.">
+<link rel="icon" href="/logo.png">
+<link rel="canonical" href="https://praxly.at/honorarnote-erstellen/">
+<meta property="og:title" content="Honorarnote erstellen: Muster als PDF">
+<meta property="og:description" content="Honorarnote für Physiotherapie online erstellen: Formular ausfüllen, Vorschau sehen, als PDF speichern. Deine Eingaben bleiben auf deinem Gerät, nichts wird gesendet.">
+<meta property="og:image" content="https://praxly.at/logo.png">
+<meta property="og:url" content="https://praxly.at/honorarnote-erstellen/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Praxly">
+<meta property="og:locale" content="de_AT">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Honorarnote-Generator für Physiotherapie",
+ "description": "Honorarnote für Physiotherapie online erstellen: Formular ausfüllen, Vorschau sehen, als PDF speichern. Deine Eingaben bleiben auf deinem Gerät, nichts wird gesendet.",
+ "url": "https://praxly.at/honorarnote-erstellen/",
+ "applicationCategory": "BusinessApplication",
+ "operatingSystem": "Web",
+ "inLanguage": "de-AT",
+ "isAccessibleForFree": true,
+ "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+ "publisher": {"@type": "Organization", "name": "Praxly", "url": "https://praxly.at", "logo": "https://praxly.at/logo.png"}
+}
+</script>
+<link href="/fonts/fonts.css" rel="stylesheet">
+<style>
+  :root {
+    --green: #2ECC71;
+    --green-dark: #157a3f;
+    --green-light: #e8faf1;
+    --green-mid: #a8edca;
+    --ink: #0f1f14;
+    --ink-light: #3d5446;
+    --gray: #f5f7f5;
+    --gray-mid: #e2e8e4;
+    --white: #ffffff;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { max-width: 100%; height: auto; display: block; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--ink); line-height: 1.7; font-size: 1rem; }
+
+  nav { background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 0 1rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 960px; margin: 0 auto; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; letter-spacing: -0.5px; }
+  .nav-logo span { color: var(--green-dark); }
+  .nav-cta { background: var(--green-dark); color: var(--white); padding: 0.45rem 1.1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .nav-cta:hover { background: #0f5c2e; }
+
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .breadcrumb { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 1rem; }
+  .breadcrumb a { color: var(--green-dark); }
+  .breadcrumb span { margin: 0 0.35rem; }
+  h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.25; margin-bottom: 0.5rem; }
+  h2 { font-family: var(--font-display); font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+  .intro { color: var(--ink-light); margin-bottom: 1rem; }
+  a { color: var(--green-dark); }
+  .privacy { background: var(--green-light); border-left: 3px solid var(--green-dark); padding: 0.8rem 1rem; border-radius: 0 10px 10px 0; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .layout { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; }
+  @media (min-width: 960px) { .layout { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } .preview-col { position: sticky; top: 76px; } }
+  fieldset { border: 1px solid var(--gray-mid); border-radius: 12px; padding: 0.9rem 1rem 1rem; margin-bottom: 1rem; min-width: 0; }
+  legend { font-family: var(--font-display); font-weight: 700; padding: 0 0.4rem; }
+  label { display: block; font-size: 0.85rem; font-weight: 500; margin: 0.6rem 0 0.2rem; }
+  .opt { font-weight: 400; color: var(--ink-light); }
+  input[type=text], input[type=date], input[type=number], select, textarea { width: 100%; font: inherit; font-size: 1rem; padding: 0.55rem 0.7rem; border: 1px solid #b8c7be; border-radius: 8px; background: var(--white); color: var(--ink); min-height: 44px; }
+  input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--green-dark); outline-offset: 1px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .hint { font-size: 0.8rem; color: var(--ink-light); margin-top: 0.25rem; }
+  .brow { border: 1px solid var(--gray-mid); border-radius: 10px; padding: 0.5rem 0.7rem 0.7rem; margin-bottom: 0.6rem; background: var(--gray); }
+  .brow .row2 { grid-template-columns: 1fr 1fr; }
+  .btn { font: inherit; font-weight: 600; min-height: 44px; padding: 0.55rem 1.1rem; border-radius: 10px; border: 1px solid var(--green-dark); background: var(--white); color: var(--green-dark); cursor: pointer; }
+  .btn-main { background: var(--green-dark); color: var(--white); font-family: var(--font-display); }
+  .btn-main:hover { background: #0f5c2e; }
+  .btn-x { border-color: #b8c7be; color: var(--ink-light); min-height: 36px; padding: 0.2rem 0.7rem; margin-top: 0.5rem; }
+  .check { display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; font-size: 0.9rem; }
+  .check input { width: 22px; height: 22px; flex: none; margin-top: 2px; }
+  .sum { font-weight: 700; margin-top: 0.7rem; }
+  .actions { margin: 1rem 0; display: flex; gap: 0.7rem; flex-wrap: wrap; }
+  .preview-title { font-family: var(--font-display); font-weight: 700; margin-bottom: 0.5rem; }
+  .sheet { background: #fff; border: 1px solid #b8c7be; border-radius: 6px; padding: 18px 20px 14px; box-shadow: 0 2px 10px rgba(15,31,20,.08); font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 1.4; color: #0f1f14; overflow-x: auto; }
+  .sheet h3 { font-size: 22px; margin: 0; font-weight: 700; }
+  .sheet .sub { color: #0d7a55; margin: 0 0 6px; }
+  .sheet h4 { font-size: 13px; color: #0d7a55; border-bottom: 1.5px solid #0d7a55; margin: 12px 0 4px; padding-bottom: 2px; }
+  .sheet table { border-collapse: collapse; width: 100%; }
+  .sheet .kv td { padding: 2px 0; vertical-align: top; }
+  .sheet .kv td.k { width: 38%; color: #55665c; font-size: 12px; padding-right: 8px; }
+  .sheet .bh th, .sheet .bh td { border: 1px solid #b8c7be; padding: 4px 6px; text-align: left; }
+  .sheet .bh th { background: #e6f6ef; font-size: 12px; }
+  .sheet .bh td.r, .sheet .bh th.r { text-align: right; white-space: nowrap; }
+  .sheet .pay { font-weight: 700; margin-top: 10px; }
+  .sheet .small { font-size: 11px; color: #55665c; }
+  .sheet .sig { display: flex; gap: 40px; margin-top: 36px; }
+  .sheet .sig div { flex: 1; border-top: 1px solid #333; padding-top: 3px; font-size: 11px; }
+  .sheet .fnote { text-align: center; font-size: 10px; color: #55665c; margin-top: 18px; }
+  .sheet .ph { color: #8a978f; }
+  .patbox { background: var(--gray); border: 1px solid var(--gray-mid); border-radius: 12px; padding: 1rem 1.25rem; margin-top: 2rem; font-size: 0.93rem; }
+  .patbox h2 { margin-top: 0; }
+  .patbox ul { padding-left: 1.3rem; margin: 0.5rem 0; }
+  .patbox li { margin-bottom: 0.35rem; }
+  .small-note { font-size: 0.85rem; color: var(--ink-light); margin-top: 1.2rem; }
+  .bottom { border-top: 1px solid var(--gray-mid); margin-top: 2.5rem; padding-top: 1rem; font-size: 0.85rem; color: var(--ink-light); text-align: center; }
+  footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 2rem 1rem; font-size: 0.8rem; text-align: center; }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 0.5rem; }
+  footer a:hover { color: white; }
+  .footer-disclaimer { max-width: 680px; margin: 0.75rem auto 0; font-size: 0.75rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .nav-logo, .nav-cta { display: inline-flex; align-items: center; min-height: 44px; }
+  .badge { font-size: 0.75rem !important; }
+  .consent input { width: 22px !important; height: 22px !important; }
+
+  @media print {
+    @page { size: A4; margin: 14mm 16mm 16mm; }
+    nav, .wrap > *, footer { display: none !important; }
+    .wrap { display: block !important; padding: 0; max-width: none; }
+    .wrap > .layout { display: block !important; }
+    .layout > .form-col { display: none !important; }
+    .layout > .preview-col { display: block !important; position: static; }
+    .preview-title { display: none !important; }
+    .sheet { border: 0; box-shadow: none; padding: 0; font-size: 10pt; overflow: visible; }
+    .sheet h3 { font-size: 20pt; }
+    .sheet .kv td.k { font-size: 9pt; }
+    .sheet .ph { color: #55665c; }
+    .sheet .fnote { position: fixed; bottom: 0; left: 0; right: 0; font-size: 8pt; margin: 0; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="https://praxly.at/" class="nav-logo">prax<span>ly</span></a>
+    <a href="https://app.praxly.at/registrierung" class="nav-cta">Kostenlos testen</a>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="breadcrumb"><a href="https://praxly.at/">Praxly</a><span>›</span>Honorarnote erstellen</div>
+  <h1>Honorarnote erstellen und als PDF speichern</h1>
+  <p class="intro">Fülle das Formular aus, prüfe die Vorschau und speichere die Honorarnote als PDF. Gedacht für Wahltherapeut:innen in Österreich.</p>
+  <p class="privacy"><strong>Deine Eingaben bleiben auf deinem Gerät, nichts wird an Praxly gesendet.</strong> Die Seite lädt nichts nach und speichert keine Patient:innendaten.</p>
+
+  <div class="layout">
+    <form class="form-col" id="f" autocomplete="off" onsubmit="return false">
+      <fieldset>
+        <legend>Therapeut:in</legend>
+        <label for="t_name">Name</label><input type="text" id="t_name" data-k="t_name">
+        <label for="t_beruf">Berufsbezeichnung <span class="opt">(optional)</span></label><input type="text" id="t_beruf" data-k="t_beruf" placeholder="z. B. Physiotherapeut:in">
+        <label for="t_adr">Anschrift</label><input type="text" id="t_adr" data-k="t_adr" placeholder="Straße Nr., PLZ Ort">
+        <label for="t_uid">UID / Steuernummer <span class="opt">(optional)</span></label><input type="text" id="t_uid" data-k="t_uid">
+        <label class="check" for="merken"><input type="checkbox" id="merken"><span>Meine Therapeut:innen-Daten auf diesem Gerät merken (Patient:innen-Daten werden nie gespeichert)</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Patient:in</legend>
+        <label for="p_name">Name</label><input type="text" id="p_name" data-k="p_name">
+        <div class="row2">
+          <div><label for="p_geb">Geburtsdatum</label><input type="date" id="p_geb" data-k="p_geb"></div>
+          <div><label for="p_sv">SV-Nummer</label><input type="text" id="p_sv" data-k="p_sv" inputmode="numeric"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Honorarnote</legend>
+        <div class="row2">
+          <div><label for="h_nr">Honorarnote-Nr.</label><input type="text" id="h_nr" data-k="h_nr" placeholder="z. B. 2026-001"></div>
+          <div><label for="h_dat">Datum</label><input type="date" id="h_dat" data-k="h_dat"></div>
+        </div>
+        <p class="hint">Die Nummer vergibst du selbst, fortlaufend. Der Generator zählt nicht mit.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Verordnung</legend>
+        <div class="row2">
+          <div><label for="v_dat">Verordnung vom</label><input type="date" id="v_dat" data-k="v_dat"></div>
+          <div><label for="v_arzt">Ärzt:in</label><input type="text" id="v_arzt" data-k="v_arzt"></div>
+        </div>
+        <label for="v_diag">Diagnose <span class="opt">(laut Verordnung)</span></label><input type="text" id="v_diag" data-k="v_diag">
+      </fieldset>
+
+      <fieldset>
+        <legend>Behandlungen</legend>
+        <div id="rows"></div>
+        <button type="button" class="btn" id="add">+ Zeile hinzufügen</button>
+        <p class="sum">Summe: <span id="sumout">0,00 €</span></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Zahlung und Steuer</legend>
+        <div class="row2">
+          <div><label for="z_dat">Betrag erhalten am</label><input type="date" id="z_dat" data-k="z_dat"></div>
+          <div><label for="z_art">Zahlungsart</label>
+            <select id="z_art" data-k="z_art"><option value="">–</option><option>bar</option><option>Karte</option><option>Überweisung</option></select></div>
+        </div>
+        <label for="s_art">Steuerhinweis</label>
+        <select id="s_art" data-k="s_art">
+          <option value="">Keiner</option>
+          <option value="z27">Kleinunternehmer:in (§ 6 Abs. 1 Z 27 UStG)</option>
+          <option value="z19">Heilbehandlung (§ 6 Abs. 1 Z 19 UStG)</option>
+        </select>
+        <p class="hint">Welcher Hinweis auf deine Honorarnote gehört, klärst du bitte mit deiner Steuerberatung.</p>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" class="btn btn-main" id="pdf">Als PDF speichern</button>
+        <button type="button" class="btn" id="reset">Patient:innen-Daten leeren</button>
+      </div>
+      <p class="hint">Im Druckfenster wählst du „Als PDF speichern“ als Drucker.</p>
+    </form>
+
+    <div class="preview-col">
+      <div class="preview-title">Vorschau</div>
+      <div class="sheet" id="sheet" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="patbox">
+    <h2>Für deine Patient:innen</h2>
+    <ul>
+      <li>Die ÖGK erstattet bei Wahltherapeut:innen 80 % des Tarifs, den sie Vertragstherapeut:innen für dieselbe Leistung zahlt – nicht 80 % des Honorars.</li>
+      <li>Nötig sind die ärztliche Verordnung, die Honorarnote mit den Angaben und ein Zahlungsnachweis.</li>
+      <li>Die Patient:in reicht selbst ein. Praxly reicht nichts bei der ÖGK ein.</li>
+    </ul>
+    <p>Quelle: <a href="https://www.oegk.at/cdscontent/?contentid=10007.870431&amp;portal=oegkportal" rel="noopener">ÖGK, Physiotherapie und Kostenerstattung</a><br>
+    Andere Träger (z. B. BVAEB, SVS) haben eigene Regeln: <a href="https://praxly.at/ratgeber/kostenerstattung-bvaeb-svs-wahltherapie/">Kostenerstattung BVAEB und SVS</a></p>
+  </div>
+
+  <p class="small-note">Optional: <a href="https://praxly.at/vorlage-honorarnote/">Word-Vorlage + Newsletter per E-Mail</a></p>
+
+  <p class="bottom">Alles in einem: Termine, Online-Buchung, Honorarnoten – 14 Tage testen, danach 150 € pro Monat, monatlich kündbar. <a href="https://app.praxly.at/registrierung">Jetzt testen</a></p>
+</div>
+<footer>
+  <div>
+    <a href="https://praxly.at/">Praxly</a>
+    <a href="https://praxly.at/impressum.html">Impressum</a>
+    <a href="https://praxly.at/datenschutz.html">Datenschutz</a>
+    <a href="mailto:sanna@praxly.at">sanna@praxly.at</a>
+  </div>
+  <div class="footer-disclaimer">
+    Muster ohne Gewähr, ersetzt keine Steuer- oder Rechtsberatung. Anforderungen der Krankenversicherungsträger können sich ändern. © 2026 Praxly
+  </div>
+</footer>
+<script>
+(function () {
+  var TKEYS = ['t_name','t_beruf','t_adr','t_uid'];
+  var LS = 'praxly_honorarnote_therapeut';
+  var $ = function (id) { return document.getElementById(id); };
+  var rowsEl = $('rows'), sheet = $('sheet');
+  var TAX = {
+    z27: 'Kleinunternehmer:in: Umsatzsteuerbefreit nach § 6 Abs. 1 Z 27 UStG.',
+    z19: 'Heilbehandlung: Umsatzsteuerfrei nach § 6 Abs. 1 Z 19 UStG.'
+  };
+
+  function lsGet() { try { return JSON.parse(localStorage.getItem(LS) || 'null'); } catch (e) { return null; } }
+  function lsSet(v) { try { if (v) localStorage.setItem(LS, JSON.stringify(v)); else localStorage.removeItem(LS); } catch (e) {} }
+
+  function addRow(vals) {
+    vals = vals || {};
+    var d = document.createElement('div'); d.className = 'brow';
+    d.innerHTML = '<div class="row2"><div><label>Datum</label><input type="date" class="b_dat"></div>' +
+      '<div><label>Betrag (€)</label><input type="number" class="b_bet" min="0" step="0.01" inputmode="decimal"></div></div>' +
+      '<div class="row2"><div><label>Leistung</label><input type="text" class="b_lei" placeholder="z. B. Physiotherapie"></div>' +
+      '<div><label>Dauer</label><input type="text" class="b_dau" placeholder="z. B. 45 Min."></div></div>' +
+      '<button type="button" class="btn btn-x">Zeile entfernen</button>';
+    d.querySelector('.b_dat').value = vals.dat || '';
+    d.querySelector('.b_bet').value = vals.bet || '';
+    d.querySelector('.b_lei').value = vals.lei || '';
+    d.querySelector('.b_dau').value = vals.dau || '';
+    d.querySelector('.btn-x').addEventListener('click', function () {
+      if (rowsEl.children.length > 1) { rowsEl.removeChild(d); render(); }
+    });
+    rowsEl.appendChild(d);
+  }
+
+  function fmtDate(v) { if (!v) return ''; var p = v.split('-'); return p.length === 3 ? p[2] + '.' + p[1] + '.' + p[0] : v; }
+  function fmtEur(n) { return n.toLocaleString('de-AT', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €'; }
+  function g(k) { var e = $(k); return e ? e.value.trim() : ''; }
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function kv(table, k, v, ph) {
+    var tr = el('tr'); tr.appendChild(el('td', 'k', k));
+    var td = el('td', v ? '' : 'ph', v || ph); tr.appendChild(td); table.appendChild(tr);
+  }
+  function sec(title) { sheet.appendChild(el('h4', '', title)); }
+
+  function render() {
+    sheet.textContent = '';
+    sheet.appendChild(el('h3', '', 'Honorarnote'));
+    sheet.appendChild(el('p', 'sub', 'Physiotherapie'));
+
+    sec('Von (leistende Therapeut:in)');
+    var t = el('table', 'kv');
+    kv(t, 'Name', g('t_name'), '[Vor- und Zuname]');
+    if (g('t_beruf')) kv(t, 'Berufsbezeichnung', g('t_beruf'));
+    kv(t, 'Anschrift', g('t_adr'), '[Straße Nr., PLZ Ort]');
+    if (g('t_uid')) kv(t, 'UID / Steuernummer', g('t_uid'));
+    sheet.appendChild(t);
+
+    sec('An (Patient:in)');
+    t = el('table', 'kv');
+    kv(t, 'Name', g('p_name'), '[Vor- und Zuname]');
+    kv(t, 'Geburtsdatum', fmtDate(g('p_geb')), '[TT.MM.JJJJ]');
+    kv(t, 'Sozialversicherungsnummer', g('p_sv'), '[Nummer]');
+    sheet.appendChild(t);
+
+    sec('Honorarnote');
+    t = el('table', 'kv');
+    kv(t, 'Honorarnote-Nr.', g('h_nr'), '[fortlaufende Nummer]');
+    kv(t, 'Ausstellungsdatum', fmtDate(g('h_dat')), '[TT.MM.JJJJ]');
+    sheet.appendChild(t);
+
+    sec('Verordnung');
+    t = el('table', 'kv');
+    kv(t, 'Verordnung vom', fmtDate(g('v_dat')), '[TT.MM.JJJJ]');
+    kv(t, 'Verordnende:r Ärzt:in', g('v_arzt'), '[Name]');
+    kv(t, 'Diagnose', g('v_diag'), '[laut Verordnung]');
+    sheet.appendChild(t);
+
+    sec('Behandlungen');
+    var bt = el('table', 'bh'), thead = el('tr');
+    ['Datum', 'Leistung', 'Dauer'].forEach(function (h) { thead.appendChild(el('th', '', h)); });
+    thead.appendChild(el('th', 'r', 'Betrag')); bt.appendChild(thead);
+    var sum = 0;
+    Array.prototype.forEach.call(rowsEl.children, function (r) {
+      var bet = parseFloat(r.querySelector('.b_bet').value.replace(',', '.'));
+      var tr = el('tr');
+      tr.appendChild(el('td', '', fmtDate(r.querySelector('.b_dat').value)));
+      tr.appendChild(el('td', '', r.querySelector('.b_lei').value.trim()));
+      tr.appendChild(el('td', '', r.querySelector('.b_dau').value.trim()));
+      tr.appendChild(el('td', 'r', isNaN(bet) ? '' : fmtEur(bet)));
+      if (!isNaN(bet)) sum += bet;
+      bt.appendChild(tr);
+    });
+    var st = el('tr'); var c = el('th', '', 'Summe'); c.colSpan = 3; st.appendChild(c);
+    st.appendChild(el('th', 'r', fmtEur(sum))); bt.appendChild(st);
+    sheet.appendChild(bt);
+    $('sumout').textContent = fmtEur(sum);
+
+    var zd = fmtDate(g('z_dat')), za = g('z_art');
+    sheet.appendChild(el('p', 'pay', 'Betrag erhalten am ' + (zd || '[TT.MM.JJJJ]') + ' – ' + (za || '[bar / Karte / Überweisung]')));
+    if (TAX[g('s_art')]) sheet.appendChild(el('p', 'small', TAX[g('s_art')]));
+
+    var sig = el('div', 'sig'); sig.appendChild(el('div', '', '[Ort, Datum]'));
+    sig.appendChild(el('div', '', 'Unterschrift und Stempel der Therapeut:in')); sheet.appendChild(sig);
+    sheet.appendChild(el('div', 'fnote', 'Muster ohne Gewähr – ersetzt keine Steuer- oder Rechtsberatung · praxly.at'));
+  }
+
+  function saveT() {
+    if (!$('merken').checked) { lsSet(null); return; }
+    var o = {}; TKEYS.forEach(function (k) { o[k] = g(k); }); lsSet(o);
+  }
+
+  document.querySelectorAll('[data-k]').forEach(function (e) {
+    e.addEventListener('input', function () { render(); if (TKEYS.indexOf(e.id) > -1) saveT(); });
+    e.addEventListener('change', render);
+  });
+  rowsEl.addEventListener('input', render);
+  $('merken').addEventListener('change', saveT);
+  $('add').addEventListener('click', function () { addRow(); render(); });
+  $('pdf').addEventListener('click', function () { render(); window.print(); });
+  $('reset').addEventListener('click', function () {
+    ['p_name','p_geb','p_sv','h_nr','v_dat','v_arzt','v_diag','z_dat','z_art'].forEach(function (k) { $(k).value = ''; });
+    rowsEl.textContent = ''; addRow(); render();
+  });
+
+  var saved = lsGet();
+  if (saved) { TKEYS.forEach(function (k) { if (saved[k]) $(k).value = saved[k]; }); $('merken').checked = true; }
+  var now = new Date(), iso = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  $('h_dat').value = iso;
+  addRow(); render();
+})();
+</script>
+</body>
+</html>
