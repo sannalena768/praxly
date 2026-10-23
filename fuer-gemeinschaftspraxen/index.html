@@ -160,6 +160,21 @@
   .nav-logo, .nav-cta { display: inline-flex; align-items: center; min-height: 44px; }
   .badge { font-size: 0.75rem !important; }
   .consent input { width: 22px !important; height: 22px !important; }
+  /* Navigation (Desktop + Handy-Burger) */
+  .nav-burger { display: none; background: none; border: 0; font-size: 1.6rem; line-height: 1; color: var(--ink); cursor: pointer; width: 48px; height: 48px; border-radius: 10px; align-items: center; justify-content: center; }
+  .nav-burger:focus-visible { outline: 3px solid var(--green-mid, #2e9e5b); }
+  .nav-links { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 1.25rem; }
+  .nav-links a:not(.nav-cta) { color: var(--ink); text-decoration: none; font-size: 0.92rem; font-weight: 500; display: inline-flex; align-items: center; min-height: 44px; }
+  .nav-links a:not(.nav-cta):hover { color: var(--green-dark); }
+  .article-wrap table { display: block; max-width: 100%; overflow-x: auto; }
+  @media (max-width: 900px) {
+    nav .nav-burger { display: inline-flex; }
+    nav .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: #fff; border-bottom: 1px solid var(--gray-mid); padding: 8px 1rem 14px; box-shadow: 0 8px 20px rgba(15,31,20,.08); }
+    nav .nav-links.open { display: flex; }
+    nav .nav-links a:not(.nav-cta) { display: flex; padding: 10px 0; min-height: 48px; }
+    nav .nav-links li:last-child { padding-top: 8px; }
+    nav .nav-links .nav-cta { justify-content: center; width: 100%; box-sizing: border-box; }
+  }
 </style>
 </head>
 <body>
@@ -167,7 +182,15 @@
 <nav>
   <div class="nav-inner">
     <a href="https://praxly.at/" class="nav-logo">prax<span>ly</span></a>
-    <a href="https://app.praxly.at/registrierung" class="nav-cta">Kostenlos testen</a>
+    <button class="nav-burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#funktionen">Funktionen</a></li>
+      <li><a href="/#fuer-wen">Für wen</a></li>
+      <li><a href="/#angebot">Preise</a></li>
+      <li><a href="/ratgeber/">Ratgeber</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="https://app.praxly.at/registrierung" class="nav-cta">Kostenlos testen</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -253,5 +276,15 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var b = document.querySelector('.nav-burger'), u = document.getElementById('nav-links');
+  if (!b || !u) return;
+  function setOpen(o) { u.classList.toggle('open', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Menü schließen' : 'Menü öffnen'); b.textContent = o ? '✕' : '☰'; }
+  b.addEventListener('click', function () { setOpen(!u.classList.contains('open')); });
+  u.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>
