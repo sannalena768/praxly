@@ -172,7 +172,7 @@
       <input type="text" id="praxis" name="praxis" autocomplete="organization" maxlength="120">
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="consent"><input type="checkbox" id="newsletter" name="newsletter">
-        <span id="newsletterText">Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams (Sanna Lena Gottschalk) mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an sanna@praxly.at.</span></label>
+        <span id="newsletterText">Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an kontakt@praxly.at.</span></label>
       <button type="submit">Checkliste per E-Mail anfordern</button>
       <p class="small">Sie erhalten zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Checkliste. Ohne Newsletter-Häkchen wird Ihre E-Mail-Adresse nur für die Zusendung der Checkliste verwendet. Details zur Verarbeitung Ihrer Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
       <div class="msg" id="optinMsg" role="status" aria-live="polite"></div>
@@ -202,7 +202,7 @@
 
 <script>
 (function () {
-  var NEWSLETTER = 'Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams (Sanna Lena Gottschalk) mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an sanna@praxly.at.';
+  var NEWSLETTER = 'Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an kontakt@praxly.at.';
   var f = document.getElementById('optinForm'), m = document.getElementById('optinMsg');
   function show(cls, txt) { m.className = 'msg ' + cls; m.textContent = txt; }
   f.addEventListener('submit', function (e) {
@@ -214,7 +214,7 @@
     fetch('https://app.praxly.at/api/checkliste', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ vorname: vorname, email: email, praxis: f.praxis.value.trim(), newsletter: f.newsletter.checked,
-        newsletter_text: f.newsletter.checked ? NEWSLETTER : null, newsletter_version: '2026-10-23', dokument: 'checkliste', quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
+        newsletter_text: f.newsletter.checked ? NEWSLETTER : null, newsletter_version: '2026-10-28', dokument: 'checkliste', quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Checkliste.');
