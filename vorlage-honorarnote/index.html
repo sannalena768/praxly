@@ -174,14 +174,14 @@
       <label class="consent"><input type="checkbox" id="newsletter" name="newsletter">
         <span id="newsletterText">Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an kontakt@praxly.at.</span></label>
       <button type="submit">Vorlage per E-Mail anfordern</button>
-      <p class="small">Sie erhalten zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Vorlage. Ohne Newsletter-Häkchen wird Ihre E-Mail-Adresse nur für die Zusendung der Vorlage verwendet. Details zur Verarbeitung Ihrer Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
+      <p class="small">Du erhältst zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Vorlage. Ohne Newsletter-Häkchen wird deine E-Mail-Adresse nur für die Zusendung der Vorlage verwendet. Details zur Verarbeitung deiner Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
       <div class="msg" id="optinMsg" role="status" aria-live="polite"></div>
     </form>
   </section>
 
   <div class="hinweis">
     <strong>Hinweis / keine Beratung</strong>
-    Die Vorlage ist ein Muster ohne Gewähr und ersetzt keine Steuer- oder Rechtsberatung. Welcher Steuerhinweis auf Ihre Honorarnote gehört, klären Sie bitte mit Ihrer Steuerberatung. Stand Oktober 2026.
+    Die Vorlage ist ein Muster ohne Gewähr und ersetzt keine Steuer- oder Rechtsberatung. Welcher Steuerhinweis auf deine Honorarnote gehört, kläre bitte mit deiner Steuerberatung. Stand Oktober 2026.
   </div>
 
   <p>Lieber nur eine Liste zum Abhaken? Dafür gibt es die <a href="https://praxly.at/checkliste-honorarnote/">Gratis-Checkliste Honorarnote</a>. Mehr Hintergrund im Ratgeber: <a href="https://praxly.at/ratgeber/honorarnote-kostenrueckerstattung/">Honorarnote &amp; Kostenrückerstattung</a> · <a href="https://praxly.at/ratgeber/aerztliche-verordnung-physiotherapie-oesterreich/">Ärztliche Verordnung in Österreich</a></p>
@@ -208,8 +208,8 @@
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = f.email.value.trim(), vorname = f.vorname.value.trim();
-    if (!vorname) { show('err', 'Bitte geben Sie Ihren Vornamen ein.'); f.vorname.focus(); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('err', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'); f.email.focus(); return; }
+    if (!vorname) { show('err', 'Bitte gib deinen Vornamen ein.'); f.vorname.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('err', 'Bitte gib eine gültige E-Mail-Adresse ein.'); f.email.focus(); return; }
     var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Wird gesendet …';
     fetch('https://app.praxly.at/api/checkliste', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -217,9 +217,9 @@
         newsletter_text: f.newsletter.checked ? NEWSLETTER : null, newsletter_version: '2026-10-28', dokument: 'vorlage-honorarnote', quelle: 'praxly.at/vorlage-honorarnote', website: f.website.value })
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
-      f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Vorlage.');
+      f.reset(); show('ok', 'Fast geschafft! Bitte bestätige deine E-Mail-Adresse über den Link in der E-Mail, die du gerade erhalten hast. Danach kommt die Vorlage.');
     }).catch(function () {
-      show('err', 'Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut oder schreiben Sie an support@praxly.at.');
+      show('err', 'Das hat leider nicht geklappt. Bitte versuche es später erneut oder schreibe an support@praxly.at.');
     }).finally(function () { btn.disabled = false; btn.textContent = 'Vorlage per E-Mail anfordern'; });
   });
 })();

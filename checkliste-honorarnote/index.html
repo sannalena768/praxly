@@ -153,7 +153,7 @@
 
   <h1>Gratis-Checkliste: Was gehört auf die Honorarnote?</h1>
 
-  <p class="intro">Fehlt auf der Honorarnote eine Angabe, kann es bei der Kostenerstattung Rückfragen geben – für Ihre Patient:innen und für Sie. Die Checkliste fasst auf zwei Seiten zusammen, was nach dem Umsatzsteuergesetz und laut ÖGK auf die Rechnung gehört.</p>
+  <p class="intro">Fehlt auf der Honorarnote eine Angabe, kann es bei der Kostenerstattung Rückfragen geben – für deine Patient:innen und für dich. Die Checkliste fasst auf zwei Seiten zusammen, was nach dem Umsatzsteuergesetz und laut ÖGK auf die Rechnung gehört.</p>
 
   <ul class="lp-list">
     <li><strong>Teil A:</strong> Rechnungsangaben nach § 11 UStG – inklusive vereinfachter Rechnung bis 400 € und Kleinunternehmerregelung</li>
@@ -174,7 +174,7 @@
       <label class="consent"><input type="checkbox" id="newsletter" name="newsletter">
         <span id="newsletterText">Ja, ich möchte zusätzlich den monatlichen Newsletter des Praxly-Teams mit Infos zu Praxly per E-Mail erhalten. Freiwillig – Widerruf jederzeit per Abmeldelink oder an kontakt@praxly.at.</span></label>
       <button type="submit">Checkliste per E-Mail anfordern</button>
-      <p class="small">Sie erhalten zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Checkliste. Ohne Newsletter-Häkchen wird Ihre E-Mail-Adresse nur für die Zusendung der Checkliste verwendet. Details zur Verarbeitung Ihrer Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
+      <p class="small">Du erhältst zuerst eine E-Mail mit einem Bestätigungslink (Double-Opt-in). Erst nach der Bestätigung kommt die Checkliste. Ohne Newsletter-Häkchen wird deine E-Mail-Adresse nur für die Zusendung der Checkliste verwendet. Details zur Verarbeitung deiner Daten: <a href="/datenschutz.html#checkliste">Datenschutzerklärung</a>.</p>
       <div class="msg" id="optinMsg" role="status" aria-live="polite"></div>
     </form>
   </section>
@@ -208,8 +208,8 @@
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = f.email.value.trim(), vorname = f.vorname.value.trim();
-    if (!vorname) { show('err', 'Bitte geben Sie Ihren Vornamen ein.'); f.vorname.focus(); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('err', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'); f.email.focus(); return; }
+    if (!vorname) { show('err', 'Bitte gib deinen Vornamen ein.'); f.vorname.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('err', 'Bitte gib eine gültige E-Mail-Adresse ein.'); f.email.focus(); return; }
     var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Wird gesendet …';
     fetch('https://app.praxly.at/api/checkliste', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -217,9 +217,9 @@
         newsletter_text: f.newsletter.checked ? NEWSLETTER : null, newsletter_version: '2026-10-28', dokument: 'checkliste', quelle: 'praxly.at/checkliste-honorarnote', website: f.website.value })
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
-      f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Checkliste.');
+      f.reset(); show('ok', 'Fast geschafft! Bitte bestätige deine E-Mail-Adresse über den Link in der E-Mail, die du gerade erhalten hast. Danach kommt die Checkliste.');
     }).catch(function () {
-      show('err', 'Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut oder schreiben Sie an support@praxly.at.');
+      show('err', 'Das hat leider nicht geklappt. Bitte versuche es später erneut oder schreibe an support@praxly.at.');
     }).finally(function () { btn.disabled = false; btn.textContent = 'Checkliste per E-Mail anfordern'; });
   });
 })();
