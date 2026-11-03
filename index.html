@@ -53,7 +53,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "support@praxly.at",
+        "email": "kontakt@praxly.at",
         "availableLanguage": "German"
       },
       "sameAs": []
@@ -112,7 +112,7 @@
    "name": "Was passiert nach den 14 Tagen?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Der Test endet automatisch, es wird nichts abgebucht. Nur wenn du dich bewusst für Praxly entscheidest, werden 149 € pro Monat fällig – monatlich kündbar, ohne Mindestlaufzeit."
+    "text": "Der Test endet automatisch, es wird nichts abgebucht. Nur wenn du dich bewusst für Praxly entscheidest, werden 149 € pro Monat fällig – monatlich kündbar, ohne Mindestlaufzeit. Ohne Vertragsabschluss wird der Zugang gesperrt; deine Daten bleiben 30 Tage erhalten und werden dann gelöscht."
    }
   },
   {
@@ -120,7 +120,7 @@
    "name": "Wo liegen meine Daten?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt), die Daten werden täglich verschlüsselt gesichert. Den Auftragsverarbeitungsvertrag (AVV) findest du in der App. Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht in der Datenschutzerklärung."
+    "text": "Die Datenbank liegt auf Servern in der EU (Frankfurt). Den Auftragsverarbeitungsvertrag (AVV) findest du in der App. Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht in der Datenschutzerklärung."
    }
   },
   {
@@ -128,7 +128,7 @@
    "name": "Wer sieht die Patientendaten?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Nur deine Praxis. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. Patientendaten schickst du dem Praxly-Team nie per E-Mail."
+    "text": "Innerhalb von Praxly sieht nur deine Praxis ihre Daten. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. Patientendaten schickst du dem Praxly-Team nie per E-Mail."
    }
   },
   {
@@ -168,7 +168,7 @@
    "name": "Gehen beim Wechsel Daten verloren?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Nein. Deine Papierkarten bewahrst du weiter auf, und deine Excel- oder Exportdatei bleibt beim Import unverändert bei dir. Praxly sichert die Daten täglich verschlüsselt, und als Inhaber:in kannst du deine Daten jederzeit selbst exportieren."
+    "text": "Nein. Deine Papierkarten bewahrst du weiter auf, und deine Excel- oder Exportdatei bleibt beim Import unverändert bei dir. Als Inhaber:in kannst du deine Daten jederzeit selbst exportieren."
    }
   },
   {
@@ -436,10 +436,12 @@
     color: var(--ink-light);
     margin-top: 16px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 7px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    hyphens: manual;
   }
+  .cta-note svg { flex-shrink: 0; margin-top: 0.25em; }
 
   /* ---------- HERO VISUAL ---------- */
   .hero-visual {
@@ -1114,7 +1116,7 @@
       </div>
       <p class="cta-note">
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        14 Tage testen, danach 149 € pro Monat, monatlich kündbar – keine Kreditkarte nötig
+        <span>14 Tage testen, danach 149 € pro Monat, <span style="white-space:nowrap">monatlich kündbar</span> – keine Kreditkarte nötig</span>
       </p>
     </div>
 
@@ -1168,7 +1170,7 @@
     </div>
     <div class="trust-item">
       <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      DSGVO · Mandantentrennung
+      Mandantentrennung · Datenbank in der EU
     </div>
     <div class="trust-item">
       <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#157a3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8h18v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/></svg>
@@ -1456,7 +1458,7 @@
   <ul class="dsfakten">
     <li><span>Datenbank</span><b>EU, Frankfurt (Supabase, Region eu-central-1)</b></li>
     <li><span>Übertragung</span><b>verschlüsselt (TLS)</b></li>
-    <li><span>Speicherung</span><b>verschlüsselt, tägliche verschlüsselte Sicherung</b></li>
+    <li><span>Speicherung</span><b>verschlüsselt</b></li>
     <li><span>Vertrag</span><b>Auftragsverarbeitungsvertrag nach Art. 28 DSGVO direkt in der App</b></li>
     <li><span>Deine Daten</span><b>Export jederzeit, nach Kündigung noch 30 Tage</b></li>
     <li><span>Dienstleister</span><b>offen aufgelistet in der <a href="https://app.praxly.at/datenschutz">Datenschutzerklärung der App</a></b></li>
@@ -1466,14 +1468,14 @@
       <div class="wic" aria-hidden="true">🇪🇺</div>
       <div>
         <h3>Datenbank in Frankfurt</h3>
-        <p>Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt). Externe Dienstleister, etwa für den Versand von E-Mails und SMS, sind in der <a href="https://app.praxly.at/datenschutz">Datenschutzerklärung der App</a> offen aufgelistet.</p>
+        <p>Die Datenbank liegt auf Servern in der EU (Frankfurt). Externe Dienstleister, etwa für den Versand von E-Mails und SMS, sind in der <a href="https://app.praxly.at/datenschutz">Datenschutzerklärung der App</a> offen aufgelistet.</p>
       </div>
     </div>
     <div class="why-card">
       <div class="wic" aria-hidden="true">🔐</div>
       <div>
         <h3>Verschlüsselt &amp; gesichert</h3>
-        <p>Daten werden verschlüsselt übertragen (TLS) und verschlüsselt gespeichert. Automatische Backups laufen regelmäßig.</p>
+        <p>Daten werden verschlüsselt übertragen (TLS) und verschlüsselt gespeichert.</p>
       </div>
     </div>
     <div class="why-card">
@@ -1582,15 +1584,15 @@
     </details>
     <details class="faq-item">
       <summary>Was passiert nach den 14 Tagen?</summary>
-      <div class="faq-body">Der Test endet automatisch, es wird nichts abgebucht. Nur wenn du dich bewusst für Praxly entscheidest, werden 149 € pro Monat fällig – monatlich kündbar, ohne Mindestlaufzeit.</div>
+      <div class="faq-body">Der Test endet automatisch, es wird nichts abgebucht. Nur wenn du dich bewusst für Praxly entscheidest, werden 149 € pro Monat fällig – monatlich kündbar, ohne Mindestlaufzeit. Ohne Vertragsabschluss wird der Zugang gesperrt; deine Daten bleiben 30 Tage erhalten und werden dann gelöscht.</div>
     </details>
     <details class="faq-item">
       <summary>Wo liegen meine Daten?</summary>
-      <div class="faq-body">Datenbank und Anwendung laufen auf Servern in der EU (Frankfurt), die Daten werden täglich verschlüsselt gesichert. Den Auftragsverarbeitungsvertrag (AVV) findest du in der App. Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht in der Datenschutzerklärung.</div>
+      <div class="faq-body">Die Datenbank liegt auf Servern in der EU (Frankfurt). Den Auftragsverarbeitungsvertrag (AVV) findest du in der App. Für einzelne Zusatzdienste wie den Versand von E-Mails und SMS werden externe Dienstleister eingesetzt – welche das sind, steht in der Datenschutzerklärung.</div>
     </details>
     <details class="faq-item">
       <summary>Wer sieht die Patientendaten?</summary>
-      <div class="faq-body">Nur deine Praxis. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. Patientendaten schickst du dem Praxly-Team nie per E-Mail.</div>
+      <div class="faq-body">Innerhalb von Praxly sieht nur deine Praxis ihre Daten. Jede Praxis ist technisch strikt von allen anderen getrennt (Mandantentrennung) und sieht ausschließlich ihre eigenen Daten. Patientendaten schickst du dem Praxly-Team nie per E-Mail.</div>
     </details>
     <details class="faq-item">
       <summary>Kann ich meine Daten exportieren?</summary>
@@ -1610,7 +1612,7 @@
     </details>
     <details class="faq-item">
       <summary>Gehen beim Wechsel Daten verloren?</summary>
-      <div class="faq-body">Nein. Deine Papierkarten bewahrst du weiter auf, und deine Excel- oder Exportdatei bleibt beim Import unverändert bei dir. Praxly sichert die Daten täglich verschlüsselt, und als Inhaber:in kannst du deine Daten jederzeit selbst exportieren.</div>
+      <div class="faq-body">Nein. Deine Papierkarten bewahrst du weiter auf, und deine Excel- oder Exportdatei bleibt beim Import unverändert bei dir. Als Inhaber:in kannst du deine Daten jederzeit selbst exportieren.</div>
     </details>
     <details class="faq-item">
       <summary>Muss ich meine alten Karteikarten abtippen?</summary>
@@ -1673,7 +1675,7 @@
     <div class="why-card"><div class="wic" aria-hidden="true">🧭</div><div><h3>Geführter Start</h3><p>Der Einrichtungs-Assistent führt dich in 5 Schritten bis zur ersten Honorarnote.</p></div></div>
   </div>
   <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-    <a href="mailto:support@praxly.at" class="btn btn-secondary">E-Mail schreiben</a>
+    <a href="mailto:kontakt@praxly.at" class="btn btn-secondary">E-Mail schreiben</a>
     <a href="https://wa.me/436642140654" class="btn btn-secondary">WhatsApp schreiben</a>
   </div>
 </section>
@@ -1870,7 +1872,7 @@
             msg.style.cssText = 'margin-top:12px;font-size:0.86rem;color:#c0392b;';
             form.appendChild(msg);
           }
-          msg.innerHTML = 'Das hat leider nicht geklappt. Schreib kurz an <a href="mailto:support@praxly.at">support@praxly.at</a> – das Praxly-Team meldet sich persönlich.';
+          msg.innerHTML = 'Das hat leider nicht geklappt. Schreib kurz an <a href="mailto:kontakt@praxly.at">kontakt@praxly.at</a> – das Praxly-Team meldet sich persönlich.';
         }
         fetch(form.action, {
           method: 'POST',
