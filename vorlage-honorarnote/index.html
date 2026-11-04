@@ -219,7 +219,7 @@
       if (!r.ok) throw new Error(r.status);
       f.reset(); show('ok', 'Fast geschafft! Bitte bestätigen Sie Ihre E-Mail-Adresse über den Link in der E-Mail, die Sie gerade erhalten haben. Danach kommt die Vorlage.');
     }).catch(function () {
-      show('err', 'Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut oder schreiben Sie an support@praxly.at.');
+      show('err', 'Das hat leider nicht geklappt. Bitte versuchen Sie es später erneut oder schreiben Sie an kontakt@praxly.at.');
     }).finally(function () { btn.disabled = false; btn.textContent = 'Vorlage per E-Mail anfordern'; });
   });
 })();
