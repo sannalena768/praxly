@@ -1020,6 +1020,8 @@
   /* ---------- Landingpage kurz (Entwurf 05.11.) ---------- */
   .shot { margin: 0; text-align: center; }
   .shot img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto; border-radius: 22px; border: 1px solid var(--gray-mid); box-shadow: 0 18px 40px -22px rgba(15,31,20,.35); background: #fff; }
+  .shot-wide { max-width: 960px; margin: 28px auto 0; }
+  .shot.shot-wide img { max-width: 100%; border-radius: 12px; }
   .shot figcaption { margin-top: 12px; font-size: .82rem; color: var(--ink-light); }
   .hero-shot { justify-self: center; }
   .feat-show { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 44px; align-items: start; }
@@ -1166,13 +1168,10 @@
     <div class="feat-card feat-mini"><div class="feat-ic" aria-hidden="true">🪑</div><div><h3>Wartezimmer &amp; Check-in</h3><p>Check-in per QR-Code, im Wartezimmer siehst du, wer schon da ist.</p></div></div>
     </div>
   </div>
-  <!-- BILD-3 (kommt von der App-Session): Kalender oder Honorarnote mit Testdaten.
-       Einsetzen als zweite Figure neben/unter der Funktionsliste, Muster:
-  <figure class="shot">
-    <img src="bilder/DATEINAME.jpg" width="BREITE" height="HOEHE" loading="lazy" decoding="async" alt="ALT-TEXT: was ist zu sehen, Beispielansicht mit Testdaten">
-    <figcaption>BILDUNTERSCHRIFT (Beispiel mit Testdaten)</figcaption>
+  <figure class="shot shot-wide">
+    <img src="bilder/kalender-wochenansicht.jpg" width="1200" height="750" loading="lazy" decoding="async" alt="Praxly Wochenkalender mit Terminen von zwei Therapeut:innen, farblich getrennt (Beispielansicht mit erfundenen Testdaten)">
+    <figcaption>Der Wochenkalender – Termine je Therapeut:in auf einen Blick (Beispiel mit erfundenen Testdaten)</figcaption>
   </figure>
-  -->
   <div class="cta-block">
     <a href="https://app.praxly.at/registrierung" class="btn btn-primary">Kostenlos 14 Tage testen</a>
     <p class="cta-sub">14 Tage kostenlos testen, keine Karte nötig</p>
