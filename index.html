@@ -236,7 +236,7 @@
   .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 26px;border-radius:3px;font:700 1.0625rem/1.2 var(--f-body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s,color .18s}
   .btn-test{background:var(--akzent);color:#fff}
   .btn-test:hover{background:#226e45;text-decoration:none}
-  .micro{font-size:.9375rem;color:var(--text2);margin-top:10px}
+  .micro{font-size:1rem;color:var(--text2);margin-top:10px}
   .dark .micro{color:#cfdcd4}
 
   /* Kopf */
@@ -265,7 +265,7 @@
   .hero-fig .frame{width:128%}
   .hero-fig .frame{border-radius:8px 0 0 0;border-right:0}
   .hero-fig figcaption{padding:8px var(--g) 14px 0;margin-top:8px}
-  figcaption{font-size:.9375rem;color:var(--text2);border-top:1px solid var(--salbei);margin-top:12px;padding-top:8px}
+  figcaption{font-size:1rem;color:var(--text2);border-top:1px solid var(--salbei);margin-top:12px;padding-top:8px}
   @keyframes gleiten{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:none}}
   .hero-fig .frame{animation:gleiten .9s cubic-bezier(.2,.7,.2,1) both}
 
@@ -282,7 +282,7 @@
   .phones .frame{border-radius:16px;padding:7px;background:var(--tinte);border-color:var(--tinte)}
   .phones .frame img{border-radius:10px;aspect-ratio:525/700;object-fit:cover;object-position:top}
   .phones figure+figure{margin-top:0}
-  .phones figcaption{font-size:.875rem}
+  .phones figcaption{font-size:1rem}
 
   /* Berufe */
   .jobs{list-style:none;border-top:1px solid var(--tanne);margin-top:26px}
@@ -302,7 +302,7 @@
   /* Preis */
   table.preis{width:100%;border-collapse:collapse;margin-top:28px;border-top:2px solid var(--tanne)}
   .preis tr{display:block;padding:11px 0;border-bottom:1px solid var(--linie)}
-  .preis th{display:block;text-align:left;font:700 .9375rem var(--f-body);color:var(--text2);margin-bottom:4px}
+  .preis th{display:block;text-align:left;font:700 1rem var(--f-body);color:var(--text2);margin-bottom:4px}
   .preis td{display:block}
   .preis .zahl{font:800 clamp(2.6rem,11vw,3.8rem)/1 var(--f-head);letter-spacing:-.035em;color:var(--tanne)}
   .preis .zahl small{font:600 1.1rem var(--f-body);letter-spacing:0;color:var(--text2)}
@@ -310,12 +310,12 @@
   .preis li{padding:3px 0;max-width:36em}
   .preis li+li{border-top:1px dotted var(--linie)}
   .preis-act{margin-top:26px;display:none}
-  .fine{font-size:.9375rem;color:var(--text2);margin-top:14px;max-width:40em}
+  .fine{font-size:1rem;color:var(--text2);margin-top:14px;max-width:40em}
 
   /* Datenschutz */
   .ds{margin-top:26px;border-top:1px solid var(--tanne)}
   .ds div{padding:11px 0;border-bottom:1px solid var(--linie);display:grid;grid-template-columns:6.4rem 1fr;gap:0 12px}
-  .ds dt{font-weight:700;font-size:.9375rem;color:var(--text2);padding-top:2px}
+  .ds dt{font-weight:700;font-size:1rem;color:var(--text2);padding-top:2px}
   .ds dd{max-width:38em}
 
   /* FAQ */
@@ -343,7 +343,7 @@
   .cta-form{margin-top:16px;display:flex;flex-direction:column;gap:12px}
   .cta-form input[type=email]{min-height:52px;padding:0 14px;border:1px solid var(--salbei);border-radius:2px;background:var(--papier);color:var(--tinte);font:1.0625rem var(--f-body)}
   .cta-form button{background:var(--papier);color:var(--tanne);border:2px solid var(--papier);font-weight:700}
-  .cta-consent{display:flex;gap:10px;align-items:flex-start;font-size:.9375rem;color:#dbe6df}
+  .cta-consent{display:flex;gap:10px;align-items:flex-start;font-size:1rem;color:#dbe6df}
   .cta-consent input{margin-top:5px;width:18px;height:18px;flex:none}
   .cta-success{display:none;margin-top:16px;padding:14px;border:1px solid var(--salbei)}
   .cta-success.show{display:block}
@@ -353,13 +353,13 @@
   footer{background:var(--kalk);border-top:1px solid var(--tanne);padding:22px 0 80px}
   .footer-links{list-style:none;margin:12px 0;display:flex;flex-wrap:wrap;gap:0 22px}
   .footer-links a{display:inline-block;padding:4px 0;color:var(--tinte)}
-  .foot-copy{font-size:.9375rem;color:var(--text2)}
+  .foot-copy{font-size:1rem;color:var(--text2)}
 
   /* Fester Button Handy */
   .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--papier);border-top:1px solid var(--tanne);padding:10px var(--g) calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s;text-align:center}
   .mobile-cta.show{transform:none}
   .mobile-cta .btn{width:100%}
-  .mobile-cta .micro{margin-top:6px;font-size:.875rem}
+  .mobile-cta .micro{margin-top:6px;font-size:1rem}
 
   @media (min-width:900px){
     :root{--g:40px}
@@ -418,6 +418,8 @@
     html{scroll-behavior:auto}
     *,*::before,*::after{animation:none!important;transition:none!important}
   }
+  main p a, main li a, .foot-copy a, .fine a{display:inline-block;padding:6px 0}
+  .faq-body a{display:inline;padding:0}
 </style>
 </head>
 <body>
@@ -468,7 +470,7 @@
       <div class="txt">
         <h3>Termine und Online-Buchung</h3>
         <ul class="feat">
-          <li><b>Online-Terminbuchung 24/7</b><span>Patient:innen buchen selbst, ohne Login und ohne Anruf. <a href="online-terminbuchung/">Mehr dazu</a></span></li>
+          <li><b>Online-Terminbuchung 24/7</b><span>Patient:innen buchen selbst, ohne Login und ohne Anruf. <a href="online-terminbuchung/" aria-label="Mehr zur Online-Terminbuchung">Mehr dazu</a></span></li>
           <li><b>Kalender &amp; Termine</b><span>Einzel- und Serientermine mit Konfliktprüfung und Therapeutenfilter.</span></li>
           <li><b>Automatische Erinnerungen</b><span>Per SMS und E-Mail, optional ein zweites Mal – weniger Ausfälle.</span></li>
           <li><b>Warteliste &amp; Absagen</b><span>Wird ein Termin frei, ist die Warteliste sofort zur Hand.</span></li>
@@ -508,8 +510,8 @@
     <div class="r">
       <ul class="jobs">
         <li><h3>Ich bin Physiotherapeut:in</h3><p>Termine, Honorarnoten für die Kostenerstattung und Dokumentation in einer Software. <a href="fuer-einzelpraxen/">Mehr für Einzelpraxen</a></p></li>
-        <li><h3>Ich bin Ergo- oder Logopäd:in</h3><p>Dieselbe Software für Ergotherapie und Logopädie: Kalender, Online-Buchung, Doku und Honorarnoten. <a href="fuer-ergotherapie-und-logopaedie/">Mehr dazu</a></p></li>
-        <li><h3>Ich bin Heilmasseur:in</h3><p>Termine, Erinnerungen und Honorarnoten für deine Klient:innen, auch am Handy. <a href="fuer-heilmassage/">Mehr dazu</a></p></li>
+        <li><h3>Ich bin Ergo- oder Logopäd:in</h3><p>Dieselbe Software für Ergotherapie und Logopädie: Kalender, Online-Buchung, Doku und Honorarnoten. <a href="fuer-ergotherapie-und-logopaedie/" aria-label="Mehr für Ergo und Logo">Mehr dazu</a></p></li>
+        <li><h3>Ich bin Heilmasseur:in</h3><p>Termine, Erinnerungen und Honorarnoten für deine Klient:innen, auch am Handy. <a href="fuer-heilmassage/" aria-label="Mehr für Heilmassage">Mehr dazu</a></p></li>
       </ul>
       <p class="more">Ihr seid mehrere? <a href="fuer-gemeinschaftspraxen/">Praxly für Gemeinschaftspraxen</a></p>
     </div>
