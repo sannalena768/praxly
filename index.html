@@ -11,7 +11,10 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Praxissoftware für Physio, Ergo, Logo, Heilmassage">
 <meta property="og:description" content="Praxissoftware für Physio, Ergo, Logopädie und Heilmassage in Österreich: Honorarnoten, Termine, Online-Buchung. 149 €/Monat, 14 Tage gratis.">
-<meta property="og:image" content="https://praxly.at/logo.png">
+<meta property="og:image" content="https://praxly.at/og/og-start.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Praxly: Wochenkalender mit Terminen, Beispielansicht mit erfundenen Testdaten">
 <meta property="og:url" content="https://praxly.at">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Praxly">
@@ -21,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Praxly – Praxissoftware für Physio, Ergo, Logo, Heilmassage">
 <meta name="twitter:description" content="Online-Terminbuchung 24/7, automatische Erinnerungen, digitale Anamnese, Dokumentation & Honorarnoten. Datenbank in der EU (Frankfurt), Auftragsverarbeitungsvertrag inklusive. Persönlich eingerichtet.">
-<meta name="twitter:image" content="https://praxly.at/logo.png">
+<meta name="twitter:image" content="https://praxly.at/og/og-start.jpg">
 
 <meta name="theme-color" content="#1E3A32">
 <link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -283,6 +286,13 @@
   .phones .frame img{border-radius:10px;aspect-ratio:525/700;object-fit:cover;object-position:top}
   .phones figure+figure{margin-top:0}
   .phones figcaption{font-size:1rem}
+  .row-fig .wide{margin-bottom:28px}
+  .row-fig .wide .frame{border-radius:8px}
+  .docs{display:grid;gap:28px;margin-top:36px}
+  .docs .frame{border-radius:8px}
+  .docs figure:last-child .frame{max-width:340px}
+  .ds-fig{margin-bottom:28px}
+  .ds-fig .frame{border-radius:8px}
 
   /* Berufe */
   .jobs{list-style:none;border-top:1px solid var(--tanne);margin-top:26px}
@@ -392,6 +402,8 @@
     .row.b .ttl{grid-column:1/5}
     .row.b .ttl h3{position:sticky;top:96px}
     .phones{gap:20px}
+    .docs{grid-template-columns:7fr 5fr;align-items:start}
+    .docs figure:last-child .frame{max-width:none}
     .two .l{grid-column:1/6}
     .two .r{grid-column:7/13}
     .two.rev .l{grid-column:1/5}
@@ -454,7 +466,7 @@
   </div>
   <figure class="hero-fig">
     <div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
-    <img src="bilder/kalender-wochenansicht.jpg" width="1200" height="750" fetchpriority="high" decoding="async" alt="Praxly Wochenkalender mit Terminen von zwei Therapeut:innen, farblich getrennt (Beispielansicht mit erfundenen Testdaten)"></div>
+    <img src="bilder/hero-kalender-woche.webp" width="1600" height="1112" fetchpriority="high" decoding="async" alt="Praxly Wochenkalender mit Terminen mehrerer Therapeut:innen, farblich nach Leistung getrennt – Beispielansicht mit erfundenen Testdaten"></div>
     <figcaption>Der Wochenkalender – Termine je Therapeut:in auf einen Blick (Beispiel mit erfundenen Testdaten)</figcaption>
   </figure>
 </div>
@@ -477,9 +489,12 @@
           <li><b>Wartezimmer &amp; Check-in</b><span>Check-in per QR-Code, im Wartezimmer siehst du, wer schon da ist.</span></li>
         </ul>
       </div>
-      <div class="row-fig phones">
+      <div class="row-fig">
+        <figure class="wide"><div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="bilder/funktion-termine-tagesansicht.webp" width="1400" height="973" loading="lazy" decoding="async" alt="Praxly Tagesansicht mit Terminen verschiedener Leistungen und Therapeut:innen – Beispielansicht mit erfundenen Testdaten"></div><figcaption>Die Tagesansicht – Termine nach Leistung farblich getrennt (Beispiel mit erfundenen Testdaten)</figcaption></figure>
+        <div class="phones">
+        <figure><div class="frame"><img src="bilder/funktion-handy-kalender.webp" width="640" height="1386" loading="lazy" decoding="async" alt="Praxly Tagesplan am Handy mit farbigen Terminen – Beispielansicht mit erfundenen Testdaten"></div><figcaption>Der Tagesplan am Handy (Beispiel mit erfundenen Testdaten)</figcaption></figure>
         <figure><div class="frame"><img src="bilder/online-buchung-termin-waehlen.jpg" width="525" height="1136" loading="lazy" decoding="async" alt="Online-Buchung in Praxly: Leistung, Datum und freie Uhrzeiten auswählen – Beispielansicht mit Testdaten"></div><figcaption>Online-Buchung für deine Patient:innen (Beispiel mit Testdaten)</figcaption></figure>
-        <figure><div class="frame"><img src="bilder/online-buchung-bestaetigung.jpg" width="525" height="1136" loading="lazy" decoding="async" alt="Online-Buchung in Praxly: Bestätigungsseite „Termin bestätigt“ für Patient:innen – Beispielansicht mit Testdaten"></div><figcaption>Termin bestätigt – die Buchung aus Sicht deiner Patient:innen (Beispiel mit Testdaten)</figcaption></figure>
+        </div>
       </div>
     </div>
 
@@ -495,6 +510,10 @@
           <li><b>Gemeinschaftspraxis &amp; Team</b><span>Gemeinsamer Kalender, Honorarnoten im Namen selbständiger Therapeut:innen, Rollen für Inhaber:in, Therapeut:in und Empfang.</span></li>
           <li><b>Kurse, Recall &amp; Statistik</b><span>Gruppenkurse verwalten, Patient:innen wieder einladen, Auslastung und Umsatz im Blick.</span></li>
         </ul>
+        <div class="docs">
+          <figure><div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="bilder/funktion-patientenakte-verlauf.webp" width="1400" height="875" loading="lazy" decoding="async" alt="Praxly Patientenakte mit Behandlungsnotizen, Patienten-Portal und Behandlungszielen – Beispielansicht mit erfundenen Testdaten"></div><figcaption>Die Patientenakte mit Behandlungsnotizen (Beispiel mit erfundenen Testdaten)</figcaption></figure>
+          <figure><div class="frame"><img src="bilder/funktion-honorarnote.webp" width="900" height="1224" loading="lazy" decoding="async" alt="Praxly Honorarnote als PDF mit zwei Leistungen und Gesamtbetrag – Beispielansicht mit erfundenen Testdaten"></div><figcaption>Die Honorarnote als PDF (Beispiel mit erfundenen Testdaten)</figcaption></figure>
+        </div>
       </div>
     </div>
   </div>
@@ -573,6 +592,7 @@
       <p class="sub">Mehr dazu: <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="https://app.praxly.at/agb" target="_blank" rel="noopener noreferrer">AGB</a> · <a href="ratgeber/datenschutz-physiopraxis/">Ratgeber: Datenschutz in der Physiopraxis</a></p>
     </div>
     <div class="r">
+      <figure class="ds-fig"><div class="frame"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="bilder/daten-export-csv.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Praxly Einstellungen: Daten als CSV oder JSON exportieren – Beispielansicht mit erfundenen Testdaten"></div><figcaption>Export deiner Daten als CSV (Beispiel mit erfundenen Testdaten)</figcaption></figure>
       <dl class="ds">
         <div><dt>Daten</dt><dd>in der EU (Frankfurt)</dd></div>
         <div><dt>Übertragung</dt><dd>verschlüsselt (HTTPS)</dd></div>
