@@ -484,7 +484,7 @@
         <ul class="feat">
           <li><b>Online-Terminbuchung 24/7</b><span>Patient:innen buchen selbst, ohne Login und ohne Anruf. <a href="online-terminbuchung/" aria-label="Mehr zur Online-Terminbuchung">Mehr dazu</a></span></li>
           <li><b>Kalender &amp; Termine</b><span>Einzel- und Serientermine mit Konfliktprüfung und Therapeutenfilter.</span></li>
-          <li><b>Automatische Erinnerungen</b><span>Per SMS und E-Mail, optional ein zweites Mal – weniger Ausfälle.</span></li>
+          <li><b>Automatische Erinnerungen</b><span>Per E-Mail, optional ein zweites Mal – weniger Ausfälle.</span></li>
           <li><b>Warteliste &amp; Absagen</b><span>Wird ein Termin frei, ist die Warteliste sofort zur Hand.</span></li>
           <li><b>Wartezimmer &amp; Check-in</b><span>Check-in per QR-Code, im Wartezimmer siehst du, wer schon da ist.</span></li>
         </ul>
@@ -566,7 +566,7 @@
           <tr><th scope="row">Test</th><td>14 Tage kostenlos testen, keine Karte nötig</td></tr>
           <tr><th scope="row">Enthalten</th><td><ul>
             <li>Alle Funktionen inklusive, keine Zusatzmodule</li>
-            <li>Online-Terminbuchung, Kalender &amp; Erinnerungen (SMS mit fairer Monatsgrenze)</li>
+            <li>Online-Terminbuchung, Kalender &amp; E-Mail-Erinnerungen</li>
             <li>Honorarnoten mit den Angaben für die Kostenerstattung</li>
             <li>Dokumentation, Anamnese &amp; Verordnungen</li>
             <li>Gemeinschaftspraxis: Honorarnoten im Namen jeder Therapeut:in, Rollen für Inhaber:in, Therapeut:in und Empfang</li>
@@ -691,19 +691,6 @@
       <a href="https://app.praxly.at/registrierung" class="btn btn-test">14 Tage kostenlos testen</a>
       <p class="micro">ohne Karte, monatlich kündbar</p>
     </div>
-    <div class="optin">
-      <h3>Lieber erst Infos per E-Mail?</h3>
-      <p>Hinterlass deine E-Mail-Adresse – das Praxly-Team meldet sich meist am selben Tag.</p>
-      <form class="cta-form" id="finalForm" action="https://2e87df60.sibforms.com/serve/MUIFADQuyJI0naQfcY2v9ZUC6II-9ZsR32E9C95uiOgKGrTt2E-aUJ3hsVe9IylPwtsNpfNpNs43bPcUm9htLH-C7rOsJLJT6XDjf2hprd5LWxEra2hkRBgvC2u84qAqitnjMUk2gmyvv-nem1c7YjFMLC7pf_L7pZd5-rNI9p-ddJcLXDYnsjEtSMhTlpyHOAXo4oK6SOxfOLP2zA==" method="POST" novalidate>
-        <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" maxlength="120" autocomplete="email" required>
-        <button type="submit" class="btn">Kontakt anfordern</button>
-        <input type="hidden" name="locale" value="de">
-        <input type="hidden" name="html_type" value="simple">
-        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-        <label class="cta-consent"><input type="checkbox" name="einwilligung" value="ja" required><span>Ich bin einverstanden, vom Praxly-Team per E-Mail kontaktiert zu werden. <a href="datenschutz.html">Datenschutz</a></span></label>
-      </form>
-      <div class="cta-success" id="finalSuccess"><strong>Danke!</strong> Das Praxly-Team meldet sich – meist am selben Tag.</div>
-    </div>
   </div>
 </section>
 
@@ -748,50 +735,6 @@
   <p class="micro">ohne Karte, monatlich kündbar</p>
 </div>
 
-<script>
-  (function () {
-    function wire(formId, successId) {
-      var form = document.getElementById(formId);
-      var success = document.getElementById(successId);
-      if (!form || !success) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-        var btn = form.querySelector('button[type="submit"]');
-        if (btn) { btn.disabled = true; btn.style.opacity = '0.7'; }
-        var emailEl = form.querySelector('input[name="EMAIL"]');
-        var body = new URLSearchParams();
-        body.set('EMAIL', emailEl ? emailEl.value.trim() : '');
-        body.set('email_address_check', '');
-        body.set('locale', 'de');
-        body.set('html_type', 'simple');
-        body.set('einwilligung', 'ja');
-        function done() { form.style.display = 'none'; success.classList.add('show'); }
-        function fail() {
-          if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
-          var msg = form.querySelector('.form-error');
-          if (!msg) {
-            msg = document.createElement('p');
-            msg.className = 'form-error';
-            msg.style.cssText = 'margin-top:12px;font-size:0.95rem;color:#ffd7d0;';
-            form.appendChild(msg);
-          }
-          msg.innerHTML = 'Das hat leider nicht geklappt. Schreib kurz an <a href="mailto:kontakt@praxly.at">kontakt@praxly.at</a> – das Praxly-Team meldet sich persönlich.';
-        }
-        fetch(form.action, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: body.toString()
-        }).then(done).catch(fail);
-      });
-    }
-    wire('finalForm', 'finalSuccess');
-  })();
-</script>
 
 <script>
 (function () {
