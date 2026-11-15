@@ -27,8 +27,8 @@
 <meta name="twitter:image" content="https://praxly.at/og/og-start.jpg">
 
 <meta name="theme-color" content="#1E3A32">
-<link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -85,6 +85,14 @@
   },
   {
    "@type": "Question",
+   "name": "Was passiert nach den 14 Tagen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Du entscheidest. Willst du weitermachen, richtest du dein Abo in der App ein. Willst du nicht, musst du nichts tun. Ohne Abo wird dein Zugang gesperrt. Deine Daten bleiben danach noch 30 Tage gespeichert und lassen sich in dieser Zeit exportieren."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Was ist im Preis enthalten?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -128,10 +136,10 @@
 </script>
 
 <style>
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2-variations'),url(/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-  @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(/fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2-variations'),url(/fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-  @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:200 900;font-display:swap;src:url(/fonts/source-sans-3-latin-ext-wght-normal.woff2) format('woff2-variations'),url(/fonts/source-sans-3-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-  @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:200 900;font-display:swap;src:url(/fonts/source-sans-3-latin-wght-normal.woff2) format('woff2-variations'),url(/fonts/source-sans-3-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2-variations'),url(fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2-variations'),url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:200 900;font-display:swap;src:url(fonts/source-sans-3-latin-ext-wght-normal.woff2) format('woff2-variations'),url(fonts/source-sans-3-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:200 900;font-display:swap;src:url(fonts/source-sans-3-latin-wght-normal.woff2) format('woff2-variations'),url(fonts/source-sans-3-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
   
   
@@ -192,8 +200,8 @@
   .hero-fig .frame{width:118%;border-radius:8px 0 0 0;border-right:0}
   figcaption{font-size:1rem;color:var(--text2);border-top:1px solid var(--salbei);margin-top:10px;padding-top:8px}
   .hero-fig figcaption{margin-right:var(--g);margin-bottom:14px}
-  @keyframes gleiten{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
-  .hero-fig .frame{animation:gleiten .9s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes gleiten{from{transform:translateX(24px)}to{transform:none}}
+  .hero-fig .frame{animation:gleiten .5s cubic-bezier(.2,.7,.2,1) both}
 
   /* Vertrauensstreifen */
   .trust{background:var(--tanne);color:#fff}
@@ -201,7 +209,7 @@
   .trust li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.22)}
   .trust li:last-child{border-bottom:0}
   .trust b{display:block;font:700 1.1rem/1.2 var(--f-head);letter-spacing:-.01em}
-  .trust span{display:block;color:#d6e2db;margin-top:2px}
+  .trust span{display:block;color:#d6e2db;margin-top:2px;font-size:1rem}
 
   /* Preis */
   .preis-card{margin-top:28px;border:1px solid var(--tanne);background:#fff;border-radius:8px;padding:24px 20px;display:grid;gap:28px}
@@ -213,6 +221,7 @@
   .liste li{padding:11px 0 11px 28px;border-bottom:1px solid var(--linie);position:relative}
   .liste li::before{content:"";position:absolute;left:4px;top:1.05em;width:11px;height:6px;border-left:2.5px solid var(--akzent);border-bottom:2.5px solid var(--akzent);transform:rotate(-45deg)}
   .fine{font-size:1rem;color:var(--text2);margin-top:16px;max-width:42em}
+  .fine a{display:inline-block;min-height:44px;line-height:44px;font-size:1rem}
 
   /* Funktionen */
   .funk{background:#fff;border-top:1px solid var(--linie);border-bottom:1px solid var(--linie)}
@@ -283,6 +292,87 @@
     .mobile-cta{display:none}
     footer{padding-bottom:40px}
   }
+  .punkte{list-style:none;margin-top:18px;max-width:31em}
+  .punkte li{position:relative;padding:5px 0 5px 30px;font-weight:600}
+  .punkte li::before{content:"";position:absolute;left:4px;top:.82em;width:12px;height:7px;border-left:3px solid var(--akzent);border-bottom:3px solid var(--akzent);transform:rotate(-45deg)}
+  .hero .btn-test{width:100%;min-height:56px;font-size:1.125rem}
+  .sicher{list-style:none;display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:12px;font-size:1rem;color:var(--text2)}
+  .sicher li{position:relative;padding-left:20px}
+  .sicher li::before{content:"";position:absolute;left:2px;top:.5em;width:9px;height:5px;border-left:2px solid var(--akzent);border-bottom:2px solid var(--akzent);transform:rotate(-45deg)}
+  .dark .sicher{color:#d6e2db}
+  .dark .sicher li::before{border-color:#fff}
+  .mehr{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-weight:600}
+
+
+  /* So läuft der Test */
+  .ablauf{background:var(--kalk);border-bottom:1px solid var(--linie)}
+  .schritte{list-style:none;margin-top:24px;display:grid;gap:14px;counter-reset:s}
+  .schritte li{counter-increment:s;background:var(--papier);border:1px solid var(--tanne);border-radius:8px;padding:20px 20px 20px 72px;position:relative}
+  .schritte li::before{content:counter(s);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--tanne);color:#fff;font:800 1.2rem/38px var(--f-head);text-align:center}
+  .schritte h3{font-size:1.2rem}
+  .schritte p{margin-top:6px;color:var(--text2)}
+
+  /* Vertrauen */
+  .vertrauen-grid{display:grid;gap:26px;margin-top:24px}
+  .karten{display:grid;gap:14px}
+  .karte{background:#fff;border:1px solid var(--linie);border-left:4px solid var(--akzent);border-radius:6px;padding:16px 18px}
+  .karte b{display:block;font:700 1.1rem/1.25 var(--f-head);letter-spacing:-.01em}
+  .karte span{display:block;color:var(--text2);margin-top:3px}
+
+  /* Vertrauensstreifen am Handy: 2 Spalten statt 4 Zeilen (kürzerer Weg zum Inhalt) */
+  @media (max-width:899px){
+    .sec{padding:30px 0}
+    .block{gap:16px;padding:22px 0}
+    .block p{margin-top:8px}
+    .block .liste{margin-top:12px}
+    .shot.phone .frame{max-width:180px;border-radius:16px;padding:6px}
+    .shot.doc .frame{max-width:240px}
+    .shot.phone,.shot.doc{display:flex;flex-direction:column;align-items:center}
+    .hero{padding-top:24px}
+    .hero .lead{margin-top:12px}
+    .hero .actions{margin-top:18px}
+    .hero-fig{margin-top:16px}
+    .hero-fig .frame{width:112%}
+    .punkte{margin-top:12px}
+    .punkte li{padding:3px 0 3px 30px}
+    .punkte li::before{top:.7em}
+    .preis-card .micro{display:none}
+    .trust li{padding:10px 0}
+    h2{font-size:clamp(1.65rem,6vw,2.9rem)}
+    .sub{margin-top:8px}
+    .final .actions{margin-top:18px}
+    .ehrlich ul{margin-top:12px}
+    .preis-card{margin-top:20px;padding:18px 16px;gap:20px}
+    .liste li{padding:8px 0 8px 28px}
+    .liste li::before{top:.85em}
+    .schritte{margin-top:16px;gap:10px}
+    .schritte li{padding:14px 16px 14px 64px}
+    .schritte li::before{top:14px;left:14px}
+    .karten{gap:10px;margin-top:16px}
+    .karte{padding:12px 14px}
+    .ehrlich ul{margin-top:14px}
+    .ehrlich li{padding:9px 0}
+    .faq-list{margin-top:16px}
+    details.faq-item summary{padding:10px 0}
+    .faq-body{padding-bottom:12px}
+    .footer-links{gap:0 18px;margin:8px 0}
+    footer{padding:20px 0 90px}
+    .trust ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:18px}
+    .trust b{hyphens:auto}
+    .trust li{padding:12px 0}
+    .trust li:nth-last-child(-n+2){border-bottom:0}
+    .trust b{font-size:1rem}
+  }
+  @media (min-width:900px){
+    .hero .btn-test{width:auto}
+    .schritte{grid-template-columns:repeat(3,1fr);gap:20px}
+    .schritte li{padding:74px 24px 24px}
+    .schritte li::before{left:24px;top:22px}
+    .hero{padding-top:56px}
+    .hero-copy{padding-bottom:56px}
+    .hero h1{font-size:clamp(2.4rem,4.3vw,3.5rem);max-width:13em}
+    .karten{grid-template-columns:repeat(3,1fr)}
+  }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{animation:none!important;transition:none!important}
@@ -297,6 +387,7 @@
     <a href="/" class="logo"><img src="logo-68.png" alt="" width="32" height="32">Praxly</a>
     <nav aria-label="Hauptmenü">
       <a class="nl" href="#funktionen">Funktionen</a>
+      <a class="nl" href="#so-laeuft-der-test">So läuft der Test</a>
       <a class="nl" href="#preis">Preis</a>
       <a class="nl" href="#fragen">Fragen</a>
       <a class="login" href="https://app.praxly.at/login">Anmelden</a>
@@ -309,10 +400,20 @@
 <div class="hero">
   <div class="hero-copy">
     <h1>Raus aus Papier und Excel: Termine, Akte und Honorarnote an einem Ort.</h1>
-    <p class="lead">Praxissoftware für Physio, Ergo, Logo und Heilmassage in Österreich, im Browser, auch am Handy. Deine Patientenliste lädst du als Excel oder CSV hoch und siehst vorher eine Vorschau.</p>
+    <p class="lead">Praxissoftware für Physio, Ergo, Logo und Heilmassage in Österreich. Läuft im Browser, auch am Handy.</p>
+    <ul class="punkte">
+      <li>Ein Kalender für alle Termine, mit Online-Buchung</li>
+      <li>Honorarnote als PDF, mit allen Angaben für die Kostenerstattung</li>
+      <li>Deine Patientenliste lädst du als Excel oder CSV hoch</li>
+    </ul>
     <div class="actions" id="hero-cta">
       <a href="https://app.praxly.at/registrierung" class="btn btn-test">14 Tage kostenlos testen</a>
-      <p class="micro">Ohne Karte. Danach 149 € im Monat, monatlich kündbar.</p>
+      <ul class="sicher" aria-label="Gut zu wissen">
+        <li>Ohne Karte</li>
+        <li>Kein Abo startet von selbst</li>
+        <li>Danach 149 € im Monat, monatlich kündbar</li>
+      </ul>
+      <a class="mehr" href="#so-laeuft-der-test">So läuft der Test in 3 Schritten</a>
     </div>
   </div>
   <figure class="hero-fig">
@@ -324,35 +425,11 @@
 <section class="trust" aria-label="Das Wichtigste in Kürze">
   <div class="wrap">
     <ul>
-      <li><b>Auftragsverarbeitungsvertrag</b><span>direkt in der App</span></li>
+      <li><b>Vertrag (AVV) in der App</b><span>Auftragsverarbeitung direkt abrufbar</span></li>
       <li><b>Export jederzeit</b><span>Deine Daten gehören deiner Praxis</span></li>
-      <li><b>Monatlich kündbar</b><span>Kein Setup, keine Mindestlaufzeit</span></li>
+      <li><b>Datenbank in der EU</b><span>Rechenzentrum Frankfurt</span></li>
       <li><b>Das Praxly-Team aus Vorarlberg</b><span>Schriftlich, direkt vom Team</span></li>
     </ul>
-  </div>
-</section>
-
-<section class="sec" id="preis">
-  <div class="wrap">
-    <h2>Ein Preis. Alles inklusive.</h2>
-    <p class="sub">Für 1 bis 5 Therapeut:innen, ohne Module und ohne Zusatzgebühren.</p>
-    <div class="preis-card">
-      <div>
-        <div class="zahl">149 €<small> pro Monat</small></div>
-        <p class="pt">Ohne Umsatzsteuer (Kleinunternehmerregelung)</p>
-        <a href="https://app.praxly.at/registrierung" class="btn btn-test">14 Tage kostenlos testen</a>
-        <p class="micro">Ohne Karte. Danach 149 € im Monat, monatlich kündbar.</p>
-      </div>
-      <ul class="liste">
-        <li>Termine und Kalender</li>
-        <li>Patient:innen und Dokumentation</li>
-        <li>Honorarnoten mit allen Angaben für die Kostenerstattung</li>
-        <li>Online-Buchung für deine Patient:innen</li>
-        <li>Erinnerungen per E-Mail, auf Wunsch ein zweites Mal</li>
-        <li>Import deiner Patientenliste, Export jederzeit</li>
-      </ul>
-    </div>
-    <p class="fine">Gut zu wissen: Die Einreichung bei der ÖGK machen deine Patient:innen weiterhin selbst. Die Honorarnote enthält alle Angaben dafür. Kein Rabatt, keine Mindestlaufzeit.</p>
   </div>
 </section>
 
@@ -389,7 +466,72 @@
         <div class="frame"><img src="bilder/funktion-honorarnote.webp" width="900" height="1224" loading="lazy" decoding="async" alt="Praxly Honorarnote als PDF mit zwei Leistungen und Gesamtbetrag, Beispieldaten mit erfundenem Namen"></div>
         <figcaption>Die Honorarnote als PDF (Beispieldaten)</figcaption>
       </figure>
+
     </div>
+  </div>
+</section>
+
+<section class="sec ablauf" id="so-laeuft-der-test">
+  <div class="wrap">
+    <h2>So läuft dein Test.</h2>
+    <p class="sub">Drei Schritte. Du brauchst dafür keine Zahlungsdaten.</p>
+    <ol class="schritte">
+      <li>
+        <h3>Anmelden ohne Karte</h3>
+        <p>Du registrierst deine Praxis. Zahlungsdaten brauchst du dafür nicht. Die 14 Tage laufen ab deiner Anmeldung.</p>
+      </li>
+      <li>
+        <h3>In Ruhe ausprobieren</h3>
+        <p>Termine eintragen, Online-Buchung einrichten, eine Honorarnote als PDF erstellen. Deine Patientenliste kannst du hochladen, musst du aber nicht.</p>
+      </li>
+      <li>
+        <h3>Du entscheidest</h3>
+        <p>Willst du weitermachen, startest du dein Abo in der App: 149 € im Monat, monatlich kündbar. Willst du nicht, musst du nichts tun. Der Zugang endet dann von selbst.</p>
+      </li>
+    </ol>
+    <p class="fine">Deine Daten bleiben nach dem Ende noch 30 Tage gespeichert und lassen sich in dieser Zeit exportieren. <a href="/so-laeuft-der-test/">Alle Details zum Test</a></p>
+  </div>
+</section>
+
+<section class="sec" id="preis">
+  <div class="wrap">
+    <h2>Ein Preis. Alles inklusive.</h2>
+    <p class="sub">Für 1 bis 5 Therapeut:innen, ohne Module und ohne Zusatzgebühren.</p>
+    <div class="preis-card">
+      <div>
+        <div class="zahl">149 €<small> pro Monat</small></div>
+        <p class="pt">Ohne Umsatzsteuer (Kleinunternehmerregelung)</p>
+        <a href="https://app.praxly.at/registrierung" class="btn btn-test">14 Tage kostenlos testen</a>
+        <p class="micro">Ohne Karte. Danach 149 € im Monat, monatlich kündbar.</p>
+      </div>
+      <ul class="liste">
+        <li>Termine und Kalender</li>
+        <li>Patient:innen und Dokumentation</li>
+        <li>Honorarnoten mit allen Angaben für die Kostenerstattung</li>
+        <li>Online-Buchung für deine Patient:innen</li>
+        <li>Erinnerungen per E-Mail, auf Wunsch ein zweites Mal</li>
+        <li>Import deiner Patientenliste, Export jederzeit</li>
+      </ul>
+    </div>
+    <p class="fine">Gut zu wissen: Die Einreichung bei der ÖGK machen deine Patient:innen weiterhin selbst. Die Honorarnote enthält alle Angaben dafür. Kein Rabatt, keine Mindestlaufzeit.</p>
+  </div>
+</section>
+
+<section class="sec" id="vertrauen" style="background:#fff;border-top:1px solid var(--linie)">
+  <div class="wrap">
+    <h2>Deine Daten. Und wer dahintersteht.</h2>
+    <p class="sub">Das Wichtigste kurz und ohne Kleingedrucktes.</p>
+    <div class="vertrauen-grid">
+      <div class="karten">
+        <div class="karte"><b>Datenbank in der EU</b><span>Die Datenbank liegt im Rechenzentrum Frankfurt. Die Übertragung ist per HTTPS verschlüsselt. Einzelne Dienstleister, z. B. für den E-Mail-Versand, sitzen in den USA.</span></div>
+        <div class="karte"><b>Vertrag in der App</b><span>Den Auftragsverarbeitungsvertrag findest du direkt in der App.</span></div>
+        <div class="karte"><b>Zuordnung zur eigenen Praxis</b><span>Die Daten werden in einer Datenbank in der EU (Frankfurt) gespeichert und werden in Praxly über die Praxis-Zuordnung voneinander getrennt gehalten. Zugriff haben außerdem das Praxly-Team (zum Beispiel für den Support) und technische Dienstleister nach dem Auftragsverarbeitungsvertrag.</span></div>
+        <div class="karte"><b>Export jederzeit</b><span>Deine Daten gehören deiner Praxis. Du kannst deine Daten jederzeit exportieren.</span></div>
+        <div class="karte"><b>Das Praxly-Team aus Vorarlberg</b><span>Du schreibst an kontakt@praxly.at und bekommst die Antwort direkt vom Team.</span></div>
+        <div class="karte"><b>Ohne Karte testen</b><span>Keine Zahlungsdaten, kein Setup. Das Abo ist monatlich kündbar.</span></div>
+      </div>
+    </div>
+    <p class="fine"><a href="/ueber-uns/">Wer steckt dahinter?</a> · <a href="/datenschutz.html">Datenschutz</a></p>
   </div>
 </section>
 
@@ -410,6 +552,7 @@
     <h2>Häufige Fragen</h2>
     <div class="faq-list">
 <details class="faq-item"><summary>Brauche ich eine Karte für den Test?</summary><div class="faq-body">Nein. Du testest 14 Tage ohne Karte. Danach kostet Praxly 149 € im Monat, monatlich kündbar.</div></details>
+<details class="faq-item"><summary>Was passiert nach den 14 Tagen?</summary><div class="faq-body">Du entscheidest. Willst du weitermachen, richtest du dein Abo in der App ein. Willst du nicht, musst du nichts tun. Ohne Abo wird dein Zugang gesperrt. Deine Daten bleiben danach noch 30 Tage gespeichert und lassen sich in dieser Zeit exportieren.</div></details>
 <details class="faq-item"><summary>Was ist im Preis enthalten?</summary><div class="faq-body">Alles. 149 € im Monat für 1 bis 5 Therapeut:innen, ohne Module, ohne Setup und ohne Mindestlaufzeit. Kein Ausweis der Umsatzsteuer (Kleinunternehmerregelung).</div></details>
 <details class="faq-item"><summary>Was passiert mit meinen Daten?</summary><div class="faq-body">Deine Daten gehören deiner Praxis. Den Auftragsverarbeitungsvertrag findest du in der App, und du kannst jederzeit alles exportieren. Die Daten werden in einer Datenbank in der EU (Frankfurt) gespeichert und werden in Praxly über die Praxis-Zuordnung voneinander getrennt gehalten. Zugriff haben außerdem das Praxly-Team (zum Beispiel für den Support) und technische Dienstleister nach dem Auftragsverarbeitungsvertrag. Gesetzliche Aufbewahrungspflichten bleiben unberührt.</div></details>
 <details class="faq-item"><summary>Wie komme ich mit meiner Patientenliste rein?</summary><div class="faq-body">Du lädst deine Liste als Excel oder CSV in der App hoch und siehst vorher eine Vorschau. Alte Behandlungsdokumentation und alte Rechnungen lassen sich nicht importieren.</div></details>
@@ -421,11 +564,15 @@
 
 <section class="sec dark final" id="jetzt-testen">
   <div class="wrap">
-    <h2>Probier es 14 Tage aus.</h2>
-    <p class="sub">Ohne Karte, monatlich kündbar.</p>
+    <h2>Probier es 14 Tage in deiner Praxis aus.</h2>
+    <p class="sub">Du siehst selbst, ob Praxly zu deinem Alltag passt.</p>
     <div class="actions">
       <a href="https://app.praxly.at/registrierung" class="btn btn-hell">14 Tage kostenlos testen</a>
-      <p class="micro">Danach 149 € im Monat, monatlich kündbar.</p>
+      <ul class="sicher" aria-label="Gut zu wissen">
+        <li>Ohne Karte</li>
+        <li>Kein Abo startet von selbst</li>
+        <li>Danach 149 € im Monat, monatlich kündbar</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -469,5 +616,6 @@
   }
 })();
 </script>
+<!-- SPÄTER: Stimmungsbilder (nur mit Freigabe einbauen): <img src="bilder/stimmung-schreibtisch.webp" width="1200" height="900" loading="lazy" decoding="async" alt=""> / <img src="bilder/stimmung-behandlungsraum.webp" width="1200" height="900" loading="lazy" decoding="async" alt=""> / <img src="bilder/stimmung-bodensee.webp" width="1600" height="700" loading="lazy" decoding="async" alt=""> -->
 </body>
 </html>
