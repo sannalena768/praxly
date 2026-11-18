@@ -153,7 +153,7 @@
   .checklist li:nth-child(even) { background: var(--gray); }
 
   .quellen { font-size: 0.8rem; color: var(--ink-light); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-mid); }
-  .quellen li { margin-bottom: 0.3rem; word-break: break-all; }
+  .quellen li { margin-bottom: 0.3rem; overflow-wrap: anywhere; }
 
   .cta-block { background: var(--green-dark); color: var(--white); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; margin: 3rem 0 1rem; }
   .cta-block h2 { color: var(--white); font-size: 1.4rem; margin: 0 0 0.6rem; }
@@ -237,14 +237,14 @@
 
   <h2>Schritt 2: Liste hochladen und Vorschau prüfen</h2>
   <p>Speichere die Liste als Excel-Datei (.xlsx) oder als CSV. In Praxly gehst du in der Seitenleiste auf „Daten übernehmen“ und wählst „Tabelle hochladen“. Die Datei darf höchstens 5 MB groß sein. Danach siehst du, wie Praxly die Spalten erkannt hat, und kannst jede Zuordnung ändern. Mindestens eine Namensspalte muss zugewiesen sein.</p>
-  <p>Vor dem Import zeigt dir Praxly ein Prüfergebnis: wie viele Personen angelegt würden, welche Zeilen Fehler haben und welche Einträge als Dubletten übersprungen werden. Erst wenn du den Import bestätigst, wird gespeichert. Stimmt etwas nicht, lädst du eine korrigierte Datei hoch. Deine Originaldatei bleibt unverändert bei dir. Wenn doch etwas schiefgeht, gibt es in der App die Möglichkeit, einen Import zurückzunehmen. Das gilt für eine begrenzte Zeit und nur für Personen, zu denen du noch nichts weiter gespeichert hast. Die genauen Bedingungen zeigt dir die App.</p>
+  <p>Vor dem Import zeigt dir Praxly ein Prüfergebnis: wie viele Personen angelegt würden, welche Zeilen Fehler haben und welche Einträge als Dubletten übersprungen werden (Dubletten erkennt Praxly nur, wenn Geburtsdatum oder E-Mail in deiner Datei stehen). Erst wenn du den Import bestätigst, wird gespeichert. Stimmt etwas nicht, lädst du eine korrigierte Datei hoch. Deine Originaldatei bleibt unverändert bei dir. Wenn doch etwas schiefgeht, gibt es in der App die Möglichkeit, einen Import zurückzunehmen. Das gilt für eine begrenzte Zeit und nur für Personen, zu denen du noch nichts weiter gespeichert hast. Die genauen Bedingungen zeigt dir die App.</p>
   <p>Schicke Patientendaten bitte nie per E-Mail, auch nicht an das Praxly-Team.</p>
 
   <h2>Schritt 3: Praxis einrichten</h2>
   <p>Lege in den Einstellungen an, wie deine Praxis arbeitet: Öffnungszeiten, Dienstleistungen und, falls ihr mehrere seid, die Therapeut:innen unter „Team“. Praxly ist für 1 bis 5 Therapeut:innen gedacht. Notiere dir vorher kurz, welche Leistungen du anbietest und wie lange sie dauern, dann geht das Einrichten schneller. Du arbeitest im Browser, auch am Handy oder Tablet, ohne etwas zu installieren.</p>
 
   <h2>Schritt 4: Termine übernehmen und Online-Buchung testen</h2>
-  <p>Deine Termine kannst du aus einer Kalender-Datei (.ics, zum Beispiel aus Google Kalender, Apple Kalender oder Outlook) oder aus einer CSV-Tabelle übernehmen, ebenfalls mit Vorschau. Der Weg führt über „Daten übernehmen“ und „Termine übernehmen“. Lege die Patient:innen am besten vorher an (Schritt 2), damit die Termine zugeordnet werden können. Übernommen werden nur Termine innerhalb eines festen Zeitfensters rund um heute. Wiederkehrende Termine und Sonderfälle kennzeichnet die Vorschau gesondert, prüfe sie bitte besonders genau.</p>
+  <p>Deine Termine kannst du aus einer Kalender-Datei (.ics, zum Beispiel aus Google Kalender, Apple Kalender oder Outlook) oder aus einer CSV-Tabelle übernehmen, ebenfalls mit Vorschau. Der Weg führt über „Daten übernehmen“ und „Termine übernehmen“. Lege die Patient:innen am besten vorher an (Schritt 2), damit die Termine zugeordnet werden können. Übernommen werden nur Termine innerhalb eines festen Zeitfensters rund um heute. Wiederkehrende Termine werden je nach Kalender-Datei nicht oder nur teilweise übernommen. Prüfe die Vorschau deshalb besonders genau und lege fehlende Termine bei Bedarf von Hand an.</p>
   <p>Danach probierst du die Online-Buchung aus: Den Buchungslink findest du in den Einstellungen. Schicke dir selbst über den Link eine Anfrage und bestätige sie in der App unter „Buchungsanfragen“. So siehst du, wie es für deine Patient:innen aussieht. Auch die E-Mails, die deine Patient:innen bekommen, kannst du in dieser Zeit ansehen und anpassen (Einstellungen, „E-Mail-Vorlagen“).</p>
 
   <h2>Schritt 5: 14 Tage ohne Karte testen, dann entscheiden</h2>
@@ -254,7 +254,7 @@
   <h2>Das geht nicht (oder nur eingeschränkt)</h2>
   <p>Sei bitte vorbereitet: Alte Behandlungsdokumentation lässt sich nicht als Einträge in Praxly übernehmen. Für alte Unterlagen gibt es in der App unter „Softwarewechsel“ Schritte für ein Archiv (PDF oder Foto je Patient:in) und, abhängig vom Stand der App, für alte Honorarnoten als Verlauf zum Nachsehen. Alte Honorarnoten werden dabei nicht in deine eigenen Nummern und Auswertungen eingerechnet.</p>
   <p>Hebe deine Papierkarten und alten Dateien weiter auf. Wie lange du welche Unterlagen aufbewahren musst, steht im Ratgeber <a href="https://praxly.at/ratgeber/aufbewahrung-dokumentation-honorarnoten-wahltherapeut/">Aufbewahrung von Dokumentation und Honorarnoten</a>. Zum Einscannen von Karten findest du Hinweise im Ratgeber <a href="https://praxly.at/ratgeber/karteikarten-digitalisieren-physiotherapie/">Karteikarten digitalisieren</a>. Wenn du später die Software wechselst, hilft <a href="https://praxly.at/ratgeber/praxissoftware-wechseln-ohne-datenverlust/">Praxissoftware wechseln ohne Datenverlust</a>.</p>
-  <p>Und noch eine Grenze: Praxly reicht keine Honorarnoten bei der ÖGK ein. Deine Patient:innen reichen sie wie gewohnt selbst ein.</p>
+  <p>Und noch eine Grenze: Praxly reicht keine Honorarnoten bei der ÖGK ein.</p>
 
   <h2>Kurz zum Datenschutz</h2>
   <p>Nimm in die Liste nur die Felder auf, die du wirklich brauchst. Das nennt man Datenminimierung und es gehört zu den Grundsätzen der Datenschutz-Grundverordnung (Art. 5). Mehr dazu im Ratgeber <a href="https://praxly.at/ratgeber/datenschutz-physiopraxis/">Datenschutz in der Physiopraxis</a>. Den Auftragsverarbeitungsvertrag (AVV) mit Praxly findest du in der App, er wird dir dort zum Bestätigen angezeigt und ist im Bereich „Datenschutz“ einsehbar. Die Datenbank von Praxly liegt in Frankfurt (EU).</p>
@@ -278,7 +278,7 @@
 
   <h2>Quellen</h2>
   <ul class="quellen">
-    <li>Datenschutz-Grundverordnung (EU) 2016/679, Art. 5 (Grundsätze, u. a. Datenminimierung): <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">eur-lex.europa.eu</a></li>
+    <li>Datenschutz-Grundverordnung (EU) 2016/679, Art. 5 (Grundsätze, u. a. Datenminimierung; im Gesetzestext nach Artikel 5 suchen): <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">eur-lex.europa.eu</a></li>
     <li>Österreichische Datenschutzbehörde, Pflichten als Verantwortliche: <a href="https://www.dsb.gv.at/rechte-pflichten/ihre-pflichten-als-verantwortlicher" rel="noopener">dsb.gv.at</a></li>
   </ul>
 
