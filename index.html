@@ -373,6 +373,42 @@
     .hero h1{font-size:clamp(2.4rem,4.3vw,3.5rem);max-width:13em}
     .karten{grid-template-columns:repeat(3,1fr)}
   }
+
+  /* Bilder 15.11.: einheitliche Rahmen, Bühne, Markierungen */
+  .fenster{border:1px solid var(--tanne);border-radius:10px;background:#fff;overflow:hidden;box-shadow:0 22px 44px -24px rgba(22,32,28,.45)}
+  .fenster-bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:var(--tanne);color:#d6e2db;font:600 .8125rem/1 var(--f-body);white-space:nowrap}
+  .fenster-bar i{flex:none;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.38)}
+  .fenster-bar span{margin-left:8px;overflow:hidden;text-overflow:ellipsis}
+  .bild{position:relative;display:block;background:#fff}
+  .bild img{width:100%}
+  .bild.weiter::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9%;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none}
+  .marke{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+  .marke rect{fill:rgba(42,132,83,.07);stroke:var(--tanne);stroke-width:3;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px #fff)}
+  .nur-d{display:none}
+  .buehne{border-radius:14px}
+  .buehne.dunkel{background:var(--tanne);padding:22px 16px}
+  .handy{width:240px;max-width:100%;margin:0 auto;border-radius:26px;padding:8px;background:#0f1614;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 26px 40px -22px rgba(0,0,0,.7)}
+  .handy .bild{border-radius:19px;overflow:hidden}
+  .blatt{border:1px solid var(--linie);border-radius:6px;background:#fff;overflow:hidden;box-shadow:0 22px 44px -24px rgba(22,32,28,.45)}
+  .shot figcaption{font-size:1rem}
+  @media (max-width:899px){
+    .hero-fig{margin-right:var(--g)}
+    .hero-fig .frame{width:100%;border-radius:10px;border-right:1px solid var(--tanne)}
+    .hero-fig figcaption{margin-right:0}
+    .b-hero img{aspect-ratio:740/862}
+    .b-akte img{aspect-ratio:700/800}
+    .b-import img{aspect-ratio:560/420}
+    .b-akte.rand::before{content:"";position:absolute;top:0;right:0;bottom:0;width:20%;background:linear-gradient(90deg,rgba(255,255,255,0),#fff 85%);pointer-events:none;z-index:1}
+  }
+  @media (min-width:900px){
+    .nur-d{display:block}
+    .nur-h{display:none}
+    .buehne{background:var(--kalk);padding:26px}
+    .buehne.dunkel{padding:36px 26px}
+    .handy{width:280px}
+    .blatt{max-width:440px;margin:0 auto}
+    .block:nth-child(even) .shot{order:-1}
+  }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{animation:none!important;transition:none!important}
@@ -417,8 +453,8 @@
     </div>
   </div>
   <figure class="hero-fig">
-    <div class="frame"><img src="bilder/hero-kalender-woche.webp" width="1122" height="974" fetchpriority="high" decoding="async" alt="Praxly Wochenkalender mit farbigen Terminen mehrerer Therapeut:innen, Beispieldaten mit erfundenen Namen"></div>
-    <figcaption>Der Wochenkalender (Beispieldaten)</figcaption>
+    <div class="frame fenster"><div class="fenster-bar" aria-hidden="true"><i></i><i></i><i></i><span>Praxly · Termine</span></div><div class="bild weiter b-hero"><picture><source media="(max-width:899px)" type="image/webp" srcset="bilder/kalender-woche-handy.webp" width="740" height="862"><source media="(max-width:899px)" srcset="bilder/kalender-woche-handy.jpg" width="740" height="862"><source type="image/webp" srcset="bilder/kalender-woche.webp" width="1400" height="1050"><img src="bilder/kalender-woche.jpg" width="1400" height="1050" fetchpriority="high" decoding="async" alt="Praxly Wochenkalender von Montag bis Sonntag mit farbigen Terminen von drei Therapeut:innen. Beispieldaten mit erfundenen Namen."></picture></div></div>
+    <figcaption>Der Wochenkalender: Jede Farbe steht für eine Therapeutin oder einen Therapeuten. (Beispieldaten)</figcaption>
   </figure>
 </div>
 
@@ -440,9 +476,9 @@
         <h2>Termine, die sich selbst erklären.</h2>
         <p>Wochenansicht, Einzel- und Serientermine mit Konfliktprüfung und Online-Buchung für deine Patient:innen. Alles in einem Kalender, auch am Handy.</p>
       </div>
-      <figure class="shot phone">
-        <div class="frame"><img src="bilder/funktion-handy-kalender.webp" width="780" height="1688" loading="lazy" decoding="async" alt="Praxly Tagesplan am Handy mit farbigen Terminen, Beispieldaten mit erfundenen Namen"></div>
-        <figcaption>Der Tagesplan am Handy (Beispieldaten)</figcaption>
+      <figure class="shot">
+        <div class="buehne dunkel"><div class="handy"><div class="bild"><picture><source type="image/webp" srcset="bilder/handy-kalender.webp" width="600" height="1298"><img src="bilder/handy-kalender.jpg" width="600" height="1298" loading="lazy" decoding="async" alt="Praxly Tagesplan am Handy für einen Mittwoch mit vier farbigen Terminen und dem Knopf für einen neuen Termin. Beispieldaten mit erfundenen Namen."></picture><svg class="marke" viewBox="0 0 600 1298" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="15" y="273" width="160" height="88" rx="22"/></svg></div></div></div>
+        <figcaption>Der Tagesplan am Handy. Markiert: der Knopf für einen neuen Termin. (Beispieldaten)</figcaption>
       </figure>
     </div>
 
@@ -452,8 +488,8 @@
         <p>Patient:innen mit Kontaktdaten und kompletter Terminhistorie, Behandlungsdokumentation mit fertigen Vorlagen und ein digitaler Anamnesebogen per Link. Die Vorlagen sind derzeit auf Physiotherapie ausgerichtet.</p>
       </div>
       <figure class="shot">
-        <div class="frame"><img src="bilder/funktion-patientenakte.webp" width="1100" height="638" loading="lazy" decoding="async" alt="Praxly Patientenakte mit nächstem Termin und Kennzahlen, Beispieldaten mit erfundenem Namen"></div>
-        <figcaption>Die Patientenakte (Beispieldaten)</figcaption>
+        <div class="buehne"><div class="fenster"><div class="fenster-bar" aria-hidden="true"><i></i><i></i><i></i><span>Praxly · Patientenakte</span></div><div class="bild b-akte rand"><picture><source media="(max-width:899px)" type="image/webp" srcset="bilder/patientenakte-handy.webp" width="700" height="800"><source media="(max-width:899px)" srcset="bilder/patientenakte-handy.jpg" width="700" height="800"><source type="image/webp" srcset="bilder/patientenakte.webp" width="1200" height="900"><img src="bilder/patientenakte.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Praxly Patientenakte mit nächstem Termin, letzter Behandlung, Anzahl der Termine und letzter Honorarnote. Beispieldaten mit erfundenem Namen."></picture><svg class="marke nur-d" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="54" y="571" width="544" height="151" rx="22"/></svg><svg class="marke nur-h" viewBox="0 0 700 800" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="10" y="420" width="666" height="190" rx="22"/></svg></div></div></div>
+        <figcaption>Die Patientenakte. Markiert: der nächste Termin. (Beispieldaten)</figcaption>
       </figure>
     </div>
 
@@ -462,11 +498,10 @@
         <h2>Honorarnote in wenigen Klicks.</h2>
         <p>Mit allen Angaben für die Kostenerstattung, als PDF. Deine Patient:innen reichen sie selbst bei ihrer Krankenversicherung ein.</p>
       </div>
-      <figure class="shot doc">
-        <div class="frame"><img src="bilder/funktion-honorarnote.webp" width="900" height="1224" loading="lazy" decoding="async" alt="Praxly Honorarnote als PDF mit zwei Leistungen und Gesamtbetrag, Beispieldaten mit erfundenem Namen"></div>
-        <figcaption>Die Honorarnote als PDF (Beispieldaten)</figcaption>
+      <figure class="shot">
+        <div class="buehne"><div class="blatt"><div class="bild"><picture><source type="image/webp" srcset="bilder/honorarnote.webp" width="1000" height="900"><img src="bilder/honorarnote.jpg" width="1000" height="900" loading="lazy" decoding="async" alt="Ausschnitt einer Praxly Honorarnote als PDF mit zwei Leistungen, Datum, Einzelpreisen und Gesamtbetrag. Beispieldaten mit erfundenem Namen."></picture><svg class="marke" viewBox="0 0 1000 900" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="497" y="772" width="449" height="82" rx="14"/></svg></div></div></div>
+        <figcaption>Die Honorarnote als PDF (Ausschnitt). Markiert: der Gesamtbetrag. (Beispieldaten)</figcaption>
       </figure>
-
     </div>
   </div>
 </section>
